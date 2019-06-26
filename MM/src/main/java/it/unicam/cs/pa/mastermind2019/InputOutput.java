@@ -83,7 +83,7 @@ public class InputOutput {
 				System.out.println("Il codice da decifrare è lungo: " + s);
 				return Integer.parseInt(s);
 			}
-			System.out.println("Insersci il numero 4, 6 o 8!");
+			System.err.println("Insersci il numero 4, 6 o 8!");
 		}
 	}
 
@@ -105,7 +105,7 @@ public class InputOutput {
 				System.out.println("Il codice potrà contenere duplicati");
 				return true;
 			}
-			System.out.println("Inserisci S o N!");
+			System.err.println("Inserisci S o N!");
 		}
 	}
 
