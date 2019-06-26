@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="it.unicam.cs.pa.mastermind2019.test" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-06-26T20:58:36" hostname="DESKTOP-AV53NU8" time="0.008">
+  <properties/>
+  <testcase name="testIsWinnerFalse" classname="it.unicam.cs.pa.mastermind2019.test" time="0.004"/>
+  <testcase name="testCheckPC" classname="it.unicam.cs.pa.mastermind2019.test" time="0.002"/>
+  <testcase name="testCheckPE" classname="it.unicam.cs.pa.mastermind2019.test" time="0.0"/>
+  <testcase name="testIsWinnerTrue" classname="it.unicam.cs.pa.mastermind2019.test" time="0.0"/>
+  <testcase name="testCheckBoth" classname="it.unicam.cs.pa.mastermind2019.test" time="0.0"/>
+  <testcase name="testCheckNull" classname="it.unicam.cs.pa.mastermind2019.test" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
