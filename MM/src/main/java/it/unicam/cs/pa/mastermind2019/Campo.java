@@ -37,7 +37,9 @@ public class Campo
 	 * @return Array da decodificare
 	 */
 	public ArrayList<Integer> getArrayFromDeco()
-	{ return this.decodeArray; }
+	{
+		LogToFile.messaggio("INFO","Codice inserito nel campo");
+		return this.decodeArray; }
 
 	/**
 	 * 

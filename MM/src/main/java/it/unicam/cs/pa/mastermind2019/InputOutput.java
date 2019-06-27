@@ -221,6 +221,7 @@ public class InputOutput {
 				+ "PE = Numero Corretto, nella Posizione Errata \n";
 		System.out.println(logo);
 		System.out.println(regole);
+		LogToFile.messaggio("INFO","Logo stampato");
 
 	}
 }

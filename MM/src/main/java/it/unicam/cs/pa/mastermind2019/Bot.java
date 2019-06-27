@@ -40,6 +40,7 @@ public class Bot implements Player {
 	 * 
 	 **/
 	public ArrayList<Integer> generateCode(GameParameters settings) {
+		
 		ArrayList<Integer> code = new ArrayList<Integer>();
 
 		while (!(code.size() == settings.codeLenght)) {
@@ -53,6 +54,7 @@ public class Bot implements Player {
 			code.add(k);
 		}
 		System.out.println(code);
+		LogToFile.messaggio("INFO","Codice generato dal Bot");
 		return code;
 	}
 
@@ -64,6 +66,7 @@ public class Bot implements Player {
 
 	@Override
 	public String getID() {
+		LogToFile.messaggio("INFO","Stringa ID del Bot restituita");
 		return ID;
 	}
 

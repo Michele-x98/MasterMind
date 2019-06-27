@@ -67,7 +67,8 @@ public class ConsoleGame
 	 */
 
 	public static void main(String argv[]) throws IOException, IllegalParameterException
-	{
+	{		
+		LogToFile.init();
 		InputOutput.stampaLogo();
 		PlayerFactory player1 = new PlayerFactory();
 		PlayerFactory player2 = new PlayerFactory();
