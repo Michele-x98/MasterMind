@@ -21,11 +21,18 @@ public class PlayerFactory
 	 */
 	public Player getPlayer(String c)
 	{
+		LogToFile.messaggio("INFO","Creazione Player");
 		Player p;
 		if (c.equalsIgnoreCase("bot"))
+		{
+			LogToFile.messaggio("INFO","Creato un Bot");
 			p = new Bot();
+		}
 		else
+		{
+			LogToFile.messaggio("INFO","Creato un umano");
 			p = new Human(c);
+		}
 		return p;
 	}
 }

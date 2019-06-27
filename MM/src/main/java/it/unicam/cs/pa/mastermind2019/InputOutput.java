@@ -22,7 +22,7 @@ public class InputOutput {
 	 * @return restituisce la linea di input che l'utente ha battuto.
 	 */
 	public static String readLine() {
-		String inputLine = "";
+		String inputLine = null;
 		try {
 			inputLine = reader.readLine();
 		} catch (IOException e) {
@@ -77,12 +77,15 @@ public class InputOutput {
 	 */
 	public static int prendiLunghezza() throws IOException {
 		while (true) {
+			LogToFile.messaggio("INFO","Richiesta lunghezza codice");
 			System.out.println("Inserisci la lunghezza del codice da decifrare fra 4, 6 e 8 numeri: ");
 			String s = InputOutput.readLine();
 			if (s.equals("4") || s.equals("6") || s.equals("8")) {
 				System.out.println("Il codice da decifrare è lungo: " + s);
+				LogToFile.messaggio("INFO","Inserita lunghezza codice da decifrare");
 				return Integer.parseInt(s);
 			}
+			LogToFile.messaggio("WARNING", "Lunghezza codice errata");
 			System.err.println("Insersci il numero 4, 6 o 8!");
 		}
 	}
@@ -95,14 +98,17 @@ public class InputOutput {
 	 */
 	public static boolean prendiDuplicati() throws IOException {
 		while (true) {
+			LogToFile.messaggio("INFO","Richiesta duplicati");
 			System.out.println("Vuoi duplicati nel codice?: (S/N)");
 			String s = InputOutput.readLine();
-			if (s.equals("N")) {
+			if (s.equalsIgnoreCase("N")) {
 				System.out.println("Non ci saranno duplicati");
+				LogToFile.messaggio("INFO","Selezionata la partita senza codice duplicato");
 				return false;
 			}
-			if (s.equals("S")) {
+			if (s.equalsIgnoreCase("S")) {
 				System.out.println("Il codice potrà contenere duplicati");
+				LogToFile.messaggio("INFO","Selezionata la partita con codice duplicato");
 				return true;
 			}
 			System.err.println("Inserisci S o N!");
@@ -119,12 +125,14 @@ public class InputOutput {
 		while (true) {
 			System.out.println("Giochi ancora? (S/N)");
 			String str = InputOutput.readLine();
-			if (str.equals("N")) {
+			if (str.equalsIgnoreCase("N")) {
 				System.out.println("Arrivederci");
+				LogToFile.messaggio("INFO","PARTITA TERMINATA");
 				return false;
 			}
-			if (str.equals("S")) {
+			if (str.equalsIgnoreCase("S")) {
 				System.out.println("Ricominciamo!");
+				LogToFile.messaggio("INFO","PARTITA RICOMINCIATA");
 				return true;
 			}
 			System.out.println("Inserisci S o N!");
@@ -139,11 +147,13 @@ public class InputOutput {
 	 */
 	public static String typePlayer() {
 		while (true) {
+			LogToFile.messaggio("INFO","Richiesta di un giocatore");
 			System.out.println("Inserisci il tipo di giocatore: 'Bot' o 'Umano' ");
 			String c = InputOutput.readLine();
 			if (c != null)
 				return c;
 			System.out.println("Tipo di giocatore non valido.");
+			LogToFile.messaggio("WARNING","Inserito un giocatore non valido");
 		}
 	}
 
@@ -167,17 +177,23 @@ public class InputOutput {
 		boolean validate = false;
 		do {
 			try {
+				LogToFile.messaggio("INFO","Richiesta di un numero");
 				System.out.print("Inserisci un numero compreso tra 1 e " + max + " : ");
 				num = readInt();
 				if (num >= 1 && num <= max)
 					validate = true;
 				else
-					System.err.println("[*] Il numero deve essere compreso tra 1 e " + max + " ,prova di nuovo \n");
+					{
+					
+					System.err.println("Il numero deve essere compreso tra 1 e " + max + " ,prova di nuovo \n");
+					}
 
 			} catch (NumberFormatException e) {
-				System.err.println("[*]Il valore inserito non è un numero, prova di nuovo");
+				LogToFile.messaggio("WARNING","Inserito un numero non valido");
+				System.err.println("Il valore inserito non è un numero, prova di nuovo");
 			}
 		} while (!validate);
+		LogToFile.messaggio("INFO","Valore riconosciuto e restituito");
 		return num;
 	}
 
@@ -196,6 +212,7 @@ public class InputOutput {
 	 * @param sugg ArrayList di pioli suggerimento
 	 */
 	public static void getSuggerimento(ArrayList<Pioli> sugg) {
+		LogToFile.messaggio("INFO","Stampa suggerimento");
 		System.out.println("Array di sugerimento: " + sugg);
 	}
 

@@ -34,6 +34,7 @@ public class Vincitore implements Risultato
 	 */
 	public String toString()
 	{
+		LogToFile.messaggio("INFO","Stampa del giocatore vincente");
 		return "Il giocatore " +
 				winnerId +
 				" ha vinto!";

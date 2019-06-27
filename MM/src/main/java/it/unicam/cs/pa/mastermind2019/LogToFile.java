@@ -1,5 +1,7 @@
 package it.unicam.cs.pa.mastermind2019;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.logging.FileHandler;
@@ -18,11 +20,14 @@ public class LogToFile
     public LogToFile() {}
     public static void init()
     {
+    	Path path = Path.of("C:/Log");
+    	if(Files.exists(path))
+    	{
     	logger.setUseParentHandlers(false);
     	//just to make our log file nicer :)
-        SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy--HH-mm-ss");
         try {
-            fh = new FileHandler("C:/Users/Daniele/git/MasterMind/MM/src/main/java/Log/Log-"
+            fh = new FileHandler("C:/Log/Log-"
                 + format.format(Calendar.getInstance().getTime()) + ".log");
         } catch (Exception e) {
             e.printStackTrace();
@@ -30,6 +35,9 @@ public class LogToFile
 
         fh.setFormatter(new SimpleFormatter());
         logger.addHandler(fh);
+    	}
+    	else
+    		System.out.println("CARTELLA NON ESISTENTE. LOG STAMPATO A CONSOLE");
     }
     
     

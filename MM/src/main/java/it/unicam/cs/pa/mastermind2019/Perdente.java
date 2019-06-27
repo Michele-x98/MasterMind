@@ -18,6 +18,7 @@ public class Perdente implements Risultato
 	@Override
 	public String toString()
 	{
+		LogToFile.messaggio("INFO","Stampa del giocatore perdente");
 		return "Il giocatore " +
 				loserId +
 				" ha perso!";

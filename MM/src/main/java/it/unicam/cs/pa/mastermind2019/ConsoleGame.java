@@ -33,6 +33,7 @@ public class ConsoleGame
 	{
 		this.giocatore1 = p1;
 		this.giocatore2 = p2;
+		LogToFile.messaggio("INFO","Creata una console di gioco");
 	}
 
 	/**
@@ -49,6 +50,7 @@ public class ConsoleGame
 	{
 		do
 		{
+			LogToFile.messaggio("INFO","PARTITA INIZIATA !");
 			GameParameters settings = new GameParameters(InputOutput.prendiLunghezza(), InputOutput.prendiDuplicati());
 			Campo terreno = new Campo(settings);
 			MatchCoordinator arbitro = new MatchCoordinator(settings, terreno, this.giocatore1, this.giocatore2);

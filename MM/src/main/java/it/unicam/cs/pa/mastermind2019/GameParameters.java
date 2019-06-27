@@ -54,6 +54,7 @@ public class GameParameters
 			this.attempts = 21;
 			this.maxCodValue = 10;
 		}
+		LogToFile.messaggio("CONFIG","Parametri di gioco impostati");
 	}
 
 	/**
@@ -78,6 +79,7 @@ public class GameParameters
 	 */
 	public boolean isValidNumber(int num)
 	{
+		LogToFile.messaggio("INFO","Effettuato controllo sulla correttezza del numero");
 		return num >= this.minCodValue && num <= this.maxCodValue;
 	}
 
