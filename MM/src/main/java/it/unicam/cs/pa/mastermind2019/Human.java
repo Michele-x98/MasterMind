@@ -37,7 +37,7 @@ public class Human implements Player
 		 * Metodo per prendere da tastiera il codice del giocatore
 		 * 
 		 * @param
-		 * @return array riempito dal giocatore
+		 * @return ArrayList riempito dal giocatore
 		 * @throws IOException 
 		 * @throws IllegalParameterException 
 		 */

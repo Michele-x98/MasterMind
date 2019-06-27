@@ -22,7 +22,7 @@ public interface Player
 	 * indovinare, sia come tentativo
 	 * 
 	 * @param settings
-	 * @return Un array di interi
+	 * @return Un ArrayList di interi
 	 * @throws IOException
 	 * @throws IllegalParameterException
 	 */

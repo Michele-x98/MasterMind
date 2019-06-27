@@ -3,7 +3,7 @@ package it.unicam.cs.pa.mastermind2019;
 import java.util.ArrayList;
 
 /**
- * <b>Responsabilità</b>: Creare il campo di battaglia.
+ * <b>Responsabilità</b>: Gestisce il campo.
  * 
  * @author TeamTrustMe
  * @param decodeArray Array da decodificare.
@@ -61,7 +61,7 @@ public class Campo
 	/**
 	 * Metodo per settare l'array codificatore
 	 * 
-	 * @param codeArray
+	 * @param codeArray Array Codificatore
 	 */
 	public void setCodeArray(ArrayList<Integer> codeArray)
 	{ this.codeArray = codeArray; }
