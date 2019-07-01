@@ -212,7 +212,7 @@ public class InputOutput {
 	 * @param sugg ArrayList di pioli suggerimento
 	 */
 	public static void getSuggerimento(ArrayList<Pioli> sugg) {
-		LogToFile.messaggio("INFO","Stampa suggerimento");
+		LogToFile.messaggio("INFO","Stampato suggerimento");
 		System.out.println("Array di sugerimento: " + sugg);
 	}
 
@@ -241,4 +241,5 @@ public class InputOutput {
 		LogToFile.messaggio("INFO","Logo stampato");
 
 	}
+	
 }
