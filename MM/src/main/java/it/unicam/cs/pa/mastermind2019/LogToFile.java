@@ -55,7 +55,7 @@ public class LogToFile
 			logger.addHandler(fh);
 		}
 		else
-			System.out.println("CARTELLA NON ESISTENTE.LOG STAMPATO A CONSOLE.");
+			System.err.println("CARTELLA NON ESISTENTE.LOG STAMPATO A CONSOLE.");
 	}
 
 	/**

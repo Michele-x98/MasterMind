@@ -173,17 +173,37 @@ public class InputOutput
 	 * 
 	 * @return Tipo del giocatore.
 	 */
-	public static String typePlayer()
+	public static String typePlayerCodeMaker()
 	{
 		while (true)
 		{
-			LogToFile.messaggio("INFO", "Richiesta di un giocatore");
-			System.out.println("Inserisci il tipo di giocatore: 'Bot' o 'Umano' ");
+			LogToFile.messaggio("INFO", "Richiesta di un CodeMaker");
+			System.out.println("Inserisci chi vuoi che sia il CodeMaker: 'Bot' o 'Umano' ");
 			String c = InputOutput.readLine();
 			if (c != null)
 				return c;
-			System.out.println("Tipo di giocatore non valido.");
-			LogToFile.messaggio("WARNING", "Inserito un giocatore non valido");
+			System.out.println("Tipo di CodeMaker non valido.");
+			LogToFile.messaggio("WARNING", "Inserito un CodeMaker non valido");
+		}
+	}
+	
+	/**
+	 * Prende i tipi di giocatore da tastiera e li da come valore di ritorno in una
+	 * String.
+	 * 
+	 * @return Tipo del giocatore.
+	 */
+	public static String typePlayerCodeBreaker()
+	{
+		while (true)
+		{
+			LogToFile.messaggio("INFO", "Richiesta di un CodeBreaker");
+			System.out.println("Inserisci chi vuoi che sia il CodeBreaker: 'Bot' o 'Umano' ");
+			String c = InputOutput.readLine();
+			if (c != null)
+				return c;
+			System.out.println("Tipo di CodeBreaker non valido.");
+			LogToFile.messaggio("WARNING", "Inserito un CodeBreaker non valido");
 		}
 	}
 

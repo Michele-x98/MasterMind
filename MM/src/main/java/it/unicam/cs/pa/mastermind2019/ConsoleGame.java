@@ -65,7 +65,7 @@ public class ConsoleGame
 		InputOutput.stampaLogo();
 		PlayerFactory player1 = new PlayerFactory();
 		PlayerFactory player2 = new PlayerFactory();
-		ConsoleGame direttore = new ConsoleGame(player1.getPlayer(InputOutput.typePlayer()), player2.getPlayer(InputOutput.typePlayer()));
+		ConsoleGame direttore = new ConsoleGame(player1.getPlayer(InputOutput.typePlayerCodeMaker()), player2.getPlayer(InputOutput.typePlayerCodeBreaker()));
 		direttore.start();
 	}
 }
