@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="it.unicam.cs.pa.mastermind2019.TestPlayer" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-07-02T09:29:53" hostname="ComputerFigo" time="0.005">
+  <properties/>
+  <testcase name="testBotGenerateCodeNotNull" classname="it.unicam.cs.pa.mastermind2019.TestPlayer" time="0.003"/>
+  <testcase name="testBotGenerateCode" classname="it.unicam.cs.pa.mastermind2019.TestPlayer" time="0.002"/>
+  <system-out><![CDATA[[6, 5, 1, 3, 7, 4]
+[6, 1, 7, 4, 2, 5]
+]]></system-out>
+  <system-err><![CDATA[lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+INFO: Creazione Player
+lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+INFO: Creato un Bot
+lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+INFO: Codice generato dal Bot
+lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+INFO: Creazione Player
+lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+INFO: Creato un Bot
+lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+INFO: Codice generato dal Bot
+]]></system-err>
+</testsuite>

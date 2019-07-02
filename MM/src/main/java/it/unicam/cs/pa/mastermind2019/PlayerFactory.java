@@ -1,23 +1,24 @@
 package it.unicam.cs.pa.mastermind2019;
 
 /**
- * <b>Responsabilità </b>: Creare il giocatore adatto alla richiesta
+ * <b>Responsabilità:</b> Creare il Player adatto alla richiesta.
  * 
- * @author Daniele
+ * @author Michele Benedetti
+ * @author Daniele Moschini
  *
  */
 public class PlayerFactory
 {
 	/**
-	 * Costruttore vuoto
+	 * Costruttore vuoto.
 	 */
 	public PlayerFactory() {}
 
 	/**
-	 * Metodo che consente di creare un player data una stringa iniziale
+	 * Metodo che consente di creare un player data una stringa iniziale.
 	 * 
-	 * @param c Parametro che inciderà sulla creazione del player
-	 * @return Il player desiderato
+	 * @param c Parametro che inciderà sulla creazione del player.
+	 * @return Il player desiderato.
 	 */
 	public Player getPlayer(String c)
 	{

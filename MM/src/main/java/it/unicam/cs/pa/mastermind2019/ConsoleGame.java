@@ -3,27 +3,20 @@ package it.unicam.cs.pa.mastermind2019;
 import java.io.IOException;
 
 /**
- * <b>Responsabilità </b>: Far partire il gioco (direttore)
+ * <b>Responsabilità:</b> Creare una partita ed avviarla.
  * 
- * @author TeamTrustMe
- *
+ * @author Michele Benedetti
+ * @author Daniele Moschini
+
  */
 
 public class ConsoleGame
 {
-
-	/**
-	 * @param output     Stringa in output.
-	 * @param input      Stringa in input.
-	 * @param giocatore1 Primo {@link}Player della partita,
-	 * @param giocatore2 Secondo {@link}Player della partita.
-	 */
-
 	private Player giocatore1;
 	private Player giocatore2;
 
 	/**
-	 * Costruttore di ConsoleGame
+	 * Costruttore di ConsoleGame.
 	 * 
 	 * @param p1 Primo giocatore della partita.
 	 * @param p2 Secondo giocatore della partita.
@@ -33,43 +26,41 @@ public class ConsoleGame
 	{
 		this.giocatore1 = p1;
 		this.giocatore2 = p2;
-		LogToFile.messaggio("INFO","Creata una console di gioco");
+		LogToFile.messaggio("INFO", "Creata una console di gioco");
 	}
 
 	/**
-	 * Metodo iniziale
+	 * Metodo iniziale che prende delle impostazioni, un terreno di gioco ed un
+	 * arbitro ed infine stampa un Risultato.
 	 * 
-	 * 1) Prendo i parametri di gioco 2) Creo i 2 ArrayList in Campo in base ai
-	 * parametri di gioco 3) Creo Arbitro a cui passo, parametri, campo, e i 2
-	 * giocatori 4) Faccio partire la partita e restituisco il risultato
-	 * 
-	 * @throws IOException
-	 * @throws IllegalParameterException
+	 * @throws IOException               Eccezione che può essere lanciata da
+	 *                                   InputOutput.
+	 * @throws IllegalParameterException Eccezione che può essere lanciata dal
+	 *                                   metodo play().
 	 */
 	private void start() throws IOException, IllegalParameterException
 	{
 		do
 		{
-			LogToFile.messaggio("INFO","PARTITA INIZIATA !");
 			GameParameters settings = new GameParameters(InputOutput.prendiLunghezza(), InputOutput.prendiDuplicati());
 			Campo terreno = new Campo(settings);
 			MatchCoordinator arbitro = new MatchCoordinator(settings, terreno, this.giocatore1, this.giocatore2);
+			LogToFile.messaggio("INFO", "PARTITA INIZIATA !");
 			System.out.println(arbitro.play());
-			arbitro.play();
 		}
 		while (InputOutput.matchAgain());
 	}
 
 	/**
-	 * Metodo Main
+	 * Metodo Main.
 	 * 
-	 * @param argv
-	 * @throws IOException
-	 * @throws IllegalParameterException
+	 * @param argv	Argomenti passati all'applicazione.
+	 * @throws IOException Eccezione che può essere lanciata da start.
+	 * @throws IllegalParameterException Eccezione che può essere lanciata da start.
 	 */
 
 	public static void main(String argv[]) throws IOException, IllegalParameterException
-	{		
+	{
 		LogToFile.init();
 		InputOutput.stampaLogo();
 		PlayerFactory player1 = new PlayerFactory();

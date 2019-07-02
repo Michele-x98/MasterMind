@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Random;
 
 /**
- * <b>Responsabilità </b>: Creare un bot
+ * <b>Responsabilità:</b> Gestire un Player indipendente (Bot).
  * 
- * @author TeamTrustMe
- * @param ID Identificatore del bot
+ * @author Michele Benedetti
+ * @author Daniele Moschini
  */
 
 public class Bot implements Player {
@@ -25,7 +25,7 @@ public class Bot implements Player {
 	}
 
 	/**
-	 * Costruttore senza parametri in ingresso, il nome di default di un bot è
+	 * Costruttore senza parametri in ingresso, il nome di default di un Bot è
 	 * "Bot".
 	 */
 	public Bot() {
@@ -33,10 +33,10 @@ public class Bot implements Player {
 	}
 
 	/**
-	 * Metodo che genera un codice random per il bot
+	 * Metodo che genera un codice random per il bot.
 	 * 
-	 * @param Impostazioni della partita corrente.
-	 * @return Array da decodificare o array da controllare
+	 * @param settings Impostazioni della partita corrente.
+	 * @return Array da decodificare o array da controllare.
 	 * 
 	 **/
 	public ArrayList<Integer> generateCode(GameParameters settings) {
@@ -59,9 +59,9 @@ public class Bot implements Player {
 	}
 
 	/**
-	 * Getter di <code>ID </code>.
+	 * Getter di <code>ID</code>.
 	 * 
-	 * @return L'ID dell'oggetto corrente
+	 * @return L'ID dell'oggetto corrente.
 	 */
 
 	@Override

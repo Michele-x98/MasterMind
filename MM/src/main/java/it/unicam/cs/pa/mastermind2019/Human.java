@@ -3,20 +3,19 @@ package it.unicam.cs.pa.mastermind2019;
 import java.util.ArrayList;
 
 /**
- * <b>Responsabilità </b>: Creare un human
+ * <b>Responsabilità:</b> Gestire un Player Interattivo (Human).
  * 
- * @author TeamTrustMe
- * @param ID Stringa che identifica un Player Human
- *
+ * @author Michele Benedetti
+ * @author Daniele Moschini
  */
 
 public class Human implements Player
 {
-
 	public String ID;
 
 	/**
 	 * Metodo costruttore di default di Human
+	 * 
 	 */
 	public Human()
 	{
@@ -33,18 +32,20 @@ public class Human implements Player
 	{
 		this.ID = id;
 	}
-
+/**
+ * Override del metodo gedID di Player.
+ * @return ID dell'Human.
+ */
 	@Override
 	public String getID()
 	{ return ID; }
 
 	/**
-	 * Metodo per prendere da tastiera il codice del giocatore
+	 * Metodo per prendere da tastiera il codice del giocatore.
 	 * 
-	 * @param
-	 * @return ArrayList riempito dal giocatore
-	 * @throws IOException
-	 * @throws IllegalParameterException
+	 * @param settings Impostazioni della partita corrente.
+	 * @return ArrayList riempito dal giocatore.
+	 * @throws IllegalParameterException Eccezione per parametri non regolari.
 	 */
 
 	public ArrayList<Integer> generateCode(GameParameters settings) throws IllegalParameterException

@@ -3,12 +3,10 @@ package it.unicam.cs.pa.mastermind2019;
 import java.util.ArrayList;
 
 /**
- * <b>Responsabilit√†</b>: Gestisce il campo.
+ * <b>Responsabilit‡:</b> Gestire il campo di gioco.
  * 
- * @author TeamTrustMe
- * @param decodeArray Array da decodificare.
- * @param codeArray   Tentativo corrente di codice.
- * @param lunghezza   Lunghezza del codice da indovinare.
+ * @author Michele Benedetti
+ * @author Daniele Moschini
  */
 
 public class Campo
@@ -20,7 +18,7 @@ public class Campo
 	/**
 	 * Costruttore con un oggetto di tipo GameParameters in ingresso.
 	 * 
-	 * @param settings
+	 * @param settings	Impostazioni della partita.
 	 */
 	public Campo(GameParameters settings )
 	{
@@ -29,41 +27,43 @@ public class Campo
 		this.codeArray = new ArrayList<Integer>();
 	}
 
-	/*
-	 ****************** GETTERS ******************
-	 */
+
+//	 ****************** GETTERS ******************
+	
 	/**
+	 * Getter della variabile <code>decodeArray</code>.
 	 * 
-	 * @return Array da decodificare
+	 * @return Array da decodificare.
 	 */
 	public ArrayList<Integer> getArrayFromDeco()
 	{
 		LogToFile.messaggio("INFO","Codice inserito nel campo");
 		return this.decodeArray; }
 
+	
 	/**
-	 * 
-	 * @return Array tentativo
+	 * Getter della variabile <code>codeArray</code>.
+	 * @return Array tentativo.
 	 */
-
 	public ArrayList<Integer> getArrayFromCode()
 	{ return this.codeArray; }
 
-	/*
-	 ****************** SETTERS ******************
-	 */
+//	 ****************** SETTERS ******************
+	
+	
 	/**
-	 * Metodo per settare l'array da decodificare
+	 * Setter per la variabile <code>decodeArray</code>.
 	 * 
-	 * @param arrayList
+	 * @param arrayList Nuovo <code>decodeArray</code>.
 	 */
 	public void setDecodeArray(ArrayList<Integer> arrayList)
 	{ this.decodeArray = arrayList; }
 
+	
 	/**
-	 * Metodo per settare l'array codificatore
+	 * Setter per la variabile <code>codeArray</code>.
 	 * 
-	 * @param codeArray Array Codificatore
+	 * @param codeArray Nuovo <code>codeArray</code>.
 	 */
 	public void setCodeArray(ArrayList<Integer> codeArray)
 	{ this.codeArray = codeArray; }

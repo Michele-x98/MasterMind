@@ -1,17 +1,17 @@
 package it.unicam.cs.pa.mastermind2019;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * <b>Responsabilità </b>: Gestire la strategia di un giocatore
+ * <b>Responsabilità:</b> Impostare le basi per la strategia di un giocatore.
  * 
- * @author TeamTrustMe
+ * @author Michele Benedetti
+ * @author Daniele Moschini
  */
 public interface Player
 {
 	/**
-	 * Restituisce l'ID del player corrente
+	 * Restituisce l'ID del player corrente.
 	 * 
 	 * @return L'ID del player
 	 */
@@ -19,13 +19,12 @@ public interface Player
 
 	/**
 	 * Genera un array di interi che può essere utilizzato sia come codice da
-	 * indovinare, sia come tentativo
+	 * indovinare, sia come tentativo.
 	 * 
-	 * @param settings
-	 * @return Un ArrayList di interi
-	 * @throws IOException
-	 * @throws IllegalParameterException
+	 * @param settings Impostazioni della partita corrente.
+	 * @return Un ArrayList di interi.
+	 * @throws IllegalParameterException Eccezione per parametri non regolari.
 	 */
-	public ArrayList<Integer> generateCode(GameParameters settings) throws IOException, IllegalParameterException;
+	public ArrayList<Integer> generateCode(GameParameters settings) throws IllegalParameterException;
 
 }

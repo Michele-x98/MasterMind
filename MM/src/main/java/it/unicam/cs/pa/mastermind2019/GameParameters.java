@@ -3,15 +3,10 @@ package it.unicam.cs.pa.mastermind2019;
 import java.io.IOException;
 
 /**
- * <b>Responsabilità </b>: Gestire i parametri di gioco.
+ * <b>Responsabilità:</b> Gestire i parametri di gioco.
  * 
- * @author TeamTrustMe
- * @param duplicateAllow Boolean per avere la duplicazione di caratteri nel
- *                       codice
- * @param codeLenght     Lunghezza del codice da indovinare
- * @param attempts       Numero di tentativi possibili
- * @param minCodValue    Numero minimo di caratteri del codice
- * @param maxCodValue    Numero massimo di caratteri del codice
+ * @author Michele Benedetti
+ * @author Daniele Moschini
  */
 
 public class GameParameters
@@ -24,12 +19,12 @@ public class GameParameters
 
 	/**
 	 * Costruttore con valori in ingresso. Il numero di tentativi e il numero
-	 * massimo di caratteri viene impostato a seconda della lunghezza del codice
+	 * massimo di caratteri viene impostato a seconda della lunghezza del codice.
 	 * 
-	 * @param lunghezza Lunghezza del codice da indovinare
-	 * @param duplicate Booleano che consente di avere duplicati nel codice
-	 * @throws IOException Viene lanciata se {@code}lunghezza{/@code} non è un
-	 *                     numero tra 4-6-8
+	 * @param lunghezza Lunghezza del codice da indovinare.
+	 * @param duplicate Booleano che consente di avere duplicati nel codice.
+	 * @throws IOException Viene lanciata se <code>lunghezza</code> non è un numero
+	 *                     tra 4-6-8.
 	 * 
 	 */
 
@@ -54,11 +49,12 @@ public class GameParameters
 			this.attempts = 21;
 			this.maxCodValue = 10;
 		}
-		LogToFile.messaggio("CONFIG","Parametri di gioco impostati");
+		LogToFile.messaggio("CONFIG", "Parametri di gioco impostati");
 	}
 
 	/**
-	 * Costruttore di default
+	 * Costruttore di default con parametri preimpostati.
+	 * 
 	 */
 
 	public GameParameters()
@@ -74,27 +70,27 @@ public class GameParameters
 	 * nel contesto del gioco.
 	 * 
 	 * @param num Numero intero da controllare.
-	 * @return <b>True</b> Se il valore è accettabile.</br>
+	 * @return <b>True</b> Se il valore è accettabile.
 	 *         <b>False</b> Se il valore non è accettabile.
 	 */
 	public boolean isValidNumber(int num)
 	{
-		LogToFile.messaggio("INFO","Effettuato controllo sulla correttezza del numero");
+		LogToFile.messaggio("INFO", "Effettuato controllo sulla correttezza del numero");
 		return num >= this.minCodValue && num <= this.maxCodValue;
 	}
 
 	/**
-	 * Metodo che restituisce la lunghezze del codice da decodificare
+	 * Metodo che restituisce la lunghezze del codice da decodificare.
 	 * 
-	 * @return lunghezza codice
+	 * @return lunghezza codice.
 	 */
 	public int getCodeLenght()
 	{ return codeLenght; }
 
 	/**
-	 * Metodo che restituisce i tentativi settati
+	 * Metodo che restituisce i tentativi settati.
 	 * 
-	 * @return tentativi impostati
+	 * @return tentativi impostati.
 	 */
 	public int getAttempts()
 	{ return attempts; }

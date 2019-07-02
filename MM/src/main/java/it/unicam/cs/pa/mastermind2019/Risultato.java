@@ -1,9 +1,10 @@
 package it.unicam.cs.pa.mastermind2019;
 
 /**
- * Interfaccia implementata da Vincitore e Perdente
+ * <b>Responsabilità:</b> Base da implementare per Vincitore e Perdente.
  * 
- * @author TeamTrustMe
+ * @author Michele Benedetti
+ * @author Daniele Moschini
  */
 public interface Risultato
 {

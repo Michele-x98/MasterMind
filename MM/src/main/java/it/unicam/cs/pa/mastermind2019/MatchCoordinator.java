@@ -4,13 +4,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * <b>Responsabilità</b>: Gestire la partita (Arbitro)
+ * <b>Responsabilità:</b> Gestire la partita (Arbitro).
  * 
- * @author TeamTrustMe
- * @param players    Giocatori
- * @param parameters Parametri usati nella partita
- * @param tentativi  Tentativi eseguiti
- * @param campo      Conserva il codice da decriptare
+ * @author Michele Benedetti
+ * @author Daniele Moschini
  */
 
 public class MatchCoordinator {
@@ -22,7 +19,7 @@ public class MatchCoordinator {
 	private ArrayList<Pioli> suggerimento;
 
 	/**
-	 * Metodo Cotruttore del MatchCoordinator
+	 * Metodo Cotruttore del MatchCoordinator.
 	 * 
 	 * @param parametri Parametri usati nella partita
 	 * @param campo     Conserva il codice da decriptare
@@ -38,17 +35,13 @@ public class MatchCoordinator {
 	}
 
 	/**
-	 * Con metodo play() le varie fasi della partita vengono svolte, inizialmente
-	 * prende l'array da decodificare e lo inserisce nel campo, poi prende dalle
-	 * impostazioni il numero di tentativi ed esegue nel do while il gioco tentativi
-	 * volte. Per finire se il giocatore 2 non ha vinto all'interno del while si ha
-	 * come valore di ritorno un perdente.
+	 * Con metodo play() le varie fasi della partita vengono svolte.
 	 * 
-	 * @return Il vincitore o il perdente della partita
+	 * @return Il vincitore o il perdente della partita.
 	 * @throws IOException               Eccezione che può essere lanciata da
-	 *                                   generateCode
+	 *                                   generateCode.
 	 * @throws IllegalParameterException Eccezione che può essere lanciata da
-	 *                                   generateCode
+	 *                                   generateCode.
 	 */
 	public Risultato play() throws IOException, IllegalParameterException {
 		campo.setDecodeArray(p1.generateCode(parameters));
@@ -70,10 +63,10 @@ public class MatchCoordinator {
 	}
 
 	/**
-	 * Metodo che si occupa del confronto tra un tentativo e il codice da decriptare
+	 * Metodo che si occupa del confronto tra un tentativo e il codice da decriptare.
 	 * 
-	 * @param tentativo ArrayList contenente il codice
-	 * @return Un ArrayList di Pioli contenente un suggerimento per l'utente
+	 * @param tentativo ArrayList contenente il codice.
+	 * @return Un ArrayList di Pioli contenente un suggerimento per l'utente.
 	 */
 	public ArrayList<Pioli> check(ArrayList<Integer> tentativo) {
 		// TODO AllowDuplicate da fare
@@ -102,19 +95,20 @@ public class MatchCoordinator {
 	/**
 	 * Metodo che controlla se un arrayList è vincente o no.
 	 * 
-	 * @param tentativo ArrayList in input
-	 * @return <b>True</b> Se l'{@link}ArrayList è vincente(pieno di
-	 *         <code>SIMBOLIPOSIZIONI</code>) <br>
-	 *         <b>False</b> Se l'{@link}ArrayList non è vincente
+	 * @param tentativo ArrayList in input.
+	 * @param campo Campo di gioco attuale.
+	 * @return <b>True</b> Se <code>tentativo</code> è vincente (pieno di
+	 *         <code>SIMBOLIPOSIZIONI</code>),
+	 *         <b>False</b> Se <code>tentativo</code> non è vincente.
 	 */
-	public static boolean isWinner(ArrayList<Pioli> tentativo, Campo cam) {
+	public static boolean isWinner(ArrayList<Pioli> tentativo, Campo campo) {
 		int count = 0;
 		for (Pioli c : tentativo) {
 			if (c.equals(Pioli.PC)) {
 				count++;
 			}
 		}
-		if (count == cam.lunghezza)
+		if (count == campo.lunghezza)
 			return true;
 		else
 			return false;

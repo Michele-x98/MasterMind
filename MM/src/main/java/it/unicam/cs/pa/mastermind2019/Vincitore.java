@@ -1,19 +1,19 @@
 package it.unicam.cs.pa.mastermind2019;
 
 /**
- * <b>Responsabilità </b>: Creare un Risultato in caso di vittoria
+ * <b>Responsabilità:</b> Creare un Risultato in caso di vittoria.
  * 
- * @author TeamTrustMe
- *
+ * @author Michele Benedetti
+ * @author Daniele Moschini
  */
 public class Vincitore implements Risultato
 {
 	private final String winnerId;
 
 	/**
-	 * Costruttore di Vincitore
+	 * Costruttore di Vincitore.
 	 * 
-	 * @param winnerId Identificatore del vincitore
+	 * @param winnerId Identificatore del vincitore.
 	 */
 	public Vincitore(String winnerId )
 	{
@@ -21,16 +21,16 @@ public class Vincitore implements Risultato
 	}
 
 	/**
-	 * Getter dell'ID
+	 * Override del metodo getID di player.
 	 * 
-	 * @return the winnerId
+	 * @return the winnerId.
 	 */
 	@Override
 	public String getID()
 	{ return winnerId; }
 
 	/**
-	 * Overriding del metodo toString per il vincitore.
+	 * Overriding del metodo toString di Player.
 	 */
 	public String toString()
 	{
