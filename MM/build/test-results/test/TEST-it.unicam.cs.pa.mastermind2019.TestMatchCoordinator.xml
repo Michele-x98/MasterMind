@@ -1,112 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="it.unicam.cs.pa.mastermind2019.TestMatchCoordinator" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-07-02T09:29:53" hostname="ComputerFigo" time="0.083">
+<testsuite name="it.unicam.cs.pa.mastermind2019.TestMatchCoordinator" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-07-02T15:45:29" hostname="DESKTOP-AV53NU8" time="0.123">
   <properties/>
-  <testcase name="testIsWinnerFalse" classname="it.unicam.cs.pa.mastermind2019.TestMatchCoordinator" time="0.005"/>
-  <testcase name="testCheckPC" classname="it.unicam.cs.pa.mastermind2019.TestMatchCoordinator" time="0.054"/>
-  <testcase name="testCheckPE" classname="it.unicam.cs.pa.mastermind2019.TestMatchCoordinator" time="0.009"/>
-  <testcase name="testIsWinnerTrue" classname="it.unicam.cs.pa.mastermind2019.TestMatchCoordinator" time="0.001"/>
-  <testcase name="testCheckBoth" classname="it.unicam.cs.pa.mastermind2019.TestMatchCoordinator" time="0.008"/>
-  <testcase name="testCheckNull" classname="it.unicam.cs.pa.mastermind2019.TestMatchCoordinator" time="0.005"/>
+  <testcase name="testIsWinnerFalse" classname="it.unicam.cs.pa.mastermind2019.TestMatchCoordinator" time="0.006"/>
+  <testcase name="testCheckPC" classname="it.unicam.cs.pa.mastermind2019.TestMatchCoordinator" time="0.079"/>
+  <testcase name="testCheckPE" classname="it.unicam.cs.pa.mastermind2019.TestMatchCoordinator" time="0.011"/>
+  <testcase name="testIsWinnerTrue" classname="it.unicam.cs.pa.mastermind2019.TestMatchCoordinator" time="0.0"/>
+  <testcase name="testCheckBoth" classname="it.unicam.cs.pa.mastermind2019.TestMatchCoordinator" time="0.012"/>
+  <testcase name="testCheckNull" classname="it.unicam.cs.pa.mastermind2019.TestMatchCoordinator" time="0.011"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+  <system-err><![CDATA[lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Creazione Player
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Creato un Bot
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Creazione Player
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Creato un Bot
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Creazione Player
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Creato un Bot
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Creazione Player
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Creato un Bot
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Creazione Player
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Creato un Bot
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Creazione Player
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Creato un Bot
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Creazione Player
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Creato un Bot
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Creazione Player
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Creato un Bot
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
-lug 02, 2019 11:29:53 AM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
+lug 02, 2019 5:45:29 PM it.unicam.cs.pa.mastermind2019.LogToFile messaggio
 INFO: Codice inserito nel campo
 ]]></system-err>
 </testsuite>
