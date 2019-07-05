@@ -4,10 +4,12 @@
 -quiet 
 -windowtitle 'MM API'
 'C:\\Users\\Michele\\git\\MasterMindGitHub\\MM\\src\\main\\java\\it\\unicam\\cs\\pa\\mastermind2019\\Bot.java'
+'C:\\Users\\Michele\\git\\MasterMindGitHub\\MM\\src\\main\\java\\it\\unicam\\cs\\pa\\mastermind2019\\BotCreator.java'
 'C:\\Users\\Michele\\git\\MasterMindGitHub\\MM\\src\\main\\java\\it\\unicam\\cs\\pa\\mastermind2019\\Campo.java'
 'C:\\Users\\Michele\\git\\MasterMindGitHub\\MM\\src\\main\\java\\it\\unicam\\cs\\pa\\mastermind2019\\ConsoleGame.java'
 'C:\\Users\\Michele\\git\\MasterMindGitHub\\MM\\src\\main\\java\\it\\unicam\\cs\\pa\\mastermind2019\\GameParameters.java'
 'C:\\Users\\Michele\\git\\MasterMindGitHub\\MM\\src\\main\\java\\it\\unicam\\cs\\pa\\mastermind2019\\Human.java'
+'C:\\Users\\Michele\\git\\MasterMindGitHub\\MM\\src\\main\\java\\it\\unicam\\cs\\pa\\mastermind2019\\HumanCreator.java'
 'C:\\Users\\Michele\\git\\MasterMindGitHub\\MM\\src\\main\\java\\it\\unicam\\cs\\pa\\mastermind2019\\IllegalParameterException.java'
 'C:\\Users\\Michele\\git\\MasterMindGitHub\\MM\\src\\main\\java\\it\\unicam\\cs\\pa\\mastermind2019\\InputOutput.java'
 'C:\\Users\\Michele\\git\\MasterMindGitHub\\MM\\src\\main\\java\\it\\unicam\\cs\\pa\\mastermind2019\\LogToFile.java'

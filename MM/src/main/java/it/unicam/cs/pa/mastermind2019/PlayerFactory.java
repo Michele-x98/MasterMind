@@ -24,15 +24,18 @@ public class PlayerFactory
 	{
 		LogToFile.messaggio("INFO","Creazione Player");
 		Player p;
+		BotCreator bot = Bot::new;
+		HumanCreator human = Human::new;
+		
 		if (c.equalsIgnoreCase("bot"))
 		{
 			LogToFile.messaggio("INFO","Creato un Bot");
-			p = new Bot();
+			p = bot.createBot();
 		}
 		else
 		{
 			LogToFile.messaggio("INFO","Creato un umano");
-			p = new Human(c);
+			p = human.createHuman(c);
 		}
 		return p;
 	}
