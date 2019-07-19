@@ -1,7 +1,17 @@
-package it.unicam.cs.pa.mastermind2019;
+package it.unicam.cs.pa.mastermind2019.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
+
+import it.unicam.cs.pa.mastermind2019.Perdente;
+import it.unicam.cs.pa.mastermind2019.Pioli;
+import it.unicam.cs.pa.mastermind2019.Player;
+import it.unicam.cs.pa.mastermind2019.Risultato;
+import it.unicam.cs.pa.mastermind2019.Vincitore;
+import it.unicam.cs.pa.mastermind2019.model.Campo;
+import it.unicam.cs.pa.mastermind2019.model.GameParameters;
+import it.unicam.cs.pa.mastermind2019.view.IllegalParameterException;
+import it.unicam.cs.pa.mastermind2019.view.InputOutput;
 
 /**
  * <b>Responsabilità:</b> Gestire la partita (Arbitro).
@@ -50,7 +60,6 @@ public class MatchCoordinator {
 		do {
 			campo.setCodeArray(p2.generateCode(parameters));
 			suggerimento = new ArrayList<>(check(campo.getArrayFromCode()));
-			System.out.println("Suggerimento" + suggerimento);
 			if (isWinner(suggerimento, this.campo)) {
 				esito = new Vincitore(this.p2.getID());
 				return esito;

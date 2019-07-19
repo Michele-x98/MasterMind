@@ -1,6 +1,8 @@
-package it.unicam.cs.pa.mastermind2019;
+package it.unicam.cs.pa.mastermind2019.model;
 
 import java.util.ArrayList;
+
+import it.unicam.cs.pa.mastermind2019.LogToFile;
 
 /**
  * <b>Responsabilità:</b> Gestire il campo di gioco.
@@ -37,7 +39,7 @@ public class Campo
 	 */
 	public ArrayList<Integer> getArrayFromDeco()
 	{
-		LogToFile.messaggio("INFO","Codice inserito nel campo");
+//		LogToFile.messaggio("INFO","Codice inserito nel campo");
 		return this.decodeArray; }
 
 	

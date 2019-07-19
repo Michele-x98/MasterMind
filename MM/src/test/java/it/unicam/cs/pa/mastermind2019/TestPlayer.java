@@ -7,6 +7,9 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
+import it.unicam.cs.pa.mastermind2019.model.GameParameters;
+import it.unicam.cs.pa.mastermind2019.view.IllegalParameterException;
+
 public class TestPlayer
 {
 

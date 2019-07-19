@@ -1,4 +1,4 @@
-package it.unicam.cs.pa.mastermind2019;
+package it.unicam.cs.pa.mastermind2019.view;
 
 /**
  *	Eccezione lanciata in caso vengano passati parametri sbagliati al {@code}generateCode()

@@ -7,6 +7,10 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
+import it.unicam.cs.pa.mastermind2019.controller.MatchCoordinator;
+import it.unicam.cs.pa.mastermind2019.model.Campo;
+import it.unicam.cs.pa.mastermind2019.model.GameParameters;
+
 public class TestMatchCoordinator {
 
 	@Test

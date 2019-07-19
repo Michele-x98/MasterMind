@@ -12,6 +12,8 @@ import java.util.logging.SimpleFormatter;
 /**
  * <b>Responsabilità:</b> Gestire i Log dell'applicazione.
  * 
+ * Da rifà quasi tutto
+ * 
  * @author Michele Benedetti
  * @author Daniele Moschini
  *
@@ -32,6 +34,7 @@ public class LogToFile
 	 * Metodo iniziale che controlla che la presenza della cartella dove creare il
 	 * file di Log, e poi imposta il nome del file di log utilizzando la data e
 	 * l'ora. Infine assegna al logger il fileHandler che deve utilizzare.
+	 * TODO pattern assoluto non va be
 	 */
 	public static void init()
 	{

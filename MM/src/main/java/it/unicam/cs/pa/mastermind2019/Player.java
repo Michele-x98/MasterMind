@@ -2,6 +2,9 @@ package it.unicam.cs.pa.mastermind2019;
 
 import java.util.ArrayList;
 
+import it.unicam.cs.pa.mastermind2019.model.GameParameters;
+import it.unicam.cs.pa.mastermind2019.view.IllegalParameterException;
+
 /**
  * <b>Responsabilità:</b> Impostare le basi per la strategia di un giocatore.
  * 
@@ -26,5 +29,8 @@ public interface Player
 	 * @throws IllegalParameterException Eccezione per parametri non regolari.
 	 */
 	public ArrayList<Integer> generateCode(GameParameters settings) throws IllegalParameterException;
+	
+	
+	public void getSuggerimento(ArrayList<Pioli> suggerimento);
 
 }

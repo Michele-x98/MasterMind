@@ -22,7 +22,7 @@ public class PlayerFactory
 	 */
 	public Player getPlayer(String c)
 	{
-		LogToFile.messaggio("INFO","Creazione Player");
+//		LogToFile.messaggio("INFO","Creazione Player");
 		Player p;
 		BotCreator bot = Bot::new;
 		HumanCreator human = Human::new;
@@ -35,7 +35,7 @@ public class PlayerFactory
 		else
 		{
 			LogToFile.messaggio("INFO","Creato un umano");
-			p = human.createHuman(c);
+			p = human.creatHuman(c);
 		}
 		return p;
 	}

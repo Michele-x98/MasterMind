@@ -1,6 +1,8 @@
-package it.unicam.cs.pa.mastermind2019;
+package it.unicam.cs.pa.mastermind2019.model;
 
 import java.io.IOException;
+
+import it.unicam.cs.pa.mastermind2019.LogToFile;
 
 /**
  * <b>Responsabilità:</b> Gestire i parametri di gioco.
@@ -11,11 +13,11 @@ import java.io.IOException;
 
 public class GameParameters
 {
-	final boolean duplicateAllow;
-	int codeLenght;
-	int attempts;
-	final int minCodValue = 1;
-	int maxCodValue;
+//	private final boolean duplicateAllow;
+	private int codeLenght;
+	private int attempts;
+	private final int minCodValue = 1;
+	private int maxCodValue;
 
 	/**
 	 * Costruttore con valori in ingresso. Il numero di tentativi e il numero
@@ -32,7 +34,7 @@ public class GameParameters
 							boolean duplicate ) throws IOException
 	{
 		this.codeLenght = lunghezza;
-		this.duplicateAllow = duplicate;
+//		this.duplicateAllow = duplicate;
 
 		if (codeLenght == 4)
 		{
@@ -49,7 +51,7 @@ public class GameParameters
 			this.attempts = 21;
 			this.maxCodValue = 10;
 		}
-		LogToFile.messaggio("CONFIG", "Parametri di gioco impostati");
+//		LogToFile.messaggio("CONFIG", "Parametri di gioco impostati");
 	}
 
 	/**
@@ -60,7 +62,7 @@ public class GameParameters
 	public GameParameters()
 	{
 		this.codeLenght = 4;
-		this.duplicateAllow = false;
+//		this.duplicateAllow = false;
 		this.attempts = 9;
 		this.maxCodValue = 6;
 	}
@@ -75,12 +77,13 @@ public class GameParameters
 	 */
 	public boolean isValidNumber(int num)
 	{
-		LogToFile.messaggio("INFO", "Effettuato controllo sulla correttezza del numero");
+//		LogToFile.messaggio("INFO", "Effettuato controllo sulla correttezza del numero");
 		return num >= this.minCodValue && num <= this.maxCodValue;
 	}
 
 	/**
 	 * Metodo che restituisce la lunghezze del codice da decodificare.
+	 * Metodo di lettura utilizzabile dalla vista.
 	 * 
 	 * @return lunghezza codice.
 	 */

@@ -1,6 +1,14 @@
-package it.unicam.cs.pa.mastermind2019;
+package it.unicam.cs.pa.mastermind2019.controller;
 
 import java.io.IOException;
+
+import it.unicam.cs.pa.mastermind2019.LogToFile;
+import it.unicam.cs.pa.mastermind2019.Player;
+import it.unicam.cs.pa.mastermind2019.PlayerFactory;
+import it.unicam.cs.pa.mastermind2019.model.Campo;
+import it.unicam.cs.pa.mastermind2019.model.GameParameters;
+import it.unicam.cs.pa.mastermind2019.view.IllegalParameterException;
+import it.unicam.cs.pa.mastermind2019.view.InputOutput;
 
 /**
  * <b>Responsabilità:</b> Creare una partita ed avviarla.
@@ -45,7 +53,7 @@ public class ConsoleGame
 			GameParameters settings = new GameParameters(InputOutput.prendiLunghezza(), InputOutput.prendiDuplicati());
 			Campo terreno = new Campo(settings);
 			MatchCoordinator arbitro = new MatchCoordinator(settings, terreno, this.giocatore1, this.giocatore2);
-			LogToFile.messaggio("INFO", "PARTITA INIZIATA !");
+//			LogToFile.messaggio("INFO", "PARTITA INIZIATA !");
 			System.out.println(arbitro.play());
 		}
 		while (InputOutput.matchAgain());
@@ -61,11 +69,11 @@ public class ConsoleGame
 
 	public static void main(String argv[]) throws IOException, IllegalParameterException
 	{
-		LogToFile.init();
+//		LogToFile.init();
 		InputOutput.stampaLogo();
 		PlayerFactory player1 = new PlayerFactory();
 		PlayerFactory player2 = new PlayerFactory();
-		ConsoleGame direttore = new ConsoleGame(player1.getPlayer(InputOutput.typePlayerCodeMaker()), player2.getPlayer(InputOutput.typePlayerCodeBreaker()));
+		ConsoleGame direttore = new ConsoleGame(player1.getPlayer(InputOutput.typePlayerSelection()), player2.getPlayer(InputOutput.typePlayerCodeBreaker()));
 		direttore.start();
 	}
 }

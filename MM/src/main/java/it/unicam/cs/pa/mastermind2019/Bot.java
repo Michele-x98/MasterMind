@@ -3,6 +3,8 @@ package it.unicam.cs.pa.mastermind2019;
 import java.util.ArrayList;
 import java.util.Random;
 
+import it.unicam.cs.pa.mastermind2019.model.GameParameters;
+
 /**
  * <b>Responsabilità:</b> Gestire un Player indipendente (Bot).
  * 
@@ -54,7 +56,7 @@ public class Bot implements Player {
 			code.add(k);
 		}
 		System.out.println(code);
-		LogToFile.messaggio("INFO","Codice generato dal Bot");
+//		LogToFile.messaggio("INFO","Codice generato dal Bot");
 		return code;
 	}
 
@@ -66,7 +68,7 @@ public class Bot implements Player {
 
 	@Override
 	public String getID() {
-		LogToFile.messaggio("INFO","Stringa ID del Bot restituita");
+//		LogToFile.messaggio("INFO","Stringa ID del Bot restituita");
 		return ID;
 	}
 
