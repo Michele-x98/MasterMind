@@ -8,16 +8,16 @@ package it.unicam.cs.pa.mastermind2019;
  */
 public class Vincitore implements Risultato
 {
-	private final String winnerId;
+	private final String vincitoreID;
 
 	/**
 	 * Costruttore di Vincitore.
 	 * 
-	 * @param winnerId Identificatore del vincitore.
+	 * @param vincitore Identificatore del vincitore.
 	 */
-	public Vincitore(String winnerId )
+	public Vincitore(String vincitore )
 	{
-		this.winnerId = winnerId;
+		this.vincitoreID = vincitore;
 	}
 
 	/**
@@ -27,7 +27,7 @@ public class Vincitore implements Risultato
 	 */
 	@Override
 	public String getID()
-	{ return winnerId; }
+	{ return vincitoreID; }
 
 	/**
 	 * Overriding del metodo toString di Player.
@@ -36,7 +36,7 @@ public class Vincitore implements Risultato
 	{
 //		LogToFile.messaggio("INFO","Stampa del giocatore vincente");
 		return "Il giocatore " +
-				winnerId +
+				vincitoreID +
 				" ha vinto!";
 	}
 

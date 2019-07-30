@@ -8,3 +8,4 @@ public enum PlayerType
 	BOT,HUMAN,
 	//Forse aggiunta di bot medio e IA con knut.
 }
+

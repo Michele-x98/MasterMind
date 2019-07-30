@@ -2,11 +2,17 @@ package it.unicam.cs.pa.mastermind2019.view;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.Observable;
+import java.util.Observer;
+import java.util.Random;
 
 import it.unicam.cs.pa.mastermind2019.Pioli;
-import it.unicam.cs.pa.mastermind2019.Player;
 import it.unicam.cs.pa.mastermind2019.PlayerType;
+import it.unicam.cs.pa.mastermind2019.model.Campo;
+import it.unicam.cs.pa.mastermind2019.model.GameParameters;
 
 /**
  * <b>Responsabilità:</b> Interfacciarsi con l'utente. <b>Fonte:</b>
@@ -16,18 +22,22 @@ import it.unicam.cs.pa.mastermind2019.PlayerType;
  * 
  */
 
-public class InputOutput implements MMView
+@SuppressWarnings("deprecation")
+public class InputOutput implements MMView,Observer
 {
+	private PrintStream output;
+	private BufferedReader input;
+	GameParameters currentParameters;
+	Campo terreno;
 
-	BufferedReader input = null;
 
-	/**
-	 * Costruttore vuoto.
-	 */
-	public InputOutput()
+	public InputOutput(GameParameters parametri, Campo terreno)
 	{
+		this.input =new BufferedReader(new InputStreamReader(System.in));
+		this.output = System.out;
+		this.currentParameters = parametri;
+		this.terreno = terreno;
 	}
-
 	@Override
 	public int prendiLunghezza()
 	{
@@ -36,24 +46,26 @@ public class InputOutput implements MMView
 			String s = null;
 			try
 			{
-				System.out.println("Inserisci la lunghezza del codice da decifrare fra 4, 6 e 8 numeri: ");
+				output.println("Inserisci la lunghezza del codice da decifrare fra 4, 6 e 8 numeri: ");
 				s = input.readLine();
 				if (s.equals("4") || s.equals("6") || s.equals("8"))
 				{
-					System.out.println("Il codice da decifrare è lungo: " + s);
+					output.println("Il codice da decifrare è lungo: " +
+										s);
 					return Integer.parseInt(s);
 				}
-				else throw new IllegalParameterException();
+				else
+					throw new IllegalParameterException();
 			}
 			catch (IOException e)
 			{
 				System.err.println("Insersci il numero 4, 6 o 8!");
 			}
-			catch(IllegalParameterException e)
+			catch (IllegalParameterException e)
 			{
 				System.err.println("Insersci il numero 4, 6 o 8!");
 			}
-			
+
 		}
 	}
 
@@ -67,35 +79,32 @@ public class InputOutput implements MMView
 	{
 		while (true)
 		{
-//			LogToFile.messaggio("INFO", "Richiesta duplicati");
-			System.out.println("Vuoi duplicati nel codice?: (S/N)");
+			output.println("Vuoi duplicati nel codice?: (S/N)");
 			String s;
 			try
 			{
 				s = input.readLine();
 				if (s.equalsIgnoreCase("N"))
 				{
-					System.out.println("Non ci saranno duplicati");
-//					LogToFile.messaggio("INFO", "Selezionata la partita senza codice duplicato");
+					output.println("Non ci saranno duplicati");
 					return false;
 				}
 				else if (s.equalsIgnoreCase("S"))
 				{
-					System.out.println("Il codice potrà contenere duplicati");
-//					LogToFile.messaggio("INFO", "Selezionata la partita con codice duplicato");
+					output.println("Il codice potrà contenere duplicati");
 					return true;
 				}
-				else throw new IllegalParameterException();
+				else
+					throw new IllegalParameterException();
 			}
 			catch (IOException e)
 			{
 				System.err.println("Inserisci S o N!");
 			}
-			catch(IllegalParameterException e)
+			catch (IllegalParameterException e)
 			{
 				System.err.println("Inserisci S o N!");
 			}
-
 
 		}
 	}
@@ -106,6 +115,41 @@ public class InputOutput implements MMView
 	 * 
 	 * @return True Se il giocatore gioca ancora, altrimenti False.
 	 */
+	@Override
+	public boolean matchAgain()
+	{
+		while (true)
+		{
+			output.println("Giochi ancora? (S/N)");
+			String str;
+			try
+			{
+				str = input.readLine();
+				if (str.equalsIgnoreCase("N"))
+				{
+					output.println("Arrivederci");
+					return false;
+				}
+				else if (str.equalsIgnoreCase("S"))
+				{
+					output.println("Ricominciamo!");
+					return true;
+				}
+				else
+					throw new IllegalParameterException();
+			}
+			catch (IOException e)
+			{
+				output.println("Inserisci S o N!");
+			}
+			catch (IllegalParameterException e)
+			{
+				output.println("Inserisci S o N!");
+			}
+
+		}
+	}
+
 
 	/**
 	 * Prende i tipi di giocatore da tastiera e li da come valore di ritorno in una
@@ -118,13 +162,16 @@ public class InputOutput implements MMView
 	public String typePlayerSelection(boolean i)
 	{
 		String code = null;
-		if(i)
+		if (i)
 			code = "CodeMaker";
 		else
-			code ="CodeBreaker";
+			code = "CodeBreaker";
 		while (true)
 		{
-			System.out.println("Inserisci chi vuoi che sia il "+ code + ":"+ PlayerType.values());
+			output.println("Inserisci chi vuoi che sia il " +
+								code +
+								":" +
+								PlayerType.values().toString());
 			String c;
 			try
 			{
@@ -135,13 +182,17 @@ public class InputOutput implements MMView
 			}
 			catch (IOException e)
 			{
-				System.out.println("Tipo di "+ code +" non valido.");
+				output.println("Tipo di " +
+									code +
+									" non valido.");
 			}
 			catch (IllegalParameterException e)
 			{
-				System.out.println("Tipo di "+ code +" non valido.");
+				output.println("Tipo di " +
+									code +
+									" non valido.");
 			}
-				
+
 		}
 	}
 
@@ -151,18 +202,7 @@ public class InputOutput implements MMView
 	 * 
 	 * @return Tipo del giocatore.
 	 */
-	
 
-	/**
-	 * Stampa il numero in ingresso.
-	 * 
-	 * @param num Numero da stampare.
-	 */
-	public static void printNumber(int num)
-	{
-		System.out.println("Numero inserito: " +
-							num);
-	}
 
 	/**
 	 * Prende un numero e lo da come valore di ritorno.
@@ -170,55 +210,45 @@ public class InputOutput implements MMView
 	 * @param max Valore massimo.
 	 * @return Il numero preso da tastiera.
 	 */
-	public int getC(int max)
+	@SuppressWarnings("null")
+	@Override
+	public ArrayList<Integer> getCombination()
 	{
-		int num = 0;
 		boolean validate = false;
+		ArrayList<Integer> codice;
 		do
 		{
-			try
-			{
-				System.out.print("Inserisci un numero compreso tra 1 e " +
-									max +
-									" : ");
-				try
+		String app = null;
+		codice = new ArrayList<Integer>();
+		try 
+		{
+			output.print("Inserisci una sequenza di "+ 
+							currentParameters.getCodeLenght()+
+							" valori, con numeri compresi tra 1 e " +
+							currentParameters.getMaxCodValue() + " : ");
+			app = input.readLine();
+			if(app.length() != currentParameters.getCodeLenght())
+				throw new IllegalParameterException();
+			char[] app2 = app.toCharArray();
+			for(int i = 0; i< app2.length;i++)
 				{
-					num = input.read();
+					if(Character.getNumericValue(app2[i])>0 && Character.getNumericValue(app2[i])< currentParameters.getMaxCodValue())
+							codice.add(Character.getNumericValue(app2[i]));
+					else throw new IllegalParameterException();
 				}
-				catch (IOException e)
-				{
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				if (num >= 1 && num <= max)
-					validate = true;
-				else
-				{
-
-					System.err.println("Il numero deve essere compreso tra 1 e " +
-										max +
-										" ,prova di nuovo \n");
-				}
-
-			}
-			catch (NumberFormatException e)
-			{
-				System.err.println("Il valore inserito non è un numero, prova di nuovo");
-			}
+			validate = true;
 		}
-		while (!validate);
-		return num;
-	}
-
-	/**
-	 * Stampa il numero in ingresso.
-	 * 
-	 * @param num Tentativi rimasti.
-	 */
-	public static void getAttempts(int num)
-	{
-		System.out.println("Tentativi rimasti: " +
-							num);
+		catch (IllegalParameterException e)
+		{
+			System.err.println("Il numero deve essere compreso tra 1 e " +currentParameters.getMaxCodValue() +" ,prova di nuovo \n");
+		}
+		catch (IOException e)
+		{
+			System.err.println("Il numero deve essere compreso tra 1 e " +currentParameters.getMaxCodValue() +" ,daje de tacco \n");
+		}
+		}while (!validate);
+		output.println("Sequenza di valori accettata");
+		return codice;
 	}
 
 	/**
@@ -226,41 +256,6 @@ public class InputOutput implements MMView
 	 * 
 	 * @param sugg ArrayList di pioli suggerimento.
 	 */
-	public static void getSuggerimento(ArrayList<Pioli> sugg)
-	{
-//		LogToFile.messaggio("INFO", "Stampato suggerimento");
-		System.out.println("Array di sugerimento: " +
-							sugg);
-	}
-
-	@Override
-	public boolean matchAgain()
-	{
-		while (true)
-		{
-			System.out.println("Giochi ancora? (S/N)");
-			String str = InputOutput.readLine();
-			if (str.equalsIgnoreCase("N"))
-			{
-				System.out.println("Arrivederci");
-//				LogToFile.messaggio("INFO", "PARTITA TERMINATA");
-				return false;
-			}
-			if (str.equalsIgnoreCase("S"))
-			{
-				System.out.println("Ricominciamo!");
-//				LogToFile.messaggio("INFO", "PARTITA RICOMINCIATA");
-				return true;
-			}
-			System.out.println("Inserisci S o N!");
-		}
-	}
-
-	@Override
-	public ArrayList<Integer> getAttempt()
-	{ // TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	public void gameInit()
@@ -286,16 +281,44 @@ public class InputOutput implements MMView
 	}
 
 	@Override
-	public Player getPlayerType()
-	{ // TODO Auto-generated method stub
-		return null;
+	public void attemptResault(ArrayList<Pioli> sugg)
+	{
+		output.println(sugg);
+
 	}
 
 	@Override
-	public void attemptResault(ArrayList<Pioli> sugg)
+	public void update(	Observable o,
+						Object arg)
 	{
 		// TODO Auto-generated method stub
-
+		
 	}
+
+	@Override
+	public void getSuggerimento()
+	{
+		terreno.getLastSuggerimento();
+	}
+	@Override
+	public ArrayList<Integer> botGetCombination()
+	{
+		
+		ArrayList<Integer> code = new ArrayList<Integer>();
+
+		while (!(code.size() == currentParameters.getCodeLenght())) {
+			Random random = new Random();
+			int n = currentParameters.getMaxCodValue() - currentParameters.getMinCodValue();
+			int k = random.nextInt(n) + currentParameters.getMinCodValue();
+			if (!currentParameters.isDuplicateAllow())
+				while (code.contains(k)) {
+					k = random.nextInt(n) + currentParameters.getMinCodValue();
+				}
+			code.add(k);
+		}
+		output.println(code);
+		return code;
+	}
+
 
 }

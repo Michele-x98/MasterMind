@@ -1,9 +1,9 @@
 package it.unicam.cs.pa.mastermind2019;
 
 import java.util.ArrayList;
-import java.util.Random;
 
-import it.unicam.cs.pa.mastermind2019.model.GameParameters;
+import it.unicam.cs.pa.mastermind2019.view.IllegalParameterException;
+import it.unicam.cs.pa.mastermind2019.view.MMView;
 
 /**
  * <b>Responsabilità:</b> Gestire un Player indipendente (Bot).
@@ -15,6 +15,7 @@ import it.unicam.cs.pa.mastermind2019.model.GameParameters;
 public class Bot implements Player {
 
 	public String ID;
+	MMView currentView;
 
 	/**
 	 * Costruttore con una stringa in ingresso, assegna alla variabile
@@ -22,7 +23,9 @@ public class Bot implements Player {
 	 * 
 	 * @param id Identificatore dell'oggetto.
 	 */
-	public Bot(String id) {
+	public Bot(MMView view,
+				String id ) {
+		this.currentView =view;
 		this.ID = id;
 	}
 
@@ -30,9 +33,7 @@ public class Bot implements Player {
 	 * Costruttore senza parametri in ingresso, il nome di default di un Bot è
 	 * "Bot".
 	 */
-	public Bot() {
-		this.ID = "Bot";
-	}
+
 
 	/**
 	 * Metodo che genera un codice random per il bot.
@@ -41,25 +42,11 @@ public class Bot implements Player {
 	 * @return Array da decodificare o array da controllare.
 	 * 
 	 **/
-	public ArrayList<Integer> generateCode(GameParameters settings) {
-		
-		ArrayList<Integer> code = new ArrayList<Integer>();
-
-		while (!(code.size() == settings.codeLenght)) {
-			Random random = new Random();
-			int n = settings.maxCodValue - settings.minCodValue;
-			int k = random.nextInt(n) + settings.minCodValue;
-			if (!settings.duplicateAllow)
-				while (code.contains(k)) {
-					k = random.nextInt(n) + settings.minCodValue;
-				}
-			code.add(k);
-		}
-		System.out.println(code);
-//		LogToFile.messaggio("INFO","Codice generato dal Bot");
-		return code;
+	@Override
+	public ArrayList<Integer> generateCode() throws IllegalParameterException
+	{
+		return currentView.botGetCombination();
 	}
-
 	/**
 	 * Getter di <code>ID</code>.
 	 * 
@@ -71,5 +58,10 @@ public class Bot implements Player {
 //		LogToFile.messaggio("INFO","Stringa ID del Bot restituita");
 		return ID;
 	}
+
+
+
+	@Override
+	public void getSuggerimento(ArrayList<Pioli> suggerimento){}
 
 }

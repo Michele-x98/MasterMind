@@ -2,7 +2,6 @@ package it.unicam.cs.pa.mastermind2019.model;
 
 import java.io.IOException;
 
-import it.unicam.cs.pa.mastermind2019.LogToFile;
 
 /**
  * <b>Responsabilità:</b> Gestire i parametri di gioco.
@@ -13,10 +12,13 @@ import it.unicam.cs.pa.mastermind2019.LogToFile;
 
 public class GameParameters
 {
-//	private final boolean duplicateAllow;
+//	TODO chiedere al prof se fare un'interfaccia per l'espandibiità del model è utile o no
+	private boolean duplicateAllow;
+
 	private int codeLenght;
 	private int attempts;
 	private final int minCodValue = 1;
+
 	private int maxCodValue;
 
 	/**
@@ -34,8 +36,6 @@ public class GameParameters
 							boolean duplicate ) throws IOException
 	{
 		this.codeLenght = lunghezza;
-//		this.duplicateAllow = duplicate;
-
 		if (codeLenght == 4)
 		{
 			this.attempts = 9;
@@ -51,7 +51,6 @@ public class GameParameters
 			this.attempts = 21;
 			this.maxCodValue = 10;
 		}
-//		LogToFile.messaggio("CONFIG", "Parametri di gioco impostati");
 	}
 
 	/**
@@ -97,5 +96,11 @@ public class GameParameters
 	 */
 	public int getAttempts()
 	{ return attempts; }
+	public int getMinCodValue()
+	{ return minCodValue; }
+	public int getMaxCodValue()
+	{ return maxCodValue; }
+	public boolean isDuplicateAllow()
+	{ return duplicateAllow; }
 
 }

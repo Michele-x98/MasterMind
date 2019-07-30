@@ -3,7 +3,6 @@ package it.unicam.cs.pa.mastermind2019;
 import java.util.ArrayList;
 
 import it.unicam.cs.pa.mastermind2019.view.IllegalParameterException;
-import it.unicam.cs.pa.mastermind2019.view.InputOutput;
 import it.unicam.cs.pa.mastermind2019.view.MMView;
 
 /**
@@ -26,7 +25,7 @@ public class Human implements Player
 	public Human(MMView view)
 	{
 		this.ID = "DefaultID";
-		this.tentativi = null;
+		this.tentativi = new ArrayList<ArrayList<Integer>>();
 		this.currentView = view;
 	}
 
@@ -36,14 +35,19 @@ public class Human implements Player
 	 * 
 	 * @param id Identificatore dell'oggetto.
 	 */
-	public Human(String id )
+	public Human(	MMView view,
+					String id )
 	{
 		this.ID = id;
+		this.tentativi =new ArrayList<ArrayList<Integer>>();
+		this.currentView = view;
 	}
-/**
- * Override del metodo gedID di Player.
- * @return ID dell'Human.
- */
+
+	/**
+	 * Override del metodo gedID di Player.
+	 * 
+	 * @return ID dell'Human.
+	 */
 	@Override
 	public String getID()
 	{ return ID; }
@@ -55,52 +59,18 @@ public class Human implements Player
 	 * @return ArrayList riempito dal giocatore.
 	 * @throws IllegalParameterException Eccezione per parametri non regolari.
 	 */
-
-	public ArrayList<Integer> generateCode(GameParameters settings) throws IllegalParameterException
+	@Override
+	public ArrayList<Integer> generateCode() throws IllegalParameterException
 	{
-		int c;
-		ArrayList<Integer> code = new ArrayList<Integer>();
-
-		
-		while (!(code.size() == settings.codeLenght))
-		{
-			try
-			{
-				c = InputOutput.getC(settings.maxCodValue);
-				if (!settings.isValidNumber(c))
-					throw new IllegalParameterException();
-				else if (!(settings.duplicateAllow) && code.contains(c))
-					throw new IllegalParameterException();
-				code.add(c);
-				InputOutput.printNumber(c);
-
-//				LogToFile.messaggio("INFO", "Codice generato dal player interattivo");
-
-
-			}
-			catch (IllegalParameterException e)
-			{
-//				LogToFile.messaggio("WARNING", "Inserito un numero non valido");
-				System.err.println("Numero inserito non valido");
-			}
-			
-		}
+		ArrayList<Integer> code = currentView.getCombination();
 		tentativi.add(code);
 		return code;
 	}
 
 	@Override
-	public ArrayList<Integer> generateCode(it.unicam.cs.pa.mastermind2019.model.GameParameters settings) throws IllegalParameterException
-	{
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public void getSuggerimento(ArrayList<Pioli> suggerimento)
 	{
-		// TODO Auto-generated method stub
-		
+		currentView.getSuggerimento();
 	}
 
 }

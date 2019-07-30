@@ -3,7 +3,6 @@ package it.unicam.cs.pa.mastermind2019.view;
 import java.util.ArrayList;
 
 import it.unicam.cs.pa.mastermind2019.Pioli;
-import it.unicam.cs.pa.mastermind2019.Player;
 
 public interface MMView
 {
@@ -17,14 +16,16 @@ public interface MMView
 
 	public boolean matchAgain();
 
-	public Player getPlayerType();
-
 	public void attemptResault(ArrayList<Pioli> sugg);
 
-	public ArrayList<Integer> getAttempt();
+	public ArrayList<Integer> getCombination();
 
 	public void gameInit();
 	
 	public String typePlayerSelection(boolean i);
 
+	public void getSuggerimento();
+	
+	public ArrayList<Integer> botGetCombination();
+	
 }

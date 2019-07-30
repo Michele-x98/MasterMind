@@ -17,11 +17,11 @@ public class TestMatchCoordinator {
 	public void testCheckPC() throws IOException {
 		
 		PlayerFactory p = new PlayerFactory();
-		Player bot = p.getPlayer("bot");
-		Player chicco = p.getPlayer("Bot");
+//		Player bot = p.getPlayer("bot");
+//		Player chicco = p.getPlayer("Bot");
 		GameParameters settings = new GameParameters(6, false);
 		Campo cam = new Campo(settings);
-		MatchCoordinator arbitro = new MatchCoordinator(settings, cam, bot, chicco);
+//		MatchCoordinator arbitro = new MatchCoordinator(settings, cam, bot, chicco);
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
 		app.add(2);

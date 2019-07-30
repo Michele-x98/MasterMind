@@ -11,7 +11,7 @@ import it.unicam.cs.pa.mastermind2019.Vincitore;
 import it.unicam.cs.pa.mastermind2019.model.Campo;
 import it.unicam.cs.pa.mastermind2019.model.GameParameters;
 import it.unicam.cs.pa.mastermind2019.view.IllegalParameterException;
-import it.unicam.cs.pa.mastermind2019.view.InputOutput;
+import it.unicam.cs.pa.mastermind2019.view.MMView;
 
 /**
  * <b>Responsabilità:</b> Gestire la partita (Arbitro).
@@ -23,6 +23,7 @@ import it.unicam.cs.pa.mastermind2019.view.InputOutput;
 public class MatchCoordinator {
 	private Player p1;
 	private Player p2;
+	private MMView vista;
 	private GameParameters parameters;
 	private int tentativi;
 	private Campo campo;
@@ -36,8 +37,9 @@ public class MatchCoordinator {
 	 * @param uno       Primo giocatore della partita
 	 * @param due       Secondo giocatore della partita
 	 */
-	public MatchCoordinator(GameParameters parametri, Campo campo, Player uno, Player due) {
+	public MatchCoordinator(GameParameters parametri, Campo campo,MMView vista, Player uno, Player due) {
 		this.parameters = parametri;
+		this.vista = vista;
 		this.p1 = uno;
 		this.p2 = due;
 		this.tentativi = 0;
@@ -53,19 +55,20 @@ public class MatchCoordinator {
 	 * @throws IllegalParameterException Eccezione che può essere lanciata da
 	 *                                   generateCode.
 	 */
-	public Risultato play() throws IOException, IllegalParameterException {
-		campo.setDecodeArray(p1.generateCode(parameters));
-		this.tentativi = parameters.attempts;
+	public Risultato play() throws IllegalParameterException {
+		campo.setDecodeArray(p1.generateCode());
+		this.tentativi = parameters.getAttempts();
 		Risultato esito;
 		do {
-			campo.setCodeArray(p2.generateCode(parameters));
+			campo.setCodeArray(p2.generateCode());
 			suggerimento = new ArrayList<>(check(campo.getArrayFromCode()));
+			vista.attemptResault(suggerimento);
+			campo.addSuggerimento(suggerimento);
 			if (isWinner(suggerimento, this.campo)) {
 				esito = new Vincitore(this.p2.getID());
 				return esito;
 			}
 			this.tentativi--;
-			InputOutput.getAttempts(this.tentativi);
 
 		} while (tentativi > 0);
 		return esito = new Perdente(this.p2.getID());

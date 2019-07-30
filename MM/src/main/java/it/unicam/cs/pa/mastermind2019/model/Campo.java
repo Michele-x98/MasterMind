@@ -1,8 +1,10 @@
 package it.unicam.cs.pa.mastermind2019.model;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
-import it.unicam.cs.pa.mastermind2019.LogToFile;
+import it.unicam.cs.pa.mastermind2019.Pioli;
+
 
 /**
  * <b>Responsabilità:</b> Gestire il campo di gioco.
@@ -15,7 +17,8 @@ public class Campo
 {
 	private ArrayList<Integer> decodeArray;
 	private ArrayList<Integer> codeArray;
-	int lunghezza;
+	private Stack<ArrayList<Pioli>> suggerimenti;
+	public int lunghezza;
 
 	/**
 	 * Costruttore con un oggetto di tipo GameParameters in ingresso.
@@ -24,14 +27,23 @@ public class Campo
 	 */
 	public Campo(GameParameters settings )
 	{
-		this.lunghezza = settings.codeLenght;
+		this.lunghezza = settings.getCodeLenght();
 		this.decodeArray = new ArrayList<Integer>();
 		this.codeArray = new ArrayList<Integer>();
+		this.suggerimenti = new Stack<ArrayList<Pioli>>();
 	}
 
 
 //	 ****************** GETTERS ******************
 	
+	public ArrayList<Pioli> getLastSuggerimento()
+	{ return suggerimenti.peek(); }
+	
+	public void addSuggerimento(ArrayList<Pioli> sugg)
+	{
+		suggerimenti.add(sugg);
+	}
+
 	/**
 	 * Getter della variabile <code>decodeArray</code>.
 	 * 
