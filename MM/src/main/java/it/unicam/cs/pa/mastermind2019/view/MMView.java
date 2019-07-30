@@ -27,5 +27,7 @@ public interface MMView
 	public void getSuggerimento();
 	
 	public ArrayList<Integer> botGetCombination();
+
+	public void vediCodice(ArrayList<Integer> arrayFromCode);
 	
 }

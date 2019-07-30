@@ -61,6 +61,7 @@ public class MatchCoordinator {
 		Risultato esito;
 		do {
 			campo.setCodeArray(p2.generateCode());
+			vista.vediCodice(campo.getArrayFromCode());
 			suggerimento = new ArrayList<>(check(campo.getArrayFromCode()));
 			vista.attemptResault(suggerimento);
 			campo.addSuggerimento(suggerimento);
@@ -81,9 +82,13 @@ public class MatchCoordinator {
 	 * @return Un ArrayList di Pioli contenente un suggerimento per l'utente.
 	 */
 	public ArrayList<Pioli> check(ArrayList<Integer> tentativo) {
-		
-		ArrayList<Integer> tempCode = campo.getArrayFromDeco();
+		ArrayList<Integer> codice = campo.getArrayFromDeco();
         ArrayList<Integer >tempNums = tentativo;
+        ArrayList<Integer> tempCode = new ArrayList<>(); 
+        for (int i=0; i < parameters.getCodeLenght(); i++) {
+            tempCode.add(codice.get(i));
+        }
+        
 		ArrayList<Pioli> checkResult = new ArrayList<Pioli>();
         int rightNumRightPlace = 0;
         
@@ -111,8 +116,7 @@ public class MatchCoordinator {
                 }
             }
         }
-
-
+ 
 		for (int i = 0; i < rightNumRightPlace; i++) {
 			checkResult.add(Pioli.PC);
 		}

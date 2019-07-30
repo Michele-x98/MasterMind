@@ -71,7 +71,10 @@ public class Campo
 	 * @param arrayList Nuovo <code>decodeArray</code>.
 	 */
 	public void setDecodeArray(ArrayList<Integer> arrayList)
-	{ this.decodeArray = arrayList; }
+	{ this.decodeArray = arrayList;
+	//DEBUG
+	System.out.println("DEBUG: "+arrayList);
+	}
 
 	
 	/**

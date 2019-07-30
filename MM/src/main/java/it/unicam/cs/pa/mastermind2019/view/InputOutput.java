@@ -316,8 +316,12 @@ public class InputOutput implements MMView,Observer
 				}
 			code.add(k);
 		}
-		output.println(code);
 		return code;
+	}
+	@Override
+	public void vediCodice(ArrayList<Integer> arrayFromCode)
+	{
+	output.println(arrayFromCode);
 	}
 
 
