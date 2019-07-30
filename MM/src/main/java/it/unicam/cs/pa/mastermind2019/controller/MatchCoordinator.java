@@ -81,8 +81,52 @@ public class MatchCoordinator {
 	 * @return Un ArrayList di Pioli contenente un suggerimento per l'utente.
 	 */
 	public ArrayList<Pioli> check(ArrayList<Integer> tentativo) {
-		// TODO AllowDuplicate da fare
+		
+		ArrayList<Integer> tempCode = campo.getArrayFromDeco();
+        ArrayList<Integer >tempNums = tentativo;
 		ArrayList<Pioli> checkResult = new ArrayList<Pioli>();
+        int rightNumRightPlace = 0;
+        
+        for (int i=0; i < parameters.getCodeLenght(); i++) {
+            if (tempCode.get(i)==tempNums.get(i)) 
+            {
+            	rightNumRightPlace++;
+                tempCode.set(i,-1);
+                tempNums.set(i,-1);
+            }
+        }
+		int rightNumWrongPlace = 0;
+        for (int i=0; i < parameters.getCodeLenght() ; i++) {
+            if (tempCode.get(i)==-1) {
+                continue;
+            }
+            for (int j=0;j < parameters.getCodeLenght(); j++) {
+                if (tempNums.get(j)==-1) {
+                    continue;
+                }
+                if (tempCode.get(i)==tempNums.get(j)) {
+                    rightNumWrongPlace++;
+                    tempCode.set(i,-1);
+                    tempNums.set(j,-1);
+                }
+            }
+        }
+
+
+		for (int i = 0; i < rightNumRightPlace; i++) {
+			checkResult.add(Pioli.PC);
+		}
+		for (int i = 0; i < rightNumWrongPlace; i++) {
+			checkResult.add(Pioli.PE);
+		}
+		return checkResult;
+    }
+		
+		
+		
+		
+	/*	
+
 		int rightNumRightPlace = 0;
 		int rightNumWrongPlace = 0;
 
@@ -102,7 +146,7 @@ public class MatchCoordinator {
 			checkResult.add(Pioli.PE);
 		}
 		return checkResult;
-	}
+	}*/
 
 	/**
 	 * Metodo che controlla se un arrayList è vincente o no.

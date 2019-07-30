@@ -232,7 +232,7 @@ public class InputOutput implements MMView,Observer
 			char[] app2 = app.toCharArray();
 			for(int i = 0; i< app2.length;i++)
 				{
-					if(Character.getNumericValue(app2[i])>0 && Character.getNumericValue(app2[i])< currentParameters.getMaxCodValue())
+					if(Character.getNumericValue(app2[i])>0 && Character.getNumericValue(app2[i])< currentParameters.getMaxCodValue()+1)
 							codice.add(Character.getNumericValue(app2[i]));
 					else throw new IllegalParameterException();
 				}

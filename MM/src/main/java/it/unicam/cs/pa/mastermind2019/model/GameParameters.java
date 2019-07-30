@@ -14,11 +14,9 @@ public class GameParameters
 {
 //	TODO chiedere al prof se fare un'interfaccia per l'espandibiità del model è utile o no
 	private boolean duplicateAllow;
-
 	private int codeLenght;
 	private int attempts;
 	private final int minCodValue = 1;
-
 	private int maxCodValue;
 
 	/**
@@ -61,7 +59,7 @@ public class GameParameters
 	public GameParameters()
 	{
 		this.codeLenght = 4;
-//		this.duplicateAllow = false;
+		this.duplicateAllow = true;
 		this.attempts = 9;
 		this.maxCodValue = 6;
 	}
