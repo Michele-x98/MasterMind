@@ -1,11 +1,9 @@
-package it.unicam.cs.pa.mastermind2019.controller;
+package it.unicam.cs.pa.mastermind2019.modelcontroller;
 
 import java.io.IOException;
 
 import it.unicam.cs.pa.mastermind2019.Player;
 import it.unicam.cs.pa.mastermind2019.PlayerFactory;
-import it.unicam.cs.pa.mastermind2019.model.Campo;
-import it.unicam.cs.pa.mastermind2019.model.GameParameters;
 import it.unicam.cs.pa.mastermind2019.view.IllegalParameterException;
 import it.unicam.cs.pa.mastermind2019.view.InputOutput;
 import it.unicam.cs.pa.mastermind2019.view.MMView;
@@ -33,7 +31,7 @@ public class ConsoleGame
 	public ConsoleGame(	Player p1,
 						Player p2,
 						MMView vista,
-						Campo terreno)
+						CampoView terreno)
 	{
 		this.giocatore1 = p1;
 		this.giocatore2 = p2;
@@ -49,7 +47,7 @@ public class ConsoleGame
 	 * @throws IllegalParameterException Eccezione che può essere lanciata dal
 	 *                                   metodo play().
 	 */
-	private void start(GameParameters impostazioni, Campo terrenogioco) throws IOException, IllegalParameterException
+	private void start(ParametersView impostazioni, Campo terrenogioco) throws IOException, IllegalParameterException
 	{
 		do
 		{
@@ -70,7 +68,7 @@ public class ConsoleGame
 
 	public static void main(String argv[]) throws IOException, IllegalParameterException
 	{
-		GameParameters settings = new GameParameters();
+		ParametersView settings = new ParametersConfig();
 		Campo terreno = new Campo(settings);
 		MMView uno = new InputOutput(settings, terreno);
 		uno.gameInit();

@@ -7,9 +7,11 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-import it.unicam.cs.pa.mastermind2019.controller.MatchCoordinator;
-import it.unicam.cs.pa.mastermind2019.model.Campo;
-import it.unicam.cs.pa.mastermind2019.model.GameParameters;
+import it.unicam.cs.pa.mastermind2019.modelcontroller.Campo;
+import it.unicam.cs.pa.mastermind2019.modelcontroller.CampoView;
+import it.unicam.cs.pa.mastermind2019.modelcontroller.GameParameters;
+import it.unicam.cs.pa.mastermind2019.modelcontroller.MatchCoordinator;
+import it.unicam.cs.pa.mastermind2019.modelcontroller.ParametersView;
 
 public class TestMatchCoordinator {
 
@@ -19,8 +21,8 @@ public class TestMatchCoordinator {
 		PlayerFactory p = new PlayerFactory();
 //		Player bot = p.getPlayer("bot");
 //		Player chicco = p.getPlayer("Bot");
-		GameParameters settings = new GameParameters(6, false);
-		Campo cam = new Campo(settings);
+		ParametersView settings = new GameParameters(6, false);
+		CampoView cam = new Campo(settings);
 //		MatchCoordinator arbitro = new MatchCoordinator(settings, cam, bot, chicco);
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
@@ -49,7 +51,7 @@ public class TestMatchCoordinator {
 		PlayerFactory p = new PlayerFactory();
 		Player bot = p.getPlayer("bot");
 		Player chicco = p.getPlayer("Bot");
-		GameParameters settings = new GameParameters(4, false);
+		ParametersView settings = new GameParameters(4, false);
 		Campo cam = new Campo(settings);
 		MatchCoordinator arbitro = new MatchCoordinator(settings, cam, bot, chicco);
 		ArrayList<Integer> app = new ArrayList<Integer>();
@@ -81,7 +83,7 @@ public class TestMatchCoordinator {
 		PlayerFactory p = new PlayerFactory();
 		Player bot = p.getPlayer("bot");
 		Player chicco = p.getPlayer("Bot");
-		GameParameters settings = new GameParameters(4, false);
+		ParametersView settings = new GameParameters(4, false);
 		Campo cam = new Campo(settings);
 		MatchCoordinator arbitro = new MatchCoordinator(settings, cam, bot, chicco);
 		ArrayList<Integer> app = new ArrayList<Integer>();
@@ -113,7 +115,7 @@ public class TestMatchCoordinator {
 		PlayerFactory p = new PlayerFactory();
 		Player bot = p.getPlayer("bot");
 		Player chicco = p.getPlayer("Bot");
-		GameParameters settings = new GameParameters(4, false);
+		ParametersView settings = new GameParameters(4, false);
 		Campo cam = new Campo(settings);
 		MatchCoordinator arbitro = new MatchCoordinator(settings, cam, bot, chicco);
 		ArrayList<Integer> app = new ArrayList<Integer>();
@@ -141,7 +143,7 @@ public class TestMatchCoordinator {
 	public void testIsWinnerTrue() throws IOException
 	{
 		
-		GameParameters settings = new GameParameters(4, false);
+		ParametersView settings = new GameParameters(4, false);
 		Campo cam = new Campo(settings);
 		
 		ArrayList<Pioli> risultato = new ArrayList<Pioli>();
@@ -157,7 +159,7 @@ public class TestMatchCoordinator {
 	public void testIsWinnerFalse() throws IOException
 	{
 		
-		GameParameters settings = new GameParameters(4, false);
+		ParametersView settings = new GameParameters(4, false);
 		Campo cam = new Campo(settings);
 		
 		ArrayList<Pioli> risultato = new ArrayList<Pioli>();

@@ -9,6 +9,19 @@ package it.unicam.cs.pa.mastermind2019.view;
  */
 public class IllegalParameterException extends Exception
 {
-	public IllegalParameterException() {}
+	public IllegalParameterException() {
+		super("Parametro non corretto");
+	}
+	public IllegalParameterException(String c)
+	{
+		super("Parametro non corretto: " + c);
+	}
+
+	@Override
+	public String toString()
+	{
+		return getMessage();
+	}
+
 	private static final long serialVersionUID = 1L;
 }

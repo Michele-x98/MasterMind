@@ -1,4 +1,4 @@
-package it.unicam.cs.pa.mastermind2019.model;
+package it.unicam.cs.pa.mastermind2019.modelcontroller;
 
 import java.util.ArrayList;
 import java.util.Stack;
@@ -13,7 +13,7 @@ import it.unicam.cs.pa.mastermind2019.Pioli;
  * @author Daniele Moschini
  */
 
-public class Campo
+public class Campo implements CampoView
 {
 	private ArrayList<Integer> decodeArray;
 	private ArrayList<Integer> codeArray;
@@ -25,7 +25,7 @@ public class Campo
 	 * 
 	 * @param settings	Impostazioni della partita.
 	 */
-	public Campo(GameParameters settings )
+	public Campo(ParametersView settings )
 	{
 		this.lunghezza = settings.getCodeLenght();
 		this.decodeArray = new ArrayList<Integer>();
@@ -36,9 +36,11 @@ public class Campo
 
 //	 ****************** GETTERS ******************
 	
+	@Override
 	public ArrayList<Pioli> getLastSuggerimento()
 	{ return suggerimenti.peek(); }
 	
+	@Override
 	public void addSuggerimento(ArrayList<Pioli> sugg)
 	{
 		suggerimenti.add(sugg);
@@ -49,6 +51,7 @@ public class Campo
 	 * 
 	 * @return Array da decodificare.
 	 */
+	@Override
 	public ArrayList<Integer> getArrayFromDeco()
 	{
 //		LogToFile.messaggio("INFO","Codice inserito nel campo");
@@ -59,6 +62,7 @@ public class Campo
 	 * Getter della variabile <code>codeArray</code>.
 	 * @return Array tentativo.
 	 */
+	@Override
 	public ArrayList<Integer> getArrayFromCode()
 	{ return this.codeArray; }
 
@@ -70,6 +74,7 @@ public class Campo
 	 * 
 	 * @param arrayList Nuovo <code>decodeArray</code>.
 	 */
+	@Override
 	public void setDecodeArray(ArrayList<Integer> arrayList)
 	{ this.decodeArray = arrayList;
 	//DEBUG
@@ -82,6 +87,7 @@ public class Campo
 	 * 
 	 * @param codeArray Nuovo <code>codeArray</code>.
 	 */
+	@Override
 	public void setCodeArray(ArrayList<Integer> codeArray)
 	{ this.codeArray = codeArray; }
 

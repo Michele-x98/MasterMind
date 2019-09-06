@@ -1,4 +1,4 @@
-package it.unicam.cs.pa.mastermind2019.model;
+package it.unicam.cs.pa.mastermind2019.modelcontroller;
 
 import java.io.IOException;
 
@@ -10,9 +10,8 @@ import java.io.IOException;
  * @author Daniele Moschini
  */
 
-public class GameParameters
+public class GameParameters implements ParametersView
 {
-//	TODO chiedere al prof se fare un'interfaccia per l'espandibiità del model è utile o no
 	private boolean duplicateAllow;
 	private int codeLenght;
 	private int attempts;
@@ -31,7 +30,7 @@ public class GameParameters
 	 */
 
 	public GameParameters(	int lunghezza,
-							boolean duplicate ) throws IOException
+							boolean duplicate ) 
 	{
 		this.codeLenght = lunghezza;
 		if (codeLenght == 4)
@@ -59,7 +58,7 @@ public class GameParameters
 	public GameParameters()
 	{
 		this.codeLenght = 4;
-		this.duplicateAllow = true;
+		this.duplicateAllow =false;
 		this.attempts = 9;
 		this.maxCodValue = 6;
 	}
@@ -72,9 +71,9 @@ public class GameParameters
 	 * @return <b>True</b> Se il valore è accettabile.
 	 *         <b>False</b> Se il valore non è accettabile.
 	 */
+	@Override
 	public boolean isValidNumber(int num)
 	{
-//		LogToFile.messaggio("INFO", "Effettuato controllo sulla correttezza del numero");
 		return num >= this.minCodValue && num <= this.maxCodValue;
 	}
 
@@ -84,6 +83,7 @@ public class GameParameters
 	 * 
 	 * @return lunghezza codice.
 	 */
+	@Override
 	public int getCodeLenght()
 	{ return codeLenght; }
 
@@ -92,12 +92,16 @@ public class GameParameters
 	 * 
 	 * @return tentativi impostati.
 	 */
+	@Override
 	public int getAttempts()
 	{ return attempts; }
+	@Override
 	public int getMinCodValue()
 	{ return minCodValue; }
+	@Override
 	public int getMaxCodValue()
 	{ return maxCodValue; }
+	@Override
 	public boolean isDuplicateAllow()
 	{ return duplicateAllow; }
 

@@ -11,8 +11,8 @@ import java.util.Random;
 
 import it.unicam.cs.pa.mastermind2019.Pioli;
 import it.unicam.cs.pa.mastermind2019.PlayerType;
-import it.unicam.cs.pa.mastermind2019.model.Campo;
-import it.unicam.cs.pa.mastermind2019.model.GameParameters;
+import it.unicam.cs.pa.mastermind2019.modelcontroller.CampoView;
+import it.unicam.cs.pa.mastermind2019.modelcontroller.ParametersView;
 
 /**
  * <b>Responsabilità:</b> Interfacciarsi con l'utente. <b>Fonte:</b>
@@ -23,21 +23,22 @@ import it.unicam.cs.pa.mastermind2019.model.GameParameters;
  */
 
 @SuppressWarnings("deprecation")
-public class InputOutput implements MMView,Observer
+public class InputOutput implements MMView, Observer
 {
 	private PrintStream output;
 	private BufferedReader input;
-	GameParameters currentParameters;
-	Campo terreno;
+	ParametersView currentParameters;
+	CampoView terreno;
 
-
-	public InputOutput(GameParameters parametri, Campo terreno)
+	public InputOutput(	ParametersView parametri,
+						CampoView terreno )
 	{
-		this.input =new BufferedReader(new InputStreamReader(System.in));
+		this.input = new BufferedReader(new InputStreamReader(System.in));
 		this.output = System.out;
 		this.currentParameters = parametri;
 		this.terreno = terreno;
 	}
+
 	@Override
 	public int prendiLunghezza()
 	{
@@ -51,7 +52,7 @@ public class InputOutput implements MMView,Observer
 				if (s.equals("4") || s.equals("6") || s.equals("8"))
 				{
 					output.println("Il codice da decifrare è lungo: " +
-										s);
+									s);
 					return Integer.parseInt(s);
 				}
 				else
@@ -150,7 +151,6 @@ public class InputOutput implements MMView,Observer
 		}
 	}
 
-
 	/**
 	 * Prende i tipi di giocatore da tastiera e li da come valore di ritorno in una
 	 * String.
@@ -168,10 +168,11 @@ public class InputOutput implements MMView,Observer
 			code = "CodeBreaker";
 		while (true)
 		{
+			PlayerType[] types = PlayerType.class.getEnumConstants();
 			output.println("Inserisci chi vuoi che sia il " +
-								code +
-								":" +
-								PlayerType.values().toString());
+							code +
+							":" +
+							types);
 			String c;
 			try
 			{
@@ -183,14 +184,14 @@ public class InputOutput implements MMView,Observer
 			catch (IOException e)
 			{
 				output.println("Tipo di " +
-									code +
-									" non valido.");
+								code +
+								" non valido.");
 			}
 			catch (IllegalParameterException e)
 			{
 				output.println("Tipo di " +
-									code +
-									" non valido.");
+								code +
+								" non valido.");
 			}
 
 		}
@@ -203,14 +204,12 @@ public class InputOutput implements MMView,Observer
 	 * @return Tipo del giocatore.
 	 */
 
-
 	/**
 	 * Prende un numero e lo da come valore di ritorno.
 	 * 
 	 * @param max Valore massimo.
 	 * @return Il numero preso da tastiera.
 	 */
-	@SuppressWarnings("null")
 	@Override
 	public ArrayList<Integer> getCombination()
 	{
@@ -218,35 +217,48 @@ public class InputOutput implements MMView,Observer
 		ArrayList<Integer> codice;
 		do
 		{
-		String app = null;
-		codice = new ArrayList<Integer>();
-		try 
-		{
-			output.print("Inserisci una sequenza di "+ 
-							currentParameters.getCodeLenght()+
-							" valori, con numeri compresi tra 1 e " +
-							currentParameters.getMaxCodValue() + " : ");
-			app = input.readLine();
-			if(app.length() != currentParameters.getCodeLenght())
-				throw new IllegalParameterException();
-			char[] app2 = app.toCharArray();
-			for(int i = 0; i< app2.length;i++)
+			String app = null;
+			codice = new ArrayList<Integer>();
+			try
+			{
+				output.print("Inserisci una sequenza di " +
+								currentParameters.getCodeLenght() +
+								" valori, con numeri compresi tra 1 e " +
+								currentParameters.getMaxCodValue() +
+								" : ");
+				app = input.readLine();
+				if (app.length() != currentParameters.getCodeLenght())
+					throw new IllegalParameterException("La lunghezza non è corretta");
+				char[] app2 = app.toCharArray();
+				for (int i = 0; i < app2.length; i++)
 				{
-					if(Character.getNumericValue(app2[i])>0 && Character.getNumericValue(app2[i])< currentParameters.getMaxCodValue()+1)
-							codice.add(Character.getNumericValue(app2[i]));
-					else throw new IllegalParameterException();
+					if (Character.getNumericValue(app2[i]) > 0 && Character.getNumericValue(app2[i]) < currentParameters.getMaxCodValue() + 1)
+					{
+						if (!(currentParameters.isDuplicateAllow()) && codice.contains(Character.getNumericValue(app2[i])))
+							throw new IllegalParameterException("Duplicati non ammessi");
+						codice.add(Character.getNumericValue(app2[i]));
+					}
+					else
+						throw new IllegalParameterException("Uno o più parametri inseriti non sono corretti\n" +
+															"I numeri devono essere compresi tra 1 e " +
+															currentParameters.getMaxCodValue() +
+															", prova di nuovo \n");
 				}
-			validate = true;
+				validate = true;
+			}
+			catch (IllegalParameterException e)
+			{
+				e.printStackTrace();
+			}
+			catch (IOException e)
+			{
+				System.err.println("Uno o più parametri inseriti non sono corretti\n" +
+						"I numeri devono essere compresi tra 1 e " +
+						currentParameters.getMaxCodValue() +
+						", prova di nuovo \n");
+			}
 		}
-		catch (IllegalParameterException e)
-		{
-			System.err.println("Il numero deve essere compreso tra 1 e " +currentParameters.getMaxCodValue() +" ,prova di nuovo \n");
-		}
-		catch (IOException e)
-		{
-			System.err.println("Il numero deve essere compreso tra 1 e " +currentParameters.getMaxCodValue() +" ,daje de tacco \n");
-		}
-		}while (!validate);
+		while (!validate);
 		output.println("Sequenza di valori accettata");
 		return codice;
 	}
@@ -292,7 +304,7 @@ public class InputOutput implements MMView,Observer
 						Object arg)
 	{
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -300,29 +312,32 @@ public class InputOutput implements MMView,Observer
 	{
 		terreno.getLastSuggerimento();
 	}
+
 	@Override
 	public ArrayList<Integer> botGetCombination()
 	{
-		
+
 		ArrayList<Integer> code = new ArrayList<Integer>();
 
-		while (!(code.size() == currentParameters.getCodeLenght())) {
+		while (!(code.size() == currentParameters.getCodeLenght()))
+		{
 			Random random = new Random();
 			int n = currentParameters.getMaxCodValue() - currentParameters.getMinCodValue();
 			int k = random.nextInt(n) + currentParameters.getMinCodValue();
 			if (!currentParameters.isDuplicateAllow())
-				while (code.contains(k)) {
+				while (code.contains(k))
+				{
 					k = random.nextInt(n) + currentParameters.getMinCodValue();
 				}
 			code.add(k);
 		}
 		return code;
 	}
+
 	@Override
 	public void vediCodice(ArrayList<Integer> arrayFromCode)
 	{
-	output.println(arrayFromCode);
+		output.println(arrayFromCode);
 	}
-
 
 }

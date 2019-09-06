@@ -1,4 +1,4 @@
-package it.unicam.cs.pa.mastermind2019.controller;
+package it.unicam.cs.pa.mastermind2019.modelcontroller;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -8,8 +8,6 @@ import it.unicam.cs.pa.mastermind2019.Pioli;
 import it.unicam.cs.pa.mastermind2019.Player;
 import it.unicam.cs.pa.mastermind2019.Risultato;
 import it.unicam.cs.pa.mastermind2019.Vincitore;
-import it.unicam.cs.pa.mastermind2019.model.Campo;
-import it.unicam.cs.pa.mastermind2019.model.GameParameters;
 import it.unicam.cs.pa.mastermind2019.view.IllegalParameterException;
 import it.unicam.cs.pa.mastermind2019.view.MMView;
 
@@ -24,7 +22,7 @@ public class MatchCoordinator {
 	private Player p1;
 	private Player p2;
 	private MMView vista;
-	private GameParameters parameters;
+	private ParametersView parameters;
 	private int tentativi;
 	private Campo campo;
 	private ArrayList<Pioli> suggerimento;
@@ -37,7 +35,7 @@ public class MatchCoordinator {
 	 * @param uno       Primo giocatore della partita
 	 * @param due       Secondo giocatore della partita
 	 */
-	public MatchCoordinator(GameParameters parametri, Campo campo,MMView vista, Player uno, Player due) {
+	public MatchCoordinator(ParametersView parametri, Campo campo,MMView vista, Player uno, Player due) {
 		this.parameters = parametri;
 		this.vista = vista;
 		this.p1 = uno;
