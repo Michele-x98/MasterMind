@@ -11,8 +11,9 @@ import java.util.Random;
 
 import it.unicam.cs.pa.mastermind2019.Pioli;
 import it.unicam.cs.pa.mastermind2019.PlayerType;
+import it.unicam.cs.pa.mastermind2019.Risultato;
 import it.unicam.cs.pa.mastermind2019.modelcontroller.CampoView;
-import it.unicam.cs.pa.mastermind2019.modelcontroller.ParametersView;
+import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniView;
 
 /**
  * <b>Responsabilità:</b> Interfacciarsi con l'utente. <b>Fonte:</b>
@@ -27,10 +28,10 @@ public class InputOutput implements MMView, Observer
 {
 	private PrintStream output;
 	private BufferedReader input;
-	ParametersView currentParameters;
+	ImpostazioniView currentParameters;
 	CampoView terreno;
 
-	public InputOutput(	ParametersView parametri,
+	public InputOutput(	ImpostazioniView parametri,
 						CampoView terreno )
 	{
 		this.input = new BufferedReader(new InputStreamReader(System.in));
@@ -121,17 +122,17 @@ public class InputOutput implements MMView, Observer
 	{
 		while (true)
 		{
-			output.println("Giochi ancora? (S/N)");
+			output.println("Vuoi uscire? (S/N)");
 			String str;
 			try
 			{
 				str = input.readLine();
-				if (str.equalsIgnoreCase("N"))
+				if (str.equalsIgnoreCase("S"))
 				{
 					output.println("Arrivederci");
 					return false;
 				}
-				else if (str.equalsIgnoreCase("S"))
+				else if (str.equalsIgnoreCase("N"))
 				{
 					output.println("Ricominciamo!");
 					return true;
@@ -338,6 +339,104 @@ public class InputOutput implements MMView, Observer
 	public void vediCodice(ArrayList<Integer> arrayFromCode)
 	{
 		output.println(arrayFromCode);
+	}
+
+	@Override
+	public void matchResault(Risultato esito)
+	{
+	System.out.println(esito);
+	}
+
+	@Override
+	public int sceltaMenu()
+	{
+		while(true)
+		{
+		output.println("1. Gioca\n2. Impostazioni\n3. Esci");
+		String str;
+		try
+		{
+			str = input.readLine();
+			if (str.equals("1") || str.equals("2") || str.equals("3"))
+			{
+				return Integer.parseInt(str);
+			}
+			else
+				throw new IllegalParameterException();
+		}
+		catch (IOException e)
+		{
+			output.println("Inserisci il numero della risposta !");
+		}
+		catch (IllegalParameterException e)
+		{
+			output.println("Inserisci il numero della risposta !");
+		}}
+	}
+
+	@Override
+	public int difficultConfiguration()
+	{
+		while(true)
+		{
+		output.println("Seleziona la difficoltà:\n1. Facile\n2. Media\n3. Difficile");
+		String str;
+		try
+		{
+			str = input.readLine();
+			if (str.equals("1"))
+			{
+				return 4;
+			}
+			else if (str.equals("2"))
+			{
+				return 6;
+			}
+			else if(str.equals("3"))
+			{
+				return 8;
+			}
+				throw new IllegalParameterException();
+		}
+		catch (IOException e)
+		{
+			output.println("Inserisci il numero della risposta !");
+		}
+		catch (IllegalParameterException e)
+		{
+			output.println("Inserisci il numero della risposta !");
+		}}
+	}
+
+	@Override
+	public boolean duplicateConfiguration()
+	{
+		while(true)
+		{
+		output.println("Seleziona:\n1.Duplicati presenti nel codice\n2. Duplicati non presenti nel codice");
+		String str;
+		try
+		{
+			str = input.readLine();
+			if (str.equals("1"))
+			{
+				return true;
+			}
+			else if (str.equals("2"))
+			{
+				return false;
+			}
+			else
+				throw new IllegalParameterException();
+		}
+		catch (IOException e)
+		{
+			output.println("Inserisci il numero della risposta !");
+		}
+		catch (IllegalParameterException e)
+		{
+			output.println("Inserisci il numero della risposta !");
+		}}
 	}
 
 }

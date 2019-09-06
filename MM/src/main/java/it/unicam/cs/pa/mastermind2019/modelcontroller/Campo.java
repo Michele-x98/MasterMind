@@ -25,7 +25,7 @@ public class Campo implements CampoView
 	 * 
 	 * @param settings	Impostazioni della partita.
 	 */
-	public Campo(ParametersView settings )
+	public Campo(ImpostazioniView settings )
 	{
 		this.lunghezza = settings.getCodeLenght();
 		this.decodeArray = new ArrayList<Integer>();

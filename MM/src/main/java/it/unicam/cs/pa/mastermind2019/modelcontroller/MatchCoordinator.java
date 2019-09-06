@@ -22,7 +22,7 @@ public class MatchCoordinator {
 	private Player p1;
 	private Player p2;
 	private MMView vista;
-	private ParametersView parameters;
+	private ImpostazioniView parameters;
 	private int tentativi;
 	private Campo campo;
 	private ArrayList<Pioli> suggerimento;
@@ -35,7 +35,7 @@ public class MatchCoordinator {
 	 * @param uno       Primo giocatore della partita
 	 * @param due       Secondo giocatore della partita
 	 */
-	public MatchCoordinator(ParametersView parametri, Campo campo,MMView vista, Player uno, Player due) {
+	public MatchCoordinator(ImpostazioniView parametri, Campo campo,MMView vista, Player uno, Player due) {
 		this.parameters = parametri;
 		this.vista = vista;
 		this.p1 = uno;
@@ -123,32 +123,6 @@ public class MatchCoordinator {
 		}
 		return checkResult;
     }
-		
-		
-		
-		
-	/*	
-
-		int rightNumRightPlace = 0;
-		int rightNumWrongPlace = 0;
-
-		for (Integer arr : tentativo) {
-			if (campo.getArrayFromDeco().contains(arr)) {
-				if (campo.getArrayFromDeco().indexOf(arr) == tentativo.indexOf(arr)) {
-					rightNumRightPlace++;
-				} else
-					rightNumWrongPlace++;
-			}
-		}
-
-		for (int i = 0; i < rightNumRightPlace; i++) {
-			checkResult.add(Pioli.PC);
-		}
-		for (int i = 0; i < rightNumWrongPlace; i++) {
-			checkResult.add(Pioli.PE);
-		}
-		return checkResult;
-	}*/
 
 	/**
 	 * Metodo che controlla se un arrayList è vincente o no.

@@ -3,6 +3,7 @@ package it.unicam.cs.pa.mastermind2019.view;
 import java.util.ArrayList;
 
 import it.unicam.cs.pa.mastermind2019.Pioli;
+import it.unicam.cs.pa.mastermind2019.Risultato;
 
 public interface MMView
 {
@@ -29,5 +30,13 @@ public interface MMView
 	public ArrayList<Integer> botGetCombination();
 
 	public void vediCodice(ArrayList<Integer> arrayFromCode);
+	
+	public void matchResault(Risultato esito);
+
+	public int sceltaMenu();
+
+	public int difficultConfiguration();
+
+	public boolean duplicateConfiguration();
 	
 }

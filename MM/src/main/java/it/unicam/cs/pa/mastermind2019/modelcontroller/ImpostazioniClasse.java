@@ -10,7 +10,7 @@ import java.io.IOException;
  * @author Daniele Moschini
  */
 
-public class GameParameters implements ParametersView
+public class ImpostazioniClasse implements ImpostazioniView
 {
 	private boolean duplicateAllow;
 	private int codeLenght;
@@ -29,7 +29,7 @@ public class GameParameters implements ParametersView
 	 * 
 	 */
 
-	public GameParameters(	int lunghezza,
+	public ImpostazioniClasse(	int lunghezza,
 							boolean duplicate ) 
 	{
 		this.codeLenght = lunghezza;
@@ -55,7 +55,7 @@ public class GameParameters implements ParametersView
 	 * 
 	 */
 
-	public GameParameters()
+	public ImpostazioniClasse()
 	{
 		this.codeLenght = 4;
 		this.duplicateAllow =false;
@@ -104,5 +104,17 @@ public class GameParameters implements ParametersView
 	@Override
 	public boolean isDuplicateAllow()
 	{ return duplicateAllow; }
+
+	@Override
+	public void setCodeLenght(int code)
+	{
+	this.codeLenght = code;
+	}
+
+	@Override
+	public void setDuplicate(boolean duplicate)
+	{
+		this.duplicateAllow = duplicate;
+	}
 
 }

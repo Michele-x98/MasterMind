@@ -13,7 +13,7 @@ import it.unicam.cs.pa.mastermind2019.view.MMView;
  * 
  * @author Michele Benedetti
  * @author Daniele Moschini
-
+ * 
  */
 
 public class ConsoleGame
@@ -21,17 +21,18 @@ public class ConsoleGame
 	private Player giocatore1;
 	private Player giocatore2;
 	private MMView vista;
+
 	/**
 	 * Costruttore di ConsoleGame.
 	 * 
-	 * @param p1 Primo giocatore della partita.
-	 * @param p2 Secondo giocatore della partita.
-	 * @param terreno 
+	 * @param p1      Primo giocatore della partita.
+	 * @param p2      Secondo giocatore della partita.
+	 * @param terreno
 	 */
 	public ConsoleGame(	Player p1,
 						Player p2,
 						MMView vista,
-						CampoView terreno)
+						CampoView terreno )
 	{
 		this.giocatore1 = p1;
 		this.giocatore2 = p2;
@@ -47,34 +48,54 @@ public class ConsoleGame
 	 * @throws IllegalParameterException Eccezione che può essere lanciata dal
 	 *                                   metodo play().
 	 */
-	private void start(ParametersView impostazioni, Campo terrenogioco) throws IOException, IllegalParameterException
+	private void start(	ImpostazioniView impostazioni,
+						Campo terrenogioco) throws IOException, IllegalParameterException
 	{
-		do
-		{
-			MatchCoordinator arbitro = new MatchCoordinator(impostazioni, terrenogioco, vista,
-					this.giocatore1, this.giocatore2);
-			System.out.println(arbitro.play());
-		}
-		while (vista.matchAgain());
+		MatchCoordinator arbitro = new MatchCoordinator(impostazioni, terrenogioco, vista, this.giocatore1, this.giocatore2);
+		vista.matchResault(arbitro.play());
+		
 	}
 
 	/**
 	 * Metodo Main.
 	 * 
-	 * @param argv	Argomenti passati all'applicazione.
-	 * @throws IOException Eccezione che può essere lanciata da start.
+	 * @param argv Argomenti passati all'applicazione.
+	 * @throws IOException               Eccezione che può essere lanciata da start.
 	 * @throws IllegalParameterException Eccezione che può essere lanciata da start.
 	 */
 
 	public static void main(String argv[]) throws IOException, IllegalParameterException
 	{
-		ParametersView settings = new ParametersConfig();
+		ImpostazioniView settings = new ImpostazioniFileConfig();
 		Campo terreno = new Campo(settings);
 		MMView uno = new InputOutput(settings, terreno);
 		uno.gameInit();
 		PlayerFactory player1 = new PlayerFactory();
 		PlayerFactory player2 = new PlayerFactory();
-		ConsoleGame direttore = new ConsoleGame(player1.getPlayer(uno.typePlayerSelection(true),uno),player2.getPlayer(uno.typePlayerSelection(false),uno),uno,terreno);
-		direttore.start(settings, terreno);
+		
+		do
+		{
+			boolean finegame = true;
+			do
+			{
+
+				switch (uno.sceltaMenu())
+				{
+					case 1:
+					{
+						ConsoleGame direttore = new ConsoleGame(player1.getPlayer(uno.typePlayerSelection(true), uno), player2.getPlayer(uno.typePlayerSelection(false), uno), uno, terreno);
+						direttore.start(settings, terreno);
+						finegame = false;
+					}
+					case 2:
+					{
+						settings.setCodeLenght(uno.difficultConfiguration());
+						settings.setDuplicate(uno.duplicateConfiguration());
+					}
+				}
+			}
+			while (finegame);
+		}
+		while (uno.matchAgain());
 	}
 }

@@ -1,6 +1,6 @@
 package it.unicam.cs.pa.mastermind2019.modelcontroller;
 
-public interface ParametersView
+public interface ImpostazioniView
 {
 
 	/**
