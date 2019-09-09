@@ -18,13 +18,13 @@ import it.unicam.cs.pa.mastermind2019.view.MMView;
  * @author Daniele Moschini
  */
 
-public class MatchCoordinator {
+public class MatchCoordinator implements ArbitroView {
 	private Player p1;
 	private Player p2;
 	private MMView vista;
 	private ImpostazioniView parameters;
 	private int tentativi;
-	private Campo campo;
+	private CampoView campo;
 	private ArrayList<Pioli> suggerimento;
 
 	/**
@@ -35,7 +35,7 @@ public class MatchCoordinator {
 	 * @param uno       Primo giocatore della partita
 	 * @param due       Secondo giocatore della partita
 	 */
-	public MatchCoordinator(ImpostazioniView parametri, Campo campo,MMView vista, Player uno, Player due) {
+	public MatchCoordinator(ImpostazioniView parametri, CampoView campo, MMView vista, Player uno, Player due) {
 		this.parameters = parametri;
 		this.vista = vista;
 		this.p1 = uno;
@@ -53,6 +53,7 @@ public class MatchCoordinator {
 	 * @throws IllegalParameterException Eccezione che può essere lanciata da
 	 *                                   generateCode.
 	 */
+	@Override
 	public Risultato play() throws IllegalParameterException {
 		campo.setDecodeArray(p1.generateCode());
 		this.tentativi = parameters.getAttempts();
@@ -74,47 +75,48 @@ public class MatchCoordinator {
 	}
 
 	/**
-	 * Metodo che si occupa del confronto tra un tentativo e il codice da decriptare.
+	 * Metodo che si occupa del confronto tra un tentativo e il codice da
+	 * decriptare.
 	 * 
 	 * @param tentativo ArrayList contenente il codice.
 	 * @return Un ArrayList di Pioli contenente un suggerimento per l'utente.
 	 */
+	@Override
 	public ArrayList<Pioli> check(ArrayList<Integer> tentativo) {
 		ArrayList<Integer> codice = campo.getArrayFromDeco();
-        ArrayList<Integer >tempNums = tentativo;
-        ArrayList<Integer> tempCode = new ArrayList<>(); 
-        for (int i=0; i < parameters.getCodeLenght(); i++) {
-            tempCode.add(codice.get(i));
-        }
-        
+		ArrayList<Integer> tempNums = tentativo;
+		ArrayList<Integer> tempCode = new ArrayList<>();
+		for (int i = 0; i < parameters.getCodeLenght(); i++) {
+			tempCode.add(codice.get(i));
+		}
+
 		ArrayList<Pioli> checkResult = new ArrayList<Pioli>();
-        int rightNumRightPlace = 0;
-        
-        for (int i=0; i < parameters.getCodeLenght(); i++) {
-            if (tempCode.get(i)==tempNums.get(i)) 
-            {
-            	rightNumRightPlace++;
-                tempCode.set(i,-1);
-                tempNums.set(i,-1);
-            }
-        }
+		int rightNumRightPlace = 0;
+
+		for (int i = 0; i < parameters.getCodeLenght(); i++) {
+			if (tempCode.get(i) == tempNums.get(i)) {
+				rightNumRightPlace++;
+				tempCode.set(i, -1);
+				tempNums.set(i, -1);
+			}
+		}
 		int rightNumWrongPlace = 0;
-        for (int i=0; i < parameters.getCodeLenght() ; i++) {
-            if (tempCode.get(i)==-1) {
-                continue;
-            }
-            for (int j=0;j < parameters.getCodeLenght(); j++) {
-                if (tempNums.get(j)==-1) {
-                    continue;
-                }
-                if (tempCode.get(i)==tempNums.get(j)) {
-                    rightNumWrongPlace++;
-                    tempCode.set(i,-1);
-                    tempNums.set(j,-1);
-                }
-            }
-        }
- 
+		for (int i = 0; i < parameters.getCodeLenght(); i++) {
+			if (tempCode.get(i) == -1) {
+				continue;
+			}
+			for (int j = 0; j < parameters.getCodeLenght(); j++) {
+				if (tempNums.get(j) == -1) {
+					continue;
+				}
+				if (tempCode.get(i) == tempNums.get(j)) {
+					rightNumWrongPlace++;
+					tempCode.set(i, -1);
+					tempNums.set(j, -1);
+				}
+			}
+		}
+
 		for (int i = 0; i < rightNumRightPlace; i++) {
 			checkResult.add(Pioli.PC);
 		}
@@ -122,25 +124,25 @@ public class MatchCoordinator {
 			checkResult.add(Pioli.PE);
 		}
 		return checkResult;
-    }
+	}
 
 	/**
 	 * Metodo che controlla se un arrayList è vincente o no.
 	 * 
 	 * @param tentativo ArrayList in input.
-	 * @param campo Campo di gioco attuale.
+	 * @param campo2    Campo di gioco attuale.
 	 * @return <b>True</b> Se <code>tentativo</code> è vincente (pieno di
-	 *         <code>SIMBOLIPOSIZIONI</code>),
-	 *         <b>False</b> Se <code>tentativo</code> non è vincente.
+	 *         <code>SIMBOLIPOSIZIONI</code>), <b>False</b> Se
+	 *         <code>tentativo</code> non è vincente.
 	 */
-	public static boolean isWinner(ArrayList<Pioli> tentativo, Campo campo) {
+	public static boolean isWinner(ArrayList<Pioli> tentativo, CampoView campo2) {
 		int count = 0;
 		for (Pioli c : tentativo) {
 			if (c.equals(Pioli.PC)) {
 				count++;
 			}
 		}
-		if (count == campo.lunghezza)
+		if (count == campo2.getArrayFromDeco().size())
 			return true;
 		else
 			return false;

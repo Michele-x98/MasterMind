@@ -169,11 +169,8 @@ public class InputOutput implements MMView, Observer
 			code = "CodeBreaker";
 		while (true)
 		{
-			PlayerType[] types = PlayerType.class.getEnumConstants();
-			output.println("Inserisci chi vuoi che sia il " +
-							code +
-							":" +
-							types);
+			//PlayerType[] types = PlayerType.class.getEnumConstants();
+			output.println("Inserisci chi vuoi che sia il " +code);
 			String c;
 			try
 			{
@@ -305,7 +302,6 @@ public class InputOutput implements MMView, Observer
 						Object arg)
 	{
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override

@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
+import it.unicam.cs.pa.mastermind2019.modelcontroller.ArbitroView;
 import it.unicam.cs.pa.mastermind2019.modelcontroller.Campo;
 import it.unicam.cs.pa.mastermind2019.modelcontroller.CampoView;
 import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse;
@@ -18,7 +19,7 @@ public class TestMatchCoordinator {
 	@Test
 	public void testCheckPC() throws IOException {
 		
-		PlayerFactory p = new PlayerFactory();
+		PlayerFactoryView p = new PlayerFactory();
 //		Player bot = p.getPlayer("bot");
 //		Player chicco = p.getPlayer("Bot");
 		ImpostazioniView settings = new ImpostazioniClasse(6, false);
@@ -48,12 +49,12 @@ public class TestMatchCoordinator {
 	@Test
 	public void testCheckPE() throws IOException
 	{
-		PlayerFactory p = new PlayerFactory();
+		PlayerFactoryView p = new PlayerFactory();
 		Player bot = p.getPlayer("bot");
 		Player chicco = p.getPlayer("Bot");
 		ImpostazioniView settings = new ImpostazioniClasse(4, false);
 		Campo cam = new Campo(settings);
-		MatchCoordinator arbitro = new MatchCoordinator(settings, cam, bot, chicco);
+		ArbitroView arbitro = new MatchCoordinator(settings, cam, bot, chicco);
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
 		app.add(2);
@@ -80,12 +81,12 @@ public class TestMatchCoordinator {
 	@Test
 	public void testCheckBoth() throws IOException
 	{
-		PlayerFactory p = new PlayerFactory();
+		PlayerFactoryView p = new PlayerFactory();
 		Player bot = p.getPlayer("bot");
 		Player chicco = p.getPlayer("Bot");
 		ImpostazioniView settings = new ImpostazioniClasse(4, false);
 		Campo cam = new Campo(settings);
-		MatchCoordinator arbitro = new MatchCoordinator(settings, cam, bot, chicco);
+		ArbitroView arbitro = new MatchCoordinator(settings, cam, bot, chicco);
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
 		app.add(2);
@@ -112,12 +113,12 @@ public class TestMatchCoordinator {
 	}@Test
 	public void testCheckNull() throws IOException
 	{
-		PlayerFactory p = new PlayerFactory();
+		PlayerFactoryView p = new PlayerFactory();
 		Player bot = p.getPlayer("bot");
 		Player chicco = p.getPlayer("Bot");
 		ImpostazioniView settings = new ImpostazioniClasse(4, false);
 		Campo cam = new Campo(settings);
-		MatchCoordinator arbitro = new MatchCoordinator(settings, cam, bot, chicco);
+		ArbitroView arbitro = new MatchCoordinator(settings, cam, bot, chicco);
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
 		app.add(2);

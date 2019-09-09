@@ -59,9 +59,4 @@ public class Bot implements Player {
 		return ID;
 	}
 
-
-
-	@Override
-	public void getSuggerimento(ArrayList<Pioli> suggerimento){}
-
 }

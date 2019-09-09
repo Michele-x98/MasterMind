@@ -28,8 +28,5 @@ public interface Player
 	 * @throws IllegalParameterException Eccezione per parametri non regolari.
 	 */
 	public ArrayList<Integer> generateCode() throws IllegalParameterException;
-	
-	
-	public void getSuggerimento(ArrayList<Pioli> suggerimento);
 
 }

@@ -1,42 +1,71 @@
 package it.unicam.cs.pa.mastermind2019.view;
 
 import java.util.ArrayList;
+import java.util.Observable;
 
 import it.unicam.cs.pa.mastermind2019.Pioli;
 import it.unicam.cs.pa.mastermind2019.Risultato;
 
-public interface MMView
-{
+public interface MMView {
 
-	// Iizialmente avevo pensato ad un metodo che restituiva un gameparameters solo
-	// che dopo non rispettava la modularità, quindi ho lasciato perde e ho lasciato
-	// i due metodi prendiLunghezza e prendiDuplicati
-	public int prendiLunghezza();
+	int prendiLunghezza();
 
-	public boolean prendiDuplicati();
+	/**
+	 * Metodo che consente di prendere in input se avere o no duplicati nel codice.
+	 * 
+	 * @return True se i duplicati sono accettati, altrimenti False.
+	 */
+	boolean prendiDuplicati();
 
-	public boolean matchAgain();
+	/**
+	 * Metodo che restituisce true se il giocatore decide di giocare ancora,
+	 * altrimenti false.
+	 * 
+	 * @return True Se il giocatore gioca ancora, altrimenti False.
+	 */
+	boolean matchAgain();
 
-	public void attemptResault(ArrayList<Pioli> sugg);
+	/**
+	 * Prende i tipi di giocatore da tastiera e li da come valore di ritorno in una
+	 * String.
+	 * 
+	 * 
+	 * @return Tipo del giocatore.
+	 */
+	String typePlayerSelection(boolean i);
 
-	public ArrayList<Integer> getCombination();
+	/**
+	 * Prende un numero e lo da come valore di ritorno.
+	 * 
+	 * @param max Valore massimo.
+	 * @return Il numero preso da tastiera.
+	 */
+	ArrayList<Integer> getCombination();
 
-	public void gameInit();
-	
-	public String typePlayerSelection(boolean i);
+	/**
+	 * Stampa l'ArrayList di suggerimento preso in input.
+	 * 
+	 * @param sugg ArrayList di pioli suggerimento.
+	 */
 
-	public void getSuggerimento();
-	
-	public ArrayList<Integer> botGetCombination();
+	void gameInit();
 
-	public void vediCodice(ArrayList<Integer> arrayFromCode);
-	
-	public void matchResault(Risultato esito);
+	void attemptResault(ArrayList<Pioli> sugg);
 
-	public int sceltaMenu();
+	void update(Observable o, Object arg);
 
-	public int difficultConfiguration();
+	void getSuggerimento();
 
-	public boolean duplicateConfiguration();
-	
+	ArrayList<Integer> botGetCombination();
+
+	void vediCodice(ArrayList<Integer> arrayFromCode);
+
+	void matchResault(Risultato esito);
+
+	int sceltaMenu();
+
+	int difficultConfiguration();
+
+	boolean duplicateConfiguration();
+
 }

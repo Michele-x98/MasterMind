@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import it.unicam.cs.pa.mastermind2019.Player;
 import it.unicam.cs.pa.mastermind2019.PlayerFactory;
+import it.unicam.cs.pa.mastermind2019.PlayerFactoryView;
 import it.unicam.cs.pa.mastermind2019.view.IllegalParameterException;
 import it.unicam.cs.pa.mastermind2019.view.InputOutput;
 import it.unicam.cs.pa.mastermind2019.view.MMView;
@@ -16,8 +17,7 @@ import it.unicam.cs.pa.mastermind2019.view.MMView;
  * 
  */
 
-public class ConsoleGame
-{
+public class ConsoleGame {
 	private Player giocatore1;
 	private Player giocatore2;
 	private MMView vista;
@@ -29,11 +29,7 @@ public class ConsoleGame
 	 * @param p2      Secondo giocatore della partita.
 	 * @param terreno
 	 */
-	public ConsoleGame(	Player p1,
-						Player p2,
-						MMView vista,
-						CampoView terreno )
-	{
+	public ConsoleGame(Player p1, Player p2, MMView vista, CampoView terreno) {
 		this.giocatore1 = p1;
 		this.giocatore2 = p2;
 		this.vista = vista;
@@ -48,12 +44,11 @@ public class ConsoleGame
 	 * @throws IllegalParameterException Eccezione che può essere lanciata dal
 	 *                                   metodo play().
 	 */
-	private void start(	ImpostazioniView impostazioni,
-						Campo terrenogioco) throws IOException, IllegalParameterException
-	{
-		MatchCoordinator arbitro = new MatchCoordinator(impostazioni, terrenogioco, vista, this.giocatore1, this.giocatore2);
+	private void start(ImpostazioniView impostazioni, CampoView terrenogioco)
+			throws IOException, IllegalParameterException {
+		ArbitroView arbitro = new MatchCoordinator(impostazioni, terrenogioco, vista, this.giocatore1, this.giocatore2);
 		vista.matchResault(arbitro.play());
-		
+
 	}
 
 	/**
@@ -64,38 +59,35 @@ public class ConsoleGame
 	 * @throws IllegalParameterException Eccezione che può essere lanciata da start.
 	 */
 
-	public static void main(String argv[]) throws IOException, IllegalParameterException
-	{
+	public static void main(String argv[]) throws IOException, IllegalParameterException {
 		ImpostazioniView settings = new ImpostazioniFileConfig();
-		Campo terreno = new Campo(settings);
-		MMView uno = new InputOutput(settings, terreno);
-		uno.gameInit();
-		PlayerFactory player1 = new PlayerFactory();
-		PlayerFactory player2 = new PlayerFactory();
-		
-		do
-		{
-			boolean finegame = true;
-			do
-			{
+		CampoView terreno = new Campo(settings);
+		MMView view = new InputOutput(settings, terreno);
+		view.gameInit();
+		PlayerFactoryView player1 = new PlayerFactory();
+		PlayerFactoryView player2 = new PlayerFactory();
 
-				switch (uno.sceltaMenu())
-				{
-					case 1:
-					{
-						ConsoleGame direttore = new ConsoleGame(player1.getPlayer(uno.typePlayerSelection(true), uno), player2.getPlayer(uno.typePlayerSelection(false), uno), uno, terreno);
-						direttore.start(settings, terreno);
-						finegame = false;
-					}
-					case 2:
-					{
-						settings.setCodeLenght(uno.difficultConfiguration());
-						settings.setDuplicate(uno.duplicateConfiguration());
-					}
+		do {
+			boolean finegame = true;
+			while (finegame) {
+
+				switch (view.sceltaMenu()) {
+				case 1: {
+
+					ConsoleGame direttore = new ConsoleGame(player1.getPlayer(view.typePlayerSelection(true), view),
+							player2.getPlayer(view.typePlayerSelection(false), view), view, terreno);
+					direttore.start(settings, terreno);
+					finegame = false;
+
+				}
+				case 2: {
+					settings.setCodeLenght(view.difficultConfiguration());
+					settings.setDuplicate(view.duplicateConfiguration());
+					finegame = false;
+				}
 				}
 			}
-			while (finegame);
-		}
-		while (uno.matchAgain());
+
+		} while (view.matchAgain());
 	}
 }

@@ -67,10 +67,4 @@ public class Human implements Player
 		return code;
 	}
 
-	@Override
-	public void getSuggerimento(ArrayList<Pioli> suggerimento)
-	{
-		currentView.getSuggerimento();
-	}
-
 }

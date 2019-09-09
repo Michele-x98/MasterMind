@@ -9,7 +9,7 @@ import it.unicam.cs.pa.mastermind2019.view.MMView;
  * @author Daniele Moschini
  *
  */
-public class PlayerFactory
+public class PlayerFactory implements PlayerFactoryView
 {
 	/**
 	 * Costruttore vuoto.
@@ -22,6 +22,7 @@ public class PlayerFactory
 	 * @param c Parametro che inciderà sulla creazione del player.
 	 * @return Il player desiderato.
 	 */
+	@Override
 	public Player getPlayer(String c, MMView vista)
 	{
 		Player p;

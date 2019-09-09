@@ -35,7 +35,7 @@ public class TestPlayer
 	public void testBotGenerateCode() throws IOException, IllegalParameterException
 	{
 		ImpostazioniView settings = new ImpostazioniClasse(6, false);
-		PlayerFactory p = new PlayerFactory();
+		PlayerFactoryView p = new PlayerFactory();
 		Player chicco = p.getPlayer("Bot");
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
@@ -51,7 +51,7 @@ public class TestPlayer
 	public void testBotGenerateCodeNotNull() throws IOException, IllegalParameterException
 	{
 		ImpostazioniView settings = new ImpostazioniClasse(6, false);
-		PlayerFactory p = new PlayerFactory();
+		PlayerFactoryView p = new PlayerFactory();
 		Player chicco = p.getPlayer("Bot");
 		assertNotNull(chicco.generateCode(settings));
 	}
@@ -60,7 +60,7 @@ public class TestPlayer
 	public void testHumanGenerateCodeNotNull() throws IOException, IllegalParameterException
 	{
 		ImpostazioniView settings = new ImpostazioniClasse(6, false);
-		PlayerFactory p = new PlayerFactory();
+		PlayerFactoryView p = new PlayerFactory();
 		Player chicco = p.getPlayer("Prova");
 		assertNotNull(chicco.generateCode(settings));
 		
