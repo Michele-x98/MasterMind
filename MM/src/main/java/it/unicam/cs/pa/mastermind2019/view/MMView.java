@@ -52,8 +52,6 @@ public interface MMView {
 
 	void attemptResault(ArrayList<Pioli> sugg);
 
-	void update(Observable o, Object arg);
-
 	void getSuggerimento();
 
 	ArrayList<Integer> botGetCombination();

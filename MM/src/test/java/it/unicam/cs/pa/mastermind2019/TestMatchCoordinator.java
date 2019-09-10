@@ -20,11 +20,11 @@ public class TestMatchCoordinator {
 	public void testCheckPC() throws IOException {
 		
 		PlayerFactoryView p = new PlayerFactory();
-//		Player bot = p.getPlayer("bot");
-//		Player chicco = p.getPlayer("Bot");
+		Player bot = p.getPlayer("bot", null);
+		Player chicco = p.getPlayer("Bot", null);
 		ImpostazioniView settings = new ImpostazioniClasse(6, false);
 		CampoView cam = new Campo(settings);
-//		MatchCoordinator arbitro = new MatchCoordinator(settings, cam, bot, chicco);
+		ArbitroView arbitro = new MatchCoordinator(settings, cam, null, bot, chicco);
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
 		app.add(2);
@@ -50,11 +50,11 @@ public class TestMatchCoordinator {
 	public void testCheckPE() throws IOException
 	{
 		PlayerFactoryView p = new PlayerFactory();
-		Player bot = p.getPlayer("bot");
-		Player chicco = p.getPlayer("Bot");
+		Player bot = p.getPlayer("bot", null);
+		Player chicco = p.getPlayer("Bot",null);
 		ImpostazioniView settings = new ImpostazioniClasse(4, false);
 		Campo cam = new Campo(settings);
-		ArbitroView arbitro = new MatchCoordinator(settings, cam, bot, chicco);
+		ArbitroView arbitro = new MatchCoordinator(settings, cam, null, bot, chicco);
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
 		app.add(2);
@@ -82,11 +82,11 @@ public class TestMatchCoordinator {
 	public void testCheckBoth() throws IOException
 	{
 		PlayerFactoryView p = new PlayerFactory();
-		Player bot = p.getPlayer("bot");
-		Player chicco = p.getPlayer("Bot");
+		Player bot = p.getPlayer("bot", null);
+		Player chicco = p.getPlayer("Bot", null);
 		ImpostazioniView settings = new ImpostazioniClasse(4, false);
 		Campo cam = new Campo(settings);
-		ArbitroView arbitro = new MatchCoordinator(settings, cam, bot, chicco);
+		ArbitroView arbitro = new MatchCoordinator(settings, cam, null, bot, chicco);
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
 		app.add(2);
@@ -114,11 +114,11 @@ public class TestMatchCoordinator {
 	public void testCheckNull() throws IOException
 	{
 		PlayerFactoryView p = new PlayerFactory();
-		Player bot = p.getPlayer("bot");
-		Player chicco = p.getPlayer("Bot");
+		Player bot = p.getPlayer("bot", null);
+		Player chicco = p.getPlayer("Bot", null);
 		ImpostazioniView settings = new ImpostazioniClasse(4, false);
 		Campo cam = new Campo(settings);
-		ArbitroView arbitro = new MatchCoordinator(settings, cam, bot, chicco);
+		ArbitroView arbitro = new MatchCoordinator(settings, cam, null, bot, chicco);
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
 		app.add(2);
@@ -145,7 +145,7 @@ public class TestMatchCoordinator {
 	{
 		
 		ImpostazioniView settings = new ImpostazioniClasse(4, false);
-		Campo cam = new Campo(settings);
+		CampoView cam = new Campo(settings);
 		
 		ArrayList<Pioli> risultato = new ArrayList<Pioli>();
 		risultato.add(Pioli.PC);

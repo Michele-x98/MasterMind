@@ -10,6 +10,7 @@ import org.junit.Test;
 import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse;
 import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniView;
 import it.unicam.cs.pa.mastermind2019.view.IllegalParameterException;
+import it.unicam.cs.pa.mastermind2019.view.MMView;
 
 public class TestPlayer
 {
@@ -36,7 +37,7 @@ public class TestPlayer
 	{
 		ImpostazioniView settings = new ImpostazioniClasse(6, false);
 		PlayerFactoryView p = new PlayerFactory();
-		Player chicco = p.getPlayer("Bot");
+		Player chicco = p.getPlayer("BOT", null);
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
 		app.add(2);
@@ -44,7 +45,7 @@ public class TestPlayer
 		app.add(4);
 		app.add(3);
 		app.add(7);
-		assertTrue(app.size() == chicco.generateCode(settings).size());
+		assertTrue(app.size() == chicco.generateCode().size());
 	}
 	
 	@Test
@@ -52,8 +53,8 @@ public class TestPlayer
 	{
 		ImpostazioniView settings = new ImpostazioniClasse(6, false);
 		PlayerFactoryView p = new PlayerFactory();
-		Player chicco = p.getPlayer("Bot");
-		assertNotNull(chicco.generateCode(settings));
+		Player chicco = p.getPlayer("Bot", null);
+		assertNotNull(chicco.generateCode());
 	}
 	
 //	@Test
@@ -61,8 +62,8 @@ public class TestPlayer
 	{
 		ImpostazioniView settings = new ImpostazioniClasse(6, false);
 		PlayerFactoryView p = new PlayerFactory();
-		Player chicco = p.getPlayer("Prova");
-		assertNotNull(chicco.generateCode(settings));
+		Player chicco = p.getPlayer("Prova", null);
+		assertNotNull(chicco.generateCode());
 		
 	}
 }

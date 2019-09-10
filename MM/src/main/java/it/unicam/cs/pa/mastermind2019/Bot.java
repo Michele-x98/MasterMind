@@ -12,7 +12,7 @@ import it.unicam.cs.pa.mastermind2019.view.MMView;
  * @author Daniele Moschini
  */
 
-public class Bot implements Player {
+public class Bot implements Player{
 
 	public String ID;
 	MMView currentView;

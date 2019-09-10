@@ -24,7 +24,7 @@ import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniView;
  */
 
 @SuppressWarnings("deprecation")
-public class InputOutput implements MMView, Observer
+public class InputOutput implements MMView
 {
 	private PrintStream output;
 	private BufferedReader input;
@@ -295,13 +295,6 @@ public class InputOutput implements MMView, Observer
 	{
 		output.println(sugg);
 
-	}
-
-	@Override
-	public void update(	Observable o,
-						Object arg)
-	{
-		// TODO Auto-generated method stub
 	}
 
 	@Override
