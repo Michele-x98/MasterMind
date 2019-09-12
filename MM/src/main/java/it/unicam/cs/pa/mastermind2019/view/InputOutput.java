@@ -10,7 +10,6 @@ import java.util.Observer;
 import java.util.Random;
 
 import it.unicam.cs.pa.mastermind2019.Pioli;
-import it.unicam.cs.pa.mastermind2019.PlayerType;
 import it.unicam.cs.pa.mastermind2019.Risultato;
 import it.unicam.cs.pa.mastermind2019.modelcontroller.CampoView;
 import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniView;
@@ -24,7 +23,7 @@ import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniView;
  */
 
 @SuppressWarnings("deprecation")
-public class InputOutput implements MMView
+public class InputOutput implements MMView, Observer
 {
 	private PrintStream output;
 	private BufferedReader input;
@@ -169,7 +168,6 @@ public class InputOutput implements MMView
 			code = "CodeBreaker";
 		while (true)
 		{
-			//PlayerType[] types = PlayerType.class.getEnumConstants();
 			output.println("Inserisci chi vuoi che sia il " +code);
 			String c;
 			try
@@ -246,7 +244,10 @@ public class InputOutput implements MMView
 			}
 			catch (IllegalParameterException e)
 			{
-				e.printStackTrace();
+				System.err.println("Uno o più parametri inseriti non sono corretti\n" +
+						"I numeri devono essere compresi tra 1 e " +
+						currentParameters.getMaxCodValue() +
+						", prova di nuovo \n");
 			}
 			catch (IOException e)
 			{
@@ -295,6 +296,13 @@ public class InputOutput implements MMView
 	{
 		output.println(sugg);
 
+	}
+
+	@Override
+	public void update(	Observable o,
+						Object arg)
+	{
+		// TODO Auto-generated method stub
 	}
 
 	@Override

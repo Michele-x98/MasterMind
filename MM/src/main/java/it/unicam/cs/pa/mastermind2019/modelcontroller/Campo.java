@@ -2,6 +2,8 @@ package it.unicam.cs.pa.mastermind2019.modelcontroller;
 
 import java.util.ArrayList;
 import java.util.Stack;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import it.unicam.cs.pa.mastermind2019.Pioli;
 
@@ -15,6 +17,7 @@ import it.unicam.cs.pa.mastermind2019.Pioli;
 
 public class Campo implements CampoView
 {
+	private static final Logger logger = Logger.getLogger(Campo.class.getName());
 	private ArrayList<Integer> decodeArray;
 	private ArrayList<Integer> codeArray;
 	private Stack<ArrayList<Pioli>> suggerimenti;
@@ -38,11 +41,16 @@ public class Campo implements CampoView
 	
 	@Override
 	public ArrayList<Pioli> getLastSuggerimento()
-	{ return suggerimenti.peek(); }
+	{ 
+		ArrayList<Pioli> lastSugg = suggerimenti.peek();
+		logger.log(Level.INFO, "Restituito il suggerimento: " + lastSugg.toString());
+		return lastSugg; 
+	}
 	
 	@Override
 	public void addSuggerimento(ArrayList<Pioli> sugg)
 	{
+		logger.log(Level.INFO, "Aggiunto il suggerimento " + sugg + " ai suggerimenti");
 		suggerimenti.add(sugg);
 	}
 
@@ -54,7 +62,7 @@ public class Campo implements CampoView
 	@Override
 	public ArrayList<Integer> getArrayFromDeco()
 	{
-//		LogToFile.messaggio("INFO","Codice inserito nel campo");
+		logger.log(Level.INFO, "Restituito array"+ this.decodeArray + " da decodificare");
 		return this.decodeArray; }
 
 	
@@ -64,7 +72,10 @@ public class Campo implements CampoView
 	 */
 	@Override
 	public ArrayList<Integer> getArrayFromCode()
-	{ return this.codeArray; }
+	{ 
+		logger.log(Level.INFO, "Restituito l'array " + this.codeArray + " da codificare");
+		return this.codeArray; 
+	}
 
 //	 ****************** SETTERS ******************
 	
@@ -76,7 +87,9 @@ public class Campo implements CampoView
 	 */
 	@Override
 	public void setDecodeArray(ArrayList<Integer> arrayList)
-	{ this.decodeArray = arrayList;
+	{ 
+		logger.log(Level.INFO, "Impostando " + arrayList + " come tentativo");
+		this.decodeArray = arrayList;
 	//DEBUG
 	System.out.println("DEBUG: "+arrayList);
 	}
@@ -89,6 +102,8 @@ public class Campo implements CampoView
 	 */
 	@Override
 	public void setCodeArray(ArrayList<Integer> codeArray)
-	{ this.codeArray = codeArray; }
+	{ 
+		logger.log(Level.INFO, "Impostando " + codeArray + " come array da codificare");
+		this.codeArray = codeArray; }
 
 }

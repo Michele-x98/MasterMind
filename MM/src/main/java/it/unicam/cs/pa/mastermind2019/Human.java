@@ -1,6 +1,8 @@
 package it.unicam.cs.pa.mastermind2019;
 
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import it.unicam.cs.pa.mastermind2019.view.IllegalParameterException;
 import it.unicam.cs.pa.mastermind2019.view.MMView;
@@ -14,6 +16,7 @@ import it.unicam.cs.pa.mastermind2019.view.MMView;
 
 public class Human implements Player
 {
+	private static final Logger logger = Logger.getLogger(Human.class.getName());
 	public String ID;
 	ArrayList<ArrayList<Integer>> tentativi;
 	MMView currentView = null;
@@ -24,9 +27,10 @@ public class Human implements Player
 	 */
 	public Human(MMView view)
 	{
-		this.ID = "DefaultID";
+		this.ID = "Standard Player";
 		this.tentativi = new ArrayList<ArrayList<Integer>>();
 		this.currentView = view;
+		logger.log(Level.INFO,"Creato un player umano con id: Standard Player");
 	}
 
 	/**
@@ -39,8 +43,9 @@ public class Human implements Player
 					String id )
 	{
 		this.ID = id;
-		this.tentativi =new ArrayList<ArrayList<Integer>>();
+		this.tentativi = new ArrayList<ArrayList<Integer>>();
 		this.currentView = view;
+		logger.log(Level.INFO,"Creato un player umano con id: "+ id);
 	}
 
 	/**
@@ -63,6 +68,7 @@ public class Human implements Player
 	public ArrayList<Integer> generateCode() throws IllegalParameterException
 	{
 		ArrayList<Integer> code = currentView.getCombination();
+		logger.log(Level.INFO,"Il player umano ha generato il codice: "+code);
 		tentativi.add(code);
 		return code;
 	}

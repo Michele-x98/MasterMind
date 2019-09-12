@@ -1,5 +1,8 @@
 package it.unicam.cs.pa.mastermind2019;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  * <b>Responsabilità:</b> Creare un Risultato in caso di sconfitta.
  * 
@@ -9,6 +12,7 @@ package it.unicam.cs.pa.mastermind2019;
  */
 public class Perdente implements Risultato
 {
+	private static final Logger logger = Logger.getLogger(Perdente.class.getName());
 	private final String loserId;
 /**
  * Costruttore di Perdente.
@@ -16,6 +20,7 @@ public class Perdente implements Risultato
  */
 	public Perdente(String ID )
 	{
+		logger.log(Level.INFO,"Creata un istanza di Perdente per il giocatore: "+ID);
 		this.loserId = ID;
 	}
 /**
@@ -24,7 +29,7 @@ public class Perdente implements Risultato
 	@Override
 	public String toString()
 	{
-//		LogToFile.messaggio("INFO","Stampa del giocatore perdente");
+		logger.log(Level.INFO, "Restituito Risultato della partita: \n"+"Il giocatore " + loserId  + " ha perso!");
 		return "Il giocatore " +
 				loserId +
 				" ha perso!";
