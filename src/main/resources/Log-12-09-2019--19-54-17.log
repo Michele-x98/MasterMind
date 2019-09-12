@@ -1,0 +1,143 @@
+set 12, 2019 7:54:25 PM it.unicam.cs.pa.mastermind2019.Bot <init>
+INFO: Bot Creato con id: Bot
+set 12, 2019 7:54:25 PM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creato un bot con id: Bot
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.Bot <init>
+INFO: Bot Creato con id: bot
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creato un bot con id: bot
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.Bot generateCode
+INFO: Il Bot ha generato il codice: [3, 5, 1, 4]
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo setDecodeArray
+INFO: Impostando [3, 5, 1, 4] come tentativo
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.Bot generateCode
+INFO: Il Bot ha generato il codice: [4, 3, 2, 5]
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo setCodeArray
+INFO: Impostando [4, 3, 2, 5] come array da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromCode
+INFO: Restituito l'array [4, 3, 2, 5] da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromCode
+INFO: Restituito l'array [4, 3, 2, 5] da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[3, 5, 1, 4] da decodificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo addSuggerimento
+INFO: Aggiunto il suggerimento [PE, PE, PE] ai suggerimenti
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[3, 5, 1, 4] da decodificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.Bot generateCode
+INFO: Il Bot ha generato il codice: [3, 2, 4, 1]
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo setCodeArray
+INFO: Impostando [3, 2, 4, 1] come array da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromCode
+INFO: Restituito l'array [3, 2, 4, 1] da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromCode
+INFO: Restituito l'array [3, 2, 4, 1] da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[3, 5, 1, 4] da decodificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo addSuggerimento
+INFO: Aggiunto il suggerimento [PC, PE, PE] ai suggerimenti
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[3, 5, 1, 4] da decodificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.Bot generateCode
+INFO: Il Bot ha generato il codice: [2, 3, 5, 4]
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo setCodeArray
+INFO: Impostando [2, 3, 5, 4] come array da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromCode
+INFO: Restituito l'array [2, 3, 5, 4] da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromCode
+INFO: Restituito l'array [2, 3, 5, 4] da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[3, 5, 1, 4] da decodificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo addSuggerimento
+INFO: Aggiunto il suggerimento [PC, PE, PE] ai suggerimenti
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[3, 5, 1, 4] da decodificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.Bot generateCode
+INFO: Il Bot ha generato il codice: [4, 3, 5, 2]
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo setCodeArray
+INFO: Impostando [4, 3, 5, 2] come array da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromCode
+INFO: Restituito l'array [4, 3, 5, 2] da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromCode
+INFO: Restituito l'array [4, 3, 5, 2] da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[3, 5, 1, 4] da decodificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo addSuggerimento
+INFO: Aggiunto il suggerimento [PE, PE, PE] ai suggerimenti
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[3, 5, 1, 4] da decodificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.Bot generateCode
+INFO: Il Bot ha generato il codice: [4, 5, 3, 1]
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo setCodeArray
+INFO: Impostando [4, 5, 3, 1] come array da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromCode
+INFO: Restituito l'array [4, 5, 3, 1] da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromCode
+INFO: Restituito l'array [4, 5, 3, 1] da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[3, 5, 1, 4] da decodificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo addSuggerimento
+INFO: Aggiunto il suggerimento [PC, PE, PE, PE] ai suggerimenti
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[3, 5, 1, 4] da decodificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.Bot generateCode
+INFO: Il Bot ha generato il codice: [5, 2, 3, 1]
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo setCodeArray
+INFO: Impostando [5, 2, 3, 1] come array da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromCode
+INFO: Restituito l'array [5, 2, 3, 1] da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromCode
+INFO: Restituito l'array [5, 2, 3, 1] da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[3, 5, 1, 4] da decodificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo addSuggerimento
+INFO: Aggiunto il suggerimento [PE, PE, PE] ai suggerimenti
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[3, 5, 1, 4] da decodificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.Bot generateCode
+INFO: Il Bot ha generato il codice: [2, 4, 5, 3]
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo setCodeArray
+INFO: Impostando [2, 4, 5, 3] come array da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromCode
+INFO: Restituito l'array [2, 4, 5, 3] da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromCode
+INFO: Restituito l'array [2, 4, 5, 3] da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[3, 5, 1, 4] da decodificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo addSuggerimento
+INFO: Aggiunto il suggerimento [PE, PE, PE] ai suggerimenti
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[3, 5, 1, 4] da decodificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.Bot generateCode
+INFO: Il Bot ha generato il codice: [5, 4, 3, 2]
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo setCodeArray
+INFO: Impostando [5, 4, 3, 2] come array da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromCode
+INFO: Restituito l'array [5, 4, 3, 2] da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromCode
+INFO: Restituito l'array [5, 4, 3, 2] da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[3, 5, 1, 4] da decodificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo addSuggerimento
+INFO: Aggiunto il suggerimento [PE, PE, PE] ai suggerimenti
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[3, 5, 1, 4] da decodificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.Bot generateCode
+INFO: Il Bot ha generato il codice: [5, 2, 4, 1]
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo setCodeArray
+INFO: Impostando [5, 2, 4, 1] come array da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromCode
+INFO: Restituito l'array [5, 2, 4, 1] da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromCode
+INFO: Restituito l'array [5, 2, 4, 1] da codificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[3, 5, 1, 4] da decodificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo addSuggerimento
+INFO: Aggiunto il suggerimento [PE, PE, PE] ai suggerimenti
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[3, 5, 1, 4] da decodificare
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.Perdente <init>
+INFO: Creata un istanza di Perdente per il giocatore: bot
+set 12, 2019 7:54:27 PM it.unicam.cs.pa.mastermind2019.Perdente toString
+INFO: Restituito Risultato della partita: 
+Il giocatore bot ha perso!

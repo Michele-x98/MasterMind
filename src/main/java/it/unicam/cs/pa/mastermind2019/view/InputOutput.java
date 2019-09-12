@@ -29,6 +29,15 @@ public class InputOutput implements MMView, Observer
 	private BufferedReader input;
 	ImpostazioniView currentParameters;
 	CampoView terreno;
+	
+	static String logo = "  __  __           _                      _           _  \n" +
+			" |  \\/  |         | |                    (_)         | | \n" +
+			" | \\  / | __ _ ___| |_ ___ _ __ _ __ ___  _ _ __   __| | \n" +
+			" | |\\/| |/ _` / __| __/ _ \\ '__| '_ ` _ \\| | '_ \\ / _` | \n" +
+			" | |  | | (_| \\__ \\ ||  __/ |  | | | | | | | | | | (_| | \n" +
+			" |_|  |_|\\__,_|___/\\__\\___|_|  |_| |_| |_|_|_| |_|\\__,_| \n" +
+			"                                                         \n" +
+			"                                                         ";
 
 	public InputOutput(	ImpostazioniView parametri,
 						CampoView terreno )
@@ -60,10 +69,12 @@ public class InputOutput implements MMView, Observer
 			}
 			catch (IOException e)
 			{
+				clearScreen();
 				System.err.println("Insersci il numero 4, 6 o 8!");
 			}
 			catch (IllegalParameterException e)
 			{
+				clearScreen();
 				System.err.println("Insersci il numero 4, 6 o 8!");
 			}
 
@@ -179,12 +190,14 @@ public class InputOutput implements MMView, Observer
 			}
 			catch (IOException e)
 			{
+				clearScreen();
 				output.println("Tipo di " +
 								code +
 								" non valido.");
 			}
 			catch (IllegalParameterException e)
 			{
+				clearScreen();
 				output.println("Tipo di " +
 								code +
 								" non valido.");
@@ -235,15 +248,13 @@ public class InputOutput implements MMView, Observer
 						codice.add(Character.getNumericValue(app2[i]));
 					}
 					else
-						throw new IllegalParameterException("Uno o più parametri inseriti non sono corretti\n" +
-															"I numeri devono essere compresi tra 1 e " +
-															currentParameters.getMaxCodValue() +
-															", prova di nuovo \n");
+						throw new IllegalParameterException();
 				}
 				validate = true;
 			}
 			catch (IllegalParameterException e)
 			{
+				clearScreen();
 				System.err.println("Uno o più parametri inseriti non sono corretti\n" +
 						"I numeri devono essere compresi tra 1 e " +
 						currentParameters.getMaxCodValue() +
@@ -271,14 +282,7 @@ public class InputOutput implements MMView, Observer
 	@Override
 	public void gameInit()
 	{
-		String logo = "  __  __           _                      _           _  \n" +
-						" |  \\/  |         | |                    (_)         | | \n" +
-						" | \\  / | __ _ ___| |_ ___ _ __ _ __ ___  _ _ __   __| | \n" +
-						" | |\\/| |/ _` / __| __/ _ \\ '__| '_ ` _ \\| | '_ \\ / _` | \n" +
-						" | |  | | (_| \\__ \\ ||  __/ |  | | | | | | | | | | (_| | \n" +
-						" |_|  |_|\\__,_|___/\\__\\___|_|  |_| |_| |_|_|_| |_|\\__,_| \n" +
-						"                                                         \n" +
-						"                                                         ";
+
 
 		String regole = "Benvenuti in MasterMind di Moschini Daniele e Benedetti Michele \n" +
 						"In questa verione di MasterMind inserire come primo giocatore colui che crea il codice da DECODIFICARE, e come\n" +
@@ -294,7 +298,7 @@ public class InputOutput implements MMView, Observer
 	@Override
 	public void attemptResault(ArrayList<Pioli> sugg)
 	{
-		output.println(sugg);
+		output.println("Suggerimento: " + sugg);
 
 	}
 
@@ -314,7 +318,6 @@ public class InputOutput implements MMView, Observer
 	@Override
 	public ArrayList<Integer> botGetCombination()
 	{
-
 		ArrayList<Integer> code = new ArrayList<Integer>();
 
 		while (!(code.size() == currentParameters.getCodeLenght()))
@@ -435,5 +438,8 @@ public class InputOutput implements MMView, Observer
 			output.println("Inserisci il numero della risposta !");
 		}}
 	}
-
+	public void clearScreen() {  
+		for (int i = 0; i < 50; ++i) System.out.println();
+	    System.out.println(logo);
+	} 
 }

@@ -1,0 +1,8 @@
+set 12, 2019 7:35:44 PM it.unicam.cs.pa.mastermind2019.Human <init>
+INFO: Creato un player umano con id: 2
+set 12, 2019 7:35:44 PM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creato un Human con id: 2
+set 12, 2019 7:35:46 PM it.unicam.cs.pa.mastermind2019.Human <init>
+INFO: Creato un player umano con id: 1
+set 12, 2019 7:35:46 PM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creato un Human con id: 1

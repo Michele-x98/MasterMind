@@ -15,7 +15,7 @@ public class ImpostazioniFileConfig implements ImpostazioniView
 
 	public ImpostazioniFileConfig() throws FileNotFoundException, IOException
 	{
-		try (InputStream input = new FileInputStream("config.properties"))
+		try (InputStream input = new FileInputStream("src/main/resources/config.properties"))
 		{
 			prop.load(input);
 		}
@@ -27,7 +27,7 @@ public class ImpostazioniFileConfig implements ImpostazioniView
 
 	private void createDefaultProperty()
 	{
-		try (OutputStream output = new FileOutputStream("config.properties"))
+		try (OutputStream output = new FileOutputStream("src/main/resources/config.properties"))
 		{
 			prop.setProperty("duplicateAllow", "true");
 			prop.setProperty("codeLenght", "4");
@@ -67,12 +67,12 @@ public class ImpostazioniFileConfig implements ImpostazioniView
 
 	@Override
 	public boolean isDuplicateAllow()
-	{ return Boolean.valueOf(prop.getProperty("duplicateAllow")); }
+	{ return Boolean.valueOf(prop.getProperty("src/main/resources/duplicateAllow")); }
 
 	@Override
 	public void setCodeLenght(int code)
 	{
-		try (OutputStream output = new FileOutputStream("config.properties"))
+		try (OutputStream output = new FileOutputStream("src/main/resources/config.properties"))
 		{
 			if (code == 4)
 			{
@@ -103,7 +103,7 @@ public class ImpostazioniFileConfig implements ImpostazioniView
 	@Override
 	public void setDuplicate(boolean duplicate)
 	{
-		try (OutputStream output = new FileOutputStream("config.properties"))
+		try (OutputStream output = new FileOutputStream("src/main/resources/config.properties"))
 		{
 			prop.setProperty("duplicateAllow", Boolean.toString(duplicate));
 			prop.store(output, null);

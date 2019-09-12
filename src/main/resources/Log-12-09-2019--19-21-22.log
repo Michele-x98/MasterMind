@@ -1,0 +1,12 @@
+set 12, 2019 7:21:27 PM it.unicam.cs.pa.mastermind2019.Human <init>
+INFO: Creato un player umano con id: 2
+set 12, 2019 7:21:27 PM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creato un Human con id: 2
+set 12, 2019 7:21:28 PM it.unicam.cs.pa.mastermind2019.Human <init>
+INFO: Creato un player umano con id: 3
+set 12, 2019 7:21:28 PM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creato un Human con id: 3
+set 12, 2019 7:21:39 PM it.unicam.cs.pa.mastermind2019.Human generateCode
+INFO: Il player umano ha generato il codice: [1, 2, 4, 5]
+set 12, 2019 7:21:39 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo setDecodeArray
+INFO: Impostando [1, 2, 4, 5] come tentativo

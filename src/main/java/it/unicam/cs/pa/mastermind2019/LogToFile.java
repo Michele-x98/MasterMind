@@ -49,9 +49,10 @@ public class LogToFile
 	{
 	
 			SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy--HH-mm-ss");
+			
 			try
 			{
-				fh = new FileHandler("Log-" + format.format(Calendar.getInstance().getTime()) + ".log");
+				fh = new FileHandler("src/main/resources/Log-" + format.format(Calendar.getInstance().getTime()) + ".log");
 			}
 			catch (Exception e)
 			{
