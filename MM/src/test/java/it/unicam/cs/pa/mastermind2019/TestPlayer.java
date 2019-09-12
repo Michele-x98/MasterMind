@@ -7,10 +7,10 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse;
-import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniView;
+//import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse;
+//import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniView;
 import it.unicam.cs.pa.mastermind2019.view.IllegalParameterException;
-import it.unicam.cs.pa.mastermind2019.view.MMView;
+//import it.unicam.cs.pa.mastermind2019.view.MMView;
 
 public class TestPlayer
 {
@@ -35,7 +35,7 @@ public class TestPlayer
 	@Test
 	public void testBotGenerateCode() throws IOException, IllegalParameterException
 	{
-		ImpostazioniView settings = new ImpostazioniClasse(6, false);
+//		ImpostazioniView settings = new ImpostazioniClasse(6, false);
 		PlayerFactoryView p = new PlayerFactory();
 		Player chicco = p.getPlayer("BOT", null);
 		ArrayList<Integer> app = new ArrayList<Integer>();
@@ -51,7 +51,7 @@ public class TestPlayer
 	@Test
 	public void testBotGenerateCodeNotNull() throws IOException, IllegalParameterException
 	{
-		ImpostazioniView settings = new ImpostazioniClasse(6, false);
+//		ImpostazioniView settings = new ImpostazioniClasse(6, false);
 		PlayerFactoryView p = new PlayerFactory();
 		Player chicco = p.getPlayer("Bot", null);
 		assertNotNull(chicco.generateCode());
@@ -60,7 +60,7 @@ public class TestPlayer
 //	@Test
 	public void testHumanGenerateCodeNotNull() throws IOException, IllegalParameterException
 	{
-		ImpostazioniView settings = new ImpostazioniClasse(6, false);
+//		ImpostazioniView settings = new ImpostazioniClasse(6, false);
 		PlayerFactoryView p = new PlayerFactory();
 		Player chicco = p.getPlayer("Prova", null);
 		assertNotNull(chicco.generateCode());
