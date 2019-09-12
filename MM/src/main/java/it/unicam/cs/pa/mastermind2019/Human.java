@@ -16,7 +16,7 @@ import it.unicam.cs.pa.mastermind2019.view.MMView;
 
 public class Human implements Player
 {
-	private static final Logger logger = Logger.getLogger(Human.class.getName());
+	private static final Logger logger = LogToFile.getLogger(Human.class);
 	public String ID;
 	ArrayList<ArrayList<Integer>> tentativi;
 	MMView currentView = null;

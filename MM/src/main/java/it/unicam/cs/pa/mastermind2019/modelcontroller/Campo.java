@@ -5,6 +5,7 @@ import java.util.Stack;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import it.unicam.cs.pa.mastermind2019.LogToFile;
 import it.unicam.cs.pa.mastermind2019.Pioli;
 
 
@@ -17,7 +18,7 @@ import it.unicam.cs.pa.mastermind2019.Pioli;
 
 public class Campo implements CampoView
 {
-	private static final Logger logger = Logger.getLogger(Campo.class.getName());
+	private static final Logger logger = LogToFile.getLogger(Campo.class);
 	private ArrayList<Integer> decodeArray;
 	private ArrayList<Integer> codeArray;
 	private Stack<ArrayList<Pioli>> suggerimenti;

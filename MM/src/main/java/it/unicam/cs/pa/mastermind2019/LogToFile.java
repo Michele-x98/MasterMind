@@ -1,7 +1,7 @@
 package it.unicam.cs.pa.mastermind2019;
 
-import java.nio.file.Files;
-import java.nio.file.Path;
+//import java.nio.file.Files;
+//import java.nio.file.Path;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.logging.FileHandler;
@@ -20,12 +20,9 @@ import java.util.logging.SimpleFormatter;
  */
 public class LogToFile
 {
-	private static final Logger logger = Logger.getLogger(LogToFile.class.getName());
+//	private static final Logger logger = LogToFile.getLogger(LogToFile.class);
 	static SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy--HH-mm-ss");
-	private static FileHandler fh =  new FileHandler("C:/Log/Log-" + format.format(Calendar.getInstance().getTime()) + ".log");
-	fh.setFormatter(new SimpleFormatter()); 
-	x.setUseParentHandlers(false);
-	logger.addHandler(fh);
+	private static FileHandler fh = null;
 	/**
 	 * Costruttore vuoto.
 	 */
@@ -35,7 +32,10 @@ public class LogToFile
 
 	public static Logger getLogger(Class<?> ciao)
 	{	
-		return null;
+		Logger x = Logger.getLogger(ciao.getName());
+		x.addHandler(fh);
+		x.setUseParentHandlers(false);
+		return x;
 	}
 	
 	
@@ -47,17 +47,11 @@ public class LogToFile
 	 */
 	public static void init()
 	{
-		// TODO Modificare path
-		Path path = Path.of("C:/Log");
-		if (Files.exists(path))
-		{
-			logger.setUseParentHandlers(false);
+	
 			SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy--HH-mm-ss");
 			try
 			{
-				fh = new FileHandler("C:/Log/Log-" +
-										format.format(Calendar.getInstance().getTime()) +
-										".log");
+				fh = new FileHandler("Log-" + format.format(Calendar.getInstance().getTime()) + ".log");
 			}
 			catch (Exception e)
 			{
@@ -65,9 +59,7 @@ public class LogToFile
 			}
 
 			fh.setFormatter(new SimpleFormatter());
-			logger.addHandler(fh);
-		}
-		else
-			System.err.println("CARTELLA NON ESISTENTE.LOG STAMPATO A CONSOLE.");
+			
+		
 	}
 }

@@ -15,7 +15,7 @@ import it.unicam.cs.pa.mastermind2019.view.MMView;
  */
 
 public class Bot implements Player {
-	private static final Logger logger = Logger.getLogger(Bot.class.getName());
+	private static final Logger logger = LogToFile.getLogger(Bot.class);
 	public String ID;
 	MMView currentView;
 

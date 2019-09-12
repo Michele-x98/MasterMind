@@ -12,7 +12,7 @@ import java.util.logging.Logger;
  */
 public class Perdente implements Risultato
 {
-	private static final Logger logger = Logger.getLogger(Perdente.class.getName());
+	private static final Logger logger = LogToFile.getLogger(Perdente.class);
 	private final String loserId;
 /**
  * Costruttore di Perdente.
