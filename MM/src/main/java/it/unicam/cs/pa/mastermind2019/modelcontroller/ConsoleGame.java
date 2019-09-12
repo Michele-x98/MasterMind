@@ -2,6 +2,7 @@ package it.unicam.cs.pa.mastermind2019.modelcontroller;
 
 import java.io.IOException;
 
+import it.unicam.cs.pa.mastermind2019.LogToFile;
 import it.unicam.cs.pa.mastermind2019.Player;
 import it.unicam.cs.pa.mastermind2019.PlayerFactory;
 import it.unicam.cs.pa.mastermind2019.PlayerFactoryView;
@@ -29,7 +30,8 @@ public class ConsoleGame {
 	 * @param p2      Secondo giocatore della partita.
 	 * @param terreno
 	 */
-	public ConsoleGame(Player p1, Player p2, MMView vista, CampoView terreno) {
+	public ConsoleGame(Player p1, Player p2, MMView vista, CampoView terreno)
+	{
 		this.giocatore1 = p1;
 		this.giocatore2 = p2;
 		this.vista = vista;
@@ -44,11 +46,10 @@ public class ConsoleGame {
 	 * @throws IllegalParameterException Eccezione che può essere lanciata dal
 	 *                                   metodo play().
 	 */
-	private void start(ImpostazioniView impostazioni, CampoView terrenogioco)
-			throws IOException, IllegalParameterException {
+	private void start(ImpostazioniView impostazioni, CampoView terrenogioco) throws IllegalParameterException 
+	{
 		ArbitroView arbitro = new MatchCoordinator(impostazioni, terrenogioco, vista, this.giocatore1, this.giocatore2);
 		vista.matchResault(arbitro.play());
-
 	}
 
 	/**
@@ -60,13 +61,13 @@ public class ConsoleGame {
 	 */
 
 	public static void main(String argv[]) throws IOException, IllegalParameterException {
+		LogToFile.init();
 		ImpostazioniView settings = new ImpostazioniFileConfig();
 		CampoView terreno = new Campo(settings);
 		MMView view = new InputOutput(settings, terreno);
 		view.gameInit();
 		PlayerFactoryView player1 = new PlayerFactory();
 		PlayerFactoryView player2 = new PlayerFactory();
-
 		do {
 			boolean finegame = true;
 			while (finegame) {
@@ -83,7 +84,6 @@ public class ConsoleGame {
 				case 2: {
 					settings.setCodeLenght(view.difficultConfiguration());
 					settings.setDuplicate(view.duplicateConfiguration());
-					finegame = false;
 				}
 				}
 			}

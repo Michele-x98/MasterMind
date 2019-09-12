@@ -5,7 +5,7 @@ import java.nio.file.Path;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.logging.FileHandler;
-import java.util.logging.Level;
+//import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
@@ -21,8 +21,11 @@ import java.util.logging.SimpleFormatter;
 public class LogToFile
 {
 	private static final Logger logger = Logger.getLogger(LogToFile.class.getName());
-	private static FileHandler fh = null;
-
+	static SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy--HH-mm-ss");
+	private static FileHandler fh =  new FileHandler("C:/Log/Log-" + format.format(Calendar.getInstance().getTime()) + ".log");
+	fh.setFormatter(new SimpleFormatter()); 
+	x.setUseParentHandlers(false);
+	logger.addHandler(fh);
 	/**
 	 * Costruttore vuoto.
 	 */
@@ -30,14 +33,21 @@ public class LogToFile
 	{
 	}
 
+	public static Logger getLogger(Class<?> ciao)
+	{	
+		return null;
+	}
+	
+	
+
 	/**
 	 * Metodo iniziale che controlla che la presenza della cartella dove creare il
 	 * file di Log, e poi imposta il nome del file di log utilizzando la data e
 	 * l'ora. Infine assegna al logger il fileHandler che deve utilizzare.
-	 * TODO pattern assoluto non va be
 	 */
 	public static void init()
 	{
+		// TODO Modificare path
 		Path path = Path.of("C:/Log");
 		if (Files.exists(path))
 		{
@@ -59,40 +69,5 @@ public class LogToFile
 		}
 		else
 			System.err.println("CARTELLA NON ESISTENTE.LOG STAMPATO A CONSOLE.");
-	}
-
-	/**
-	 * Stampa un messaggio di Log con livelo di importanza <code>level</code> e
-	 * messaggio <code>message</code>.
-	 * 
-	 * @param level   Stringa che caratterizza il livello di importanza del
-	 *                messaggio.
-	 * @param message Contenuto del messaggio.
-	 */
-	public static void messaggio(	String level,
-									String message)
-	{
-		switch (level)
-		{
-			case "WARNING":
-			{
-				logger.log(Level.WARNING, message);
-				break;
-			}
-			case "INFO":
-			{
-				logger.log(Level.INFO, message);
-				break;
-			}
-			case "CONFIG":
-			{
-				logger.log(Level.CONFIG, message);
-				break;
-			}
-			default:
-			{
-				logger.log(Level.INFO, message);
-			}
-		}
 	}
 }

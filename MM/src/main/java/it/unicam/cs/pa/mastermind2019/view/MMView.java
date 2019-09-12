@@ -1,7 +1,7 @@
 package it.unicam.cs.pa.mastermind2019.view;
 
 import java.util.ArrayList;
-import java.util.Observable;
+//import java.util.Observable;
 
 import it.unicam.cs.pa.mastermind2019.Pioli;
 import it.unicam.cs.pa.mastermind2019.Risultato;
@@ -51,6 +51,8 @@ public interface MMView {
 	void gameInit();
 
 	void attemptResault(ArrayList<Pioli> sugg);
+
+//	void update(Observable o, Object arg);
 
 	void getSuggerimento();
 

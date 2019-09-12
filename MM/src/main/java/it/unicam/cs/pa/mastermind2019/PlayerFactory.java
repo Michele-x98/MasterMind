@@ -1,5 +1,8 @@
 package it.unicam.cs.pa.mastermind2019;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import it.unicam.cs.pa.mastermind2019.view.MMView;
 
 /**
@@ -11,6 +14,7 @@ import it.unicam.cs.pa.mastermind2019.view.MMView;
  */
 public class PlayerFactory implements PlayerFactoryView
 {
+	private static final Logger logger = Logger.getLogger(PlayerFactory.class.getName());
 	/**
 	 * Costruttore vuoto.
 	 */
@@ -22,7 +26,6 @@ public class PlayerFactory implements PlayerFactoryView
 	 * @param c Parametro che inciderà sulla creazione del player.
 	 * @return Il player desiderato.
 	 */
-	@Override
 	public Player getPlayer(String c, MMView vista)
 	{
 		Player p;
@@ -30,11 +33,14 @@ public class PlayerFactory implements PlayerFactoryView
 		if (c.equalsIgnoreCase("bot"))
 		{
 			p = new Bot(vista,c);
+			logger.log(Level.INFO, "Creato un bot con id: "+ c);
 		}
 		else
 		{
 			p = new Human(vista,c);
+			logger.log(Level.INFO, "Creato un Human con id: "+ c);
 		}
+		
 		return p;
 	}
 }
