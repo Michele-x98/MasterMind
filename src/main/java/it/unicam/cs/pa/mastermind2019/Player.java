@@ -12,21 +12,10 @@ import it.unicam.cs.pa.mastermind2019.view.IllegalParameterException;
  */
 public interface Player
 {
-	/**
-	 * Restituisce l'ID del player corrente.
-	 * 
-	 * @return L'ID del player
-	 */
+
 	public String getID();
 
-	/**
-	 * Genera un array di interi che può essere utilizzato sia come codice da
-	 * indovinare, sia come tentativo.
-	 * 
-	 * @param settings Impostazioni della partita corrente.
-	 * @return Un ArrayList di interi.
-	 * @throws IllegalParameterException Eccezione per parametri non regolari.
-	 */
+
 	public ArrayList<Integer> generateCode() throws IllegalParameterException;
 
 }

@@ -1,6 +1,5 @@
 package it.unicam.cs.pa.mastermind2019.modelcontroller;
 
-import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -42,11 +41,8 @@ public class ConsoleGame {
 	}
 
 	/**
-	 * Metodo iniziale che prende delle impostazioni, un terreno di gioco ed un
-	 * arbitro ed infine stampa un Risultato.
 	 * 
-	 * @throws IOException               Eccezione che può essere lanciata da
-	 *                                   InputOutput.
+	 * 
 	 * @throws IllegalParameterException Eccezione che può essere lanciata dal
 	 *                                   metodo play().
 	 */
@@ -56,14 +52,4 @@ public class ConsoleGame {
 		ArbitroView arbitro = new MatchCoordinator(impostazioni, terrenogioco, vista, this.giocatore1, this.giocatore2);
 		vista.matchResault(arbitro.play());
 	}
-
-	/**
-	 * Metodo Main.
-	 * 
-	 * @param argv Argomenti passati all'applicazione.
-	 * @throws IOException               Eccezione che può essere lanciata da start.
-	 * @throws IllegalParameterException Eccezione che può essere lanciata da start.
-	 */
-
-	
 }

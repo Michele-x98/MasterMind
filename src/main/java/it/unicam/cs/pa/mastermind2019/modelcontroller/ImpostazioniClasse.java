@@ -1,6 +1,5 @@
 package it.unicam.cs.pa.mastermind2019.modelcontroller;
 
-import java.io.IOException;
 import java.util.logging.Logger;
 import java.util.logging.Level;
 
@@ -22,16 +21,6 @@ public class ImpostazioniClasse implements ImpostazioniView
 	private int maxCodValue;
 	private static final Logger logger = LogToFile.getLogger(ImpostazioniClasse.class);
 
-	/**
-	 * Costruttore con valori in ingresso. Il numero di tentativi e il numero
-	 * massimo di caratteri viene impostato a seconda della lunghezza del codice.
-	 * 
-	 * @param lunghezza Lunghezza del codice da indovinare.
-	 * @param duplicate Booleano che consente di avere duplicati nel codice.
-	 * @throws IOException Viene lanciata se <code>lunghezza</code> non è un numero
-	 *                     tra 4-6-8.
-	 * 
-	 */
 
 	public ImpostazioniClasse(	int lunghezza,
 								boolean duplicate )
@@ -54,11 +43,6 @@ public class ImpostazioniClasse implements ImpostazioniView
 		}
 	}
 
-	/**
-	 * Costruttore di default con parametri preimpostati.
-	 * 
-	 */
-
 	public ImpostazioniClasse()
 	{
 		logger.log(Level.INFO, "Create impostazioni di default");
@@ -68,14 +52,7 @@ public class ImpostazioniClasse implements ImpostazioniView
 		this.maxCodValue = 6;
 	}
 
-	/**
-	 * Controlla che il numero in input sia compreso nel range di numeri accettabili
-	 * nel contesto del gioco.
-	 * 
-	 * @param num Numero intero da controllare.
-	 * @return <b>True</b> Se il valore è accettabile. <b>False</b> Se il valore non
-	 *         è accettabile.
-	 */
+
 	@Override
 	public boolean isValidNumber(int num)
 	{
@@ -85,12 +62,6 @@ public class ImpostazioniClasse implements ImpostazioniView
 		return x;
 	}
 
-	/**
-	 * Metodo che restituisce la lunghezze del codice da decodificare. Metodo di
-	 * lettura utilizzabile dalla vista.
-	 * 
-	 * @return lunghezza codice.
-	 */
 	@Override
 	public int getCodeLenght()
 	{
@@ -99,11 +70,6 @@ public class ImpostazioniClasse implements ImpostazioniView
 		return codeLenght;
 	}
 
-	/**
-	 * Metodo che restituisce i tentativi settati.
-	 * 
-	 * @return tentativi impostati.
-	 */
 	@Override
 	public int getAttempts()
 	{

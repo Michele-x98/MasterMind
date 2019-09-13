@@ -15,20 +15,13 @@ import it.unicam.cs.pa.mastermind2019.view.MMView;
 public class PlayerFactory implements PlayerFactoryView
 {
 	private static final Logger logger = LogToFile.getLogger(PlayerFactory.class);
-	/**
-	 * Costruttore vuoto.
-	 */
+
 	public PlayerFactory() 
 	{
 		logger.log(Level.INFO,"Factory creata con successo");
 	}
 
-	/**
-	 * Metodo che consente di creare un player data una stringa iniziale.
-	 * 
-	 * @param c Parametro che inciderà sulla creazione del player.
-	 * @return Il player desiderato.
-	 */
+
 	public Player getPlayer(String c, MMView vista)
 	{
 		Player p;

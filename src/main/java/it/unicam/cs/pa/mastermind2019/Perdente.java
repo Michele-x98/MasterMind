@@ -14,18 +14,13 @@ public class Perdente implements Risultato
 {
 	private static final Logger logger = LogToFile.getLogger(Perdente.class);
 	private final String loserId;
-/**
- * Costruttore di Perdente.
- * @param ID del perdente.
- */
+
 	public Perdente(String ID )
 	{
 		logger.log(Level.INFO,"Creata un istanza di Perdente per il giocatore: "+ID);
 		this.loserId = ID;
 	}
-/**
- * Override del metodo toString di Player.
- */
+
 	@Override
 	public String toString()
 	{
@@ -34,9 +29,7 @@ public class Perdente implements Risultato
 				loserId +
 				" ha perso!";
 	}
-/**
- * Override del metodo getID di Player.
- */
+
 	@Override
 	public String getID()
 	{ return loserId; }

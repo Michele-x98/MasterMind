@@ -8,7 +8,6 @@ import java.util.logging.Logger;
 import it.unicam.cs.pa.mastermind2019.LogToFile;
 import it.unicam.cs.pa.mastermind2019.Pioli;
 
-
 /**
  * <b>Responsabilità:</b> Gestire il campo di gioco.
  * 
@@ -24,36 +23,33 @@ public class Campo implements CampoView
 	private Stack<ArrayList<Pioli>> suggerimenti;
 	public int lunghezza;
 
-	/**
-	 * Costruttore con un oggetto di tipo GameParameters in ingresso.
-	 * 
-	 * @param settings	Impostazioni della partita.
-	 */
 	public Campo(ImpostazioniView settings )
 	{
 		this.lunghezza = settings.getCodeLenght();
 		this.decodeArray = new ArrayList<Integer>();
 		this.codeArray = new ArrayList<Integer>();
 		this.suggerimenti = new Stack<ArrayList<Pioli>>();
-		logger.log(Level.INFO,"Campo creato correttamente");
+		logger.log(Level.INFO, "Campo creato correttamente");
 	}
 
-
-//	 ****************** GETTERS ******************
-	
-	@Override
-	public ArrayList<Pioli> getLastSuggerimento()
-	{ 
-		ArrayList<Pioli> lastSugg = suggerimenti.peek();
-		logger.log(Level.INFO, "Restituito il suggerimento: " + lastSugg.toString());
-		return lastSugg; 
-	}
-	
 	@Override
 	public void addSuggerimento(ArrayList<Pioli> sugg)
 	{
-		logger.log(Level.INFO, "Aggiunto il suggerimento " + sugg + " ai suggerimenti");
+		logger.log(Level.INFO, "Aggiunto il suggerimento " +
+								sugg +
+								" ai suggerimenti");
 		suggerimenti.add(sugg);
+	}
+
+//	 ****************** GETTERS ******************
+
+	@Override
+	public ArrayList<Pioli> getLastSuggerimento()
+	{
+		ArrayList<Pioli> lastSugg = suggerimenti.peek();
+		logger.log(Level.INFO, "Restituito il suggerimento: " +
+								lastSugg.toString());
+		return lastSugg;
 	}
 
 	/**
@@ -61,27 +57,32 @@ public class Campo implements CampoView
 	 * 
 	 * @return Array da decodificare.
 	 */
+
 	@Override
 	public ArrayList<Integer> getArrayFromDeco()
 	{
-		logger.log(Level.INFO, "Restituito array"+ this.decodeArray + " da decodificare");
-		return this.decodeArray; }
+		logger.log(Level.INFO, "Restituito array" +
+								this.decodeArray +
+								" da decodificare");
+		return this.decodeArray;
+	}
 
-	
 	/**
 	 * Getter della variabile <code>codeArray</code>.
+	 * 
 	 * @return Array tentativo.
 	 */
 	@Override
 	public ArrayList<Integer> getArrayFromCode()
-	{ 
-		logger.log(Level.INFO, "Restituito l'array " + this.codeArray + " da codificare");
-		return this.codeArray; 
+	{
+		logger.log(Level.INFO, "Restituito l'array " +
+								this.codeArray +
+								" da codificare");
+		return this.codeArray;
 	}
 
 //	 ****************** SETTERS ******************
-	
-	
+
 	/**
 	 * Setter per la variabile <code>decodeArray</code>.
 	 * 
@@ -89,12 +90,13 @@ public class Campo implements CampoView
 	 */
 	@Override
 	public void setDecodeArray(ArrayList<Integer> arrayList)
-	{ 
-		logger.log(Level.INFO, "Impostando " + arrayList + " come tentativo");
+	{
+		logger.log(Level.INFO, "Impostando " +
+								arrayList +
+								" come tentativo");
 		this.decodeArray = arrayList;
 	}
 
-	
 	/**
 	 * Setter per la variabile <code>codeArray</code>.
 	 * 
@@ -102,8 +104,11 @@ public class Campo implements CampoView
 	 */
 	@Override
 	public void setCodeArray(ArrayList<Integer> codeArray)
-	{ 
-		logger.log(Level.INFO, "Impostando " + codeArray + " come array da codificare");
-		this.codeArray = codeArray; }
+	{
+		logger.log(Level.INFO, "Impostando " +
+								codeArray +
+								" come array da codificare");
+		this.codeArray = codeArray;
+	}
 
 }

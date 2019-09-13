@@ -1,6 +1,5 @@
 package it.unicam.cs.pa.mastermind2019.modelcontroller;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -31,14 +30,7 @@ public class MatchCoordinator implements ArbitroView {
 	private CampoView campo;
 	private ArrayList<Pioli> suggerimento;
 	private static final Logger logger = LogToFile.getLogger(MatchCoordinator.class);
-	/**
-	 * Metodo Cotruttore del MatchCoordinator.
-	 * 
-	 * @param parametri Parametri usati nella partita
-	 * @param campo     Conserva il codice da decriptare
-	 * @param uno       Primo giocatore della partita
-	 * @param due       Secondo giocatore della partita
-	 */
+	
 	public MatchCoordinator(ImpostazioniView parametri, CampoView campo, MMView vista, Player uno, Player due) {
 		this.parameters = parametri;
 		this.vista = vista;
@@ -49,15 +41,7 @@ public class MatchCoordinator implements ArbitroView {
 		logger.log(Level.INFO,"Arbitro creato correttamente");
 	}
 
-	/**
-	 * Con metodo play() le varie fasi della partita vengono svolte.
-	 * 
-	 * @return Il vincitore o il perdente della partita.
-	 * @throws IOException               Eccezione che può essere lanciata da
-	 *                                   generateCode.
-	 * @throws IllegalParameterException Eccezione che può essere lanciata da
-	 *                                   generateCode.
-	 */
+	
 	@Override
 	public Risultato play() throws IllegalParameterException {
 		logger.log(Level.INFO,"Match start!");
@@ -81,13 +65,7 @@ public class MatchCoordinator implements ArbitroView {
 		return esito = new Perdente(this.p2.getID());
 	}
 
-	/**
-	 * Metodo che si occupa del confronto tra un tentativo e il codice da
-	 * decriptare.
-	 * 
-	 * @param tentativo ArrayList contenente il codice.
-	 * @return Un ArrayList di Pioli contenente un suggerimento per l'utente.
-	 */
+
 	@Override
 	public ArrayList<Pioli> check(ArrayList<Integer> tentativo) {
 		logger.log(Level.INFO,"Inizio controllo dei dati");
@@ -135,15 +113,7 @@ public class MatchCoordinator implements ArbitroView {
 		return checkResult;
 	}
 
-	/**
-	 * Metodo che controlla se un arrayList è vincente o no.
-	 * 
-	 * @param tentativo ArrayList in input.
-	 * @param campo2    Campo di gioco attuale.
-	 * @return <b>True</b> Se <code>tentativo</code> è vincente (pieno di
-	 *         <code>SIMBOLIPOSIZIONI</code>), <b>False</b> Se
-	 *         <code>tentativo</code> non è vincente.
-	 */
+
 	public static boolean isWinner(ArrayList<Pioli> tentativo, CampoView campo2) {
 		int count = 0;
 		for (Pioli c : tentativo) {

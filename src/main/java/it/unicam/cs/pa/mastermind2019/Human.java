@@ -22,22 +22,26 @@ public class Human implements Player
 	MMView currentView = null;
 
 	/**
-	 * Metodo costruttore di default di Human
+	 * Metodo costruttore della classe Human di Default con in ingresso un'istanza
+	 * di una classe che implementa MMView
 	 * 
+	 * @param view Classe che implementa l'interfaccia per la View del programma
 	 */
-	public Human(MMView view)
+	public Human(MMView view )
 	{
 		this.ID = "Standard Player";
 		this.tentativi = new ArrayList<ArrayList<Integer>>();
 		this.currentView = view;
-		logger.log(Level.INFO,"Player umano di default creato correttamente con id: Standard Player");
+		logger.log(Level.INFO, "Player umano di default creato correttamente con id: Standard Player");
 	}
 
 	/**
-	 * Costruttore Human con una stringa in ingresso, assegna alla variabile
-	 * <code>ID </code> il valore della stringa in ingresso.
+	 * Metodo costruttore della classe Human con una String in ingresso che
+	 * identifica identifica l'Human e un'istanza di una classe che implementa
+	 * MMView.
 	 * 
-	 * @param id Identificatore dell'oggetto.
+	 * @param view Istanza di una classe che implementa l'interfaccia MMView.
+	 * @param id   String che identifica l'Human.
 	 */
 	public Human(	MMView view,
 					String id )
@@ -45,30 +49,32 @@ public class Human implements Player
 		this.ID = id;
 		this.tentativi = new ArrayList<ArrayList<Integer>>();
 		this.currentView = view;
-		logger.log(Level.INFO,"Player umano creato correttamente con id: "+ id);
+		logger.log(Level.INFO, "Player umano creato correttamente con id: " +
+								id);
 	}
 
 	/**
-	 * Override del metodo gedID di Player.
+	 * Override del metodo dell'interfaccia Player che restituisce l'ID che
+	 * identifica l'Human.
 	 * 
-	 * @return ID dell'Human.
+	 * @return ID Stringa che identifica l'Human.
 	 */
 	@Override
 	public String getID()
 	{ return ID; }
 
 	/**
-	 * Metodo per prendere da tastiera il codice del giocatore.
+	 * Override del metodo dell'interfaccia Player che genera e restituisce un
+	 * codice attraverso la classe che implementa l'interfaccia MMView.
 	 * 
-	 * @param settings Impostazioni della partita corrente.
-	 * @return ArrayList riempito dal giocatore.
-	 * @throws IllegalParameterException Eccezione per parametri non regolari.
+	 * @return codice Codice generato dal giocatore interattivo.
 	 */
 	@Override
 	public ArrayList<Integer> generateCode() throws IllegalParameterException
 	{
 		ArrayList<Integer> code = currentView.getCombination(PlayerType.HUMAN);
-		logger.log(Level.INFO,"Il player umano ha generato il codice: "+code);
+		logger.log(Level.INFO, "Il player umano ha generato il codice: " +
+								code);
 		tentativi.add(code);
 		return code;
 	}
