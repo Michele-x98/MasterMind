@@ -6,18 +6,11 @@ import java.util.ArrayList;
 //import java.util.Observable;
 
 import it.unicam.cs.pa.mastermind2019.Pioli;
+import it.unicam.cs.pa.mastermind2019.PlayerType;
 import it.unicam.cs.pa.mastermind2019.Risultato;
 
 public interface MMView {
 
-	int prendiLunghezza();
-
-	/**
-	 * Metodo che consente di prendere in input se avere o no duplicati nel codice.
-	 * 
-	 * @return True se i duplicati sono accettati, altrimenti False.
-	 */
-	boolean prendiDuplicati();
 
 	/**
 	 * Metodo che restituisce true se il giocatore decide di giocare ancora,
@@ -42,7 +35,7 @@ public interface MMView {
 	 * @param max Valore massimo.
 	 * @return Il numero preso da tastiera.
 	 */
-	ArrayList<Integer> getCombination();
+	ArrayList<Integer> getCombination(PlayerType giocatore);
 
 	/**
 	 * Stampa l'ArrayList di suggerimento preso in input.
@@ -57,8 +50,6 @@ public interface MMView {
 //	void update(Observable o, Object arg);
 
 	void getSuggerimento();
-
-	ArrayList<Integer> botGetCombination();
 
 	void vediCodice(ArrayList<Integer> arrayFromCode);
 

@@ -35,6 +35,7 @@ public class Campo implements CampoView
 		this.decodeArray = new ArrayList<Integer>();
 		this.codeArray = new ArrayList<Integer>();
 		this.suggerimenti = new Stack<ArrayList<Pioli>>();
+		logger.log(Level.INFO,"Campo creato correttamente");
 	}
 
 
@@ -91,8 +92,6 @@ public class Campo implements CampoView
 	{ 
 		logger.log(Level.INFO, "Impostando " + arrayList + " come tentativo");
 		this.decodeArray = arrayList;
-	//DEBUG
-	System.out.println("DEBUG: "+arrayList);
 	}
 
 	

@@ -29,7 +29,7 @@ public class Bot implements Player {
 				String id ) {
 		this.currentView =view;
 		this.ID = id;
-		logger.log(Level.INFO,"Bot Creato con id: "+id);
+		logger.log(Level.INFO,"Bot Creato correttamente con id: "+id);
 	}
 
 	/**
@@ -48,7 +48,7 @@ public class Bot implements Player {
 	@Override
 	public ArrayList<Integer> generateCode() throws IllegalParameterException
 	{
-		ArrayList<Integer> codice = currentView.botGetCombination();
+		ArrayList<Integer> codice = currentView.getCombination(PlayerType.BOT);
 		logger.log(Level.INFO,"Il Bot ha generato il codice: "+ codice);
 		return codice;
 	}

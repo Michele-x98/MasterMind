@@ -5,14 +5,19 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.util.ArrayList;
-import java.util.Observable;
-import java.util.Observer;
+//import java.util.Observable;
+//import java.util.Observer;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
+import it.unicam.cs.pa.mastermind2019.LogToFile;
 import it.unicam.cs.pa.mastermind2019.Pioli;
+import it.unicam.cs.pa.mastermind2019.PlayerType;
 import it.unicam.cs.pa.mastermind2019.Risultato;
 import it.unicam.cs.pa.mastermind2019.modelcontroller.CampoView;
 import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniView;
+//import it.unicam.cs.pa.mastermind2019.modelcontroller.MatchCoordinator;
 
 /**
  * <b>Responsabilità:</b> Interfacciarsi con l'utente. <b>Fonte:</b>
@@ -22,22 +27,29 @@ import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniView;
  * 
  */
 
-@SuppressWarnings("deprecation")
-public class InputOutput implements MMView, Observer
+//@SuppressWarnings("deprecation")
+public class InputOutput implements MMView// , Observer
 {
 	private PrintStream output;
 	private BufferedReader input;
 	ImpostazioniView currentParameters;
 	CampoView terreno;
-	
-	static String logo = "  __  __           _                      _           _  \n" +
-			" |  \\/  |         | |                    (_)         | | \n" +
-			" | \\  / | __ _ ___| |_ ___ _ __ _ __ ___  _ _ __   __| | \n" +
-			" | |\\/| |/ _` / __| __/ _ \\ '__| '_ ` _ \\| | '_ \\ / _` | \n" +
-			" | |  | | (_| \\__ \\ ||  __/ |  | | | | | | | | | | (_| | \n" +
-			" |_|  |_|\\__,_|___/\\__\\___|_|  |_| |_| |_|_|_| |_|\\__,_| \n" +
-			"                                                         \n" +
-			"                                                         ";
+	private static final Logger logger = LogToFile.getLogger(InputOutput.class);
+	String logo = "  __  __           _                      _           _  \n" +
+					" |  \\/  |         | |                    (_)         | | \n" +
+					" | \\  / | __ _ ___| |_ ___ _ __ _ __ ___  _ _ __   __| | \n" +
+					" | |\\/| |/ _` / __| __/ _ \\ '__| '_ ` _ \\| | '_ \\ / _` | \n" +
+					" | |  | | (_| \\__ \\ ||  __/ |  | | | | | | | | | | (_| | \n" +
+					" |_|  |_|\\__,_|___/\\__\\___|_|  |_| |_| |_|_|_| |_|\\__,_| \n" +
+					"                                                         \n" +
+					"                                                         ";
+	String regole = "Benvenuti in MasterMind di Moschini Daniele e Benedetti Michele \n" +
+					"In questa verione di MasterMind inserire come primo giocatore colui che crea il codice da DECODIFICARE, e come\n" +
+					"secondo giocatore colui che dovrà indovinare il CODICE.\n" +
+					"La lunghezza del codice è variabile tra 4, 6 e 8 numeri, e si può scegliere se avere duplicati o no nel codice.\n" +
+					"Il Suggerimento stampato va interpretato come segue: \n" +
+					"PC = Numero Corretto, nella Posizione Corretta \n" +
+					"PE = Numero Corretto, nella Posizione Errata \n";
 
 	public InputOutput(	ImpostazioniView parametri,
 						CampoView terreno )
@@ -46,90 +58,13 @@ public class InputOutput implements MMView, Observer
 		this.output = System.out;
 		this.currentParameters = parametri;
 		this.terreno = terreno;
+		logger.log(Level.INFO, "Creazione dell' INPUT e dell' OUTPUT con l'utente avvenuta con successo");
 	}
 
-	@Override
-	public int prendiLunghezza()
-	{
-		while (true)
-		{
-			String s = null;
-			try
-			{
-				output.println("Inserisci la lunghezza del codice da decifrare fra 4, 6 e 8 numeri: ");
-				s = input.readLine();
-				if (s.equals("4") || s.equals("6") || s.equals("8"))
-				{
-					output.println("Il codice da decifrare è lungo: " +
-									s);
-					return Integer.parseInt(s);
-				}
-				else
-					throw new IllegalParameterException();
-			}
-			catch (IOException e)
-			{
-				clearScreen();
-				System.err.println("Insersci il numero 4, 6 o 8!");
-			}
-			catch (IllegalParameterException e)
-			{
-				clearScreen();
-				System.err.println("Insersci il numero 4, 6 o 8!");
-			}
-
-		}
-	}
-
-	/**
-	 * Metodo che consente di prendere in input se avere o no duplicati nel codice.
-	 * 
-	 * @return True se i duplicati sono accettati, altrimenti False.
-	 */
-	@Override
-	public boolean prendiDuplicati()
-	{
-		while (true)
-		{
-			output.println("Vuoi duplicati nel codice?: (S/N)");
-			String s;
-			try
-			{
-				s = input.readLine();
-				if (s.equalsIgnoreCase("N"))
-				{
-					output.println("Non ci saranno duplicati");
-					return false;
-				}
-				else if (s.equalsIgnoreCase("S"))
-				{
-					output.println("Il codice potrà contenere duplicati");
-					return true;
-				}
-				else
-					throw new IllegalParameterException();
-			}
-			catch (IOException e)
-			{
-				System.err.println("Inserisci S o N!");
-			}
-			catch (IllegalParameterException e)
-			{
-				System.err.println("Inserisci S o N!");
-			}
-
-		}
-	}
-
-	/**
-	 * Metodo che restituisce true se il giocatore decide di giocare ancora,
-	 * altrimenti false.
-	 * 
-	 * @return True Se il giocatore gioca ancora, altrimenti False.
-	 */
 	@Override
 	public boolean matchAgain()
 	{
+		logger.log(Level.INFO, "In attesa della decisione dell'utente ..");
 		while (true)
 		{
 			output.println("Vuoi uscire? (S/N)");
@@ -139,11 +74,15 @@ public class InputOutput implements MMView, Observer
 				str = input.readLine();
 				if (str.equalsIgnoreCase("S"))
 				{
+					logger.log(Level.INFO, "Decisione accettata: FINE");
+					clearScreen();
 					output.println("Arrivederci");
 					return false;
 				}
 				else if (str.equalsIgnoreCase("N"))
 				{
+					logger.log(Level.INFO, "Decisione accettata: REGAME");
+					clearScreen();
 					output.println("Ricominciamo!");
 					return true;
 				}
@@ -152,23 +91,22 @@ public class InputOutput implements MMView, Observer
 			}
 			catch (IOException e)
 			{
+				logger.log(Level.WARNING, "Decisione non valida");
+				clearScreen();
+				output.println("Vuoi uscire? (S/N)");
 				output.println("Inserisci S o N!");
 			}
 			catch (IllegalParameterException e)
 			{
+				logger.log(Level.WARNING, "Decisione non valida");
+				clearScreen();
+				output.println("Vuoi uscire? (S/N)");
 				output.println("Inserisci S o N!");
 			}
 
 		}
 	}
 
-	/**
-	 * Prende i tipi di giocatore da tastiera e li da come valore di ritorno in una
-	 * String.
-	 * 
-	 * 
-	 * @return Tipo del giocatore.
-	 */
 	@Override
 	public String typePlayerSelection(boolean i)
 	{
@@ -177,19 +115,23 @@ public class InputOutput implements MMView, Observer
 			code = "CodeMaker";
 		else
 			code = "CodeBreaker";
+		logger.log(Level.INFO, "In attesa della decisione dell'utente ..");
 		while (true)
 		{
-			output.println("Inserisci chi vuoi che sia il " +code);
+			output.println("Inserisci chi vuoi che sia il " +
+							code);
 			String c;
 			try
 			{
 				c = input.readLine();
 				if (c == null)
 					throw new IllegalParameterException();
+				logger.log(Level.INFO, "Decisione accettata");
 				return c;
 			}
 			catch (IOException e)
 			{
+				logger.log(Level.WARNING, "Decisione non valida");
 				clearScreen();
 				output.println("Tipo di " +
 								code +
@@ -197,6 +139,7 @@ public class InputOutput implements MMView, Observer
 			}
 			catch (IllegalParameterException e)
 			{
+				logger.log(Level.WARNING, "Decisione non valida");
 				clearScreen();
 				output.println("Tipo di " +
 								code +
@@ -206,22 +149,208 @@ public class InputOutput implements MMView, Observer
 		}
 	}
 
-	/**
-	 * Prende i tipi di giocatore da tastiera e li da come valore di ritorno in una
-	 * String.
-	 * 
-	 * @return Tipo del giocatore.
-	 */
-
-	/**
-	 * Prende un numero e lo da come valore di ritorno.
-	 * 
-	 * @param max Valore massimo.
-	 * @return Il numero preso da tastiera.
-	 */
 	@Override
-	public ArrayList<Integer> getCombination()
+	public ArrayList<Integer> getCombination(PlayerType giocatore)
 	{
+		switch (giocatore)
+		{
+			case HUMAN:
+			{
+				return humanGetCombination();
+			}
+			case BOT:
+			{
+				return botGetCombination();
+			}
+			default:
+			{
+				return null;
+			}
+		}
+	}
+
+	@Override
+	public void gameInit()
+	{
+		logger.log(Level.INFO, "Stampa logo e regole in corso");
+		System.out.println(logo);
+		System.out.println(regole);
+		logger.log(Level.INFO, "Logo e regole stampate correttamente");
+	}
+
+	@Override
+	public void attemptResault(ArrayList<Pioli> sugg)
+	{
+		logger.log(Level.INFO, "Restituzione del suggerimento: " +
+								sugg);
+		output.println("Suggerimento: " +
+						sugg);
+	}
+
+//	@Override
+//	public void update(	Observable o,
+//						Object arg)
+//	{
+//		 TODO Auto-generated method stub
+//	}
+
+	@Override
+	public void getSuggerimento()
+	{
+		logger.log(Level.INFO, "Restituito il suggerimento");
+		terreno.getLastSuggerimento();
+	}
+
+	@Override
+	public void vediCodice(ArrayList<Integer> arrayFromCode)
+	{
+		logger.log(Level.INFO, "Stampato Array");
+		output.println(arrayFromCode);
+	}
+
+	@Override
+	public void matchResault(Risultato esito)
+	{
+		logger.log(Level.INFO, "Stampato l'esito della partita");
+		System.out.println(esito);
+	}
+
+	@Override
+	public int sceltaMenu()
+	{
+		logger.log(Level.INFO, "Aspettando la Decisione del menù dell'utente");
+		while (true)
+		{
+			output.println("1. Gioca\n2. Impostazioni\n3. Esci");
+			String str;
+			try
+			{
+				str = input.readLine();
+				if (str.equals("1") || str.equals("2") || str.equals("3"))
+				{
+					logger.log(Level.INFO, "Decisione acquisita correttamente");
+					return Integer.parseInt(str);
+				}
+				else
+					throw new IllegalParameterException();
+			}
+			catch (IOException e)
+			{
+				logger.log(Level.WARNING, "Decisione non accettata");
+				clearScreen();
+				output.println("1. Gioca\n2. Impostazioni\n3. Esci");
+				output.println("Inserisci il numero della risposta !");
+			}
+			catch (IllegalParameterException e)
+			{
+				logger.log(Level.WARNING, "Decisione non accettata");
+				clearScreen();
+				output.println("1. Gioca\n2. Impostazioni\n3. Esci");
+				output.println("Inserisci il numero della risposta !");
+			}
+		}
+	}
+
+	@Override
+	public int difficultConfiguration()
+	{
+		logger.log(Level.INFO, "Aspettando la decisione della difficoltà dell'utente");
+		while (true)
+		{
+			output.println("Seleziona la difficoltà:\n1. Facile\n2. Media\n3. Difficile");
+			String str;
+			try
+			{
+				str = input.readLine();
+				if (str.equals("1"))
+				{
+					logger.log(Level.INFO, "Decisione acquisita correttamente");
+					return 4;
+				}
+				else if (str.equals("2"))
+				{
+					logger.log(Level.INFO, "Decisione acquisita correttamente");
+					return 6;
+				}
+				else if (str.equals("3"))
+				{
+					logger.log(Level.INFO, "Decisione acquisita correttamente");
+					return 8;
+				}
+				throw new IllegalParameterException();
+			}
+			catch (IOException e)
+			{
+				logger.log(Level.WARNING, "Decisione non accettata");
+				clearScreen();
+				output.println("Seleziona la difficoltà:\n1. Facile\n2. Media\n3. Difficile");
+				output.println("Inserisci il numero della risposta !");
+			}
+			catch (IllegalParameterException e)
+			{
+				logger.log(Level.WARNING, "Decisione non accettata");
+				clearScreen();
+				output.println("Seleziona la difficoltà:\n1. Facile\n2. Media\n3. Difficile");
+				output.println("Inserisci il numero della risposta !");
+			}
+		}
+	}
+
+	@Override
+	public boolean duplicateConfiguration()
+	{
+		logger.log(Level.INFO, "Aspettando la decisione dell'utente");
+		while (true)
+		{
+			output.println("Seleziona:\n1. Duplicati presenti nel codice\n2. Duplicati non presenti nel codice");
+			String str;
+			try
+			{
+				str = input.readLine();
+				if (str.equals("1"))
+				{
+					logger.log(Level.INFO, "Decisione accettata");
+					clearScreen();
+					System.out.println("Impostazioni aggiornate con successo");
+					return true;
+				}
+				else if (str.equals("2"))
+				{
+					logger.log(Level.INFO, "Decisione accettata");
+					clearScreen();
+					System.out.println("Impostazioni aggiornate con successo");
+					return false;
+				}
+				else
+					throw new IllegalParameterException();
+			}
+			catch (IOException e)
+			{
+				logger.log(Level.WARNING, "Decisione non accettata");
+				clearScreen();
+				output.println("Inserisci il numero della risposta !");
+				output.println("Seleziona:\n1. Duplicati presenti nel codice\n2. Duplicati non presenti nel codice");
+			}
+			catch (IllegalParameterException e)
+			{
+				logger.log(Level.WARNING, "Decisione non accettata");
+				clearScreen();
+				output.println("Inserisci il numero della risposta !");
+				output.println("Seleziona:\n1. Duplicati presenti nel codice\n2. Duplicati non presenti nel codice");
+			}
+		}
+	}
+
+	public void clearScreen()
+	{
+		for (int i = 0; i < 50; ++i) System.out.println();
+		System.out.println(logo);
+		System.out.println(regole);
+	}
+
+	private ArrayList<Integer> humanGetCombination()
+	{
+		logger.log(Level.INFO, "Aspettando la decisione dell'utente");
 		boolean validate = false;
 		ArrayList<Integer> codice;
 		do
@@ -254,70 +383,35 @@ public class InputOutput implements MMView, Observer
 			}
 			catch (IllegalParameterException e)
 			{
+				logger.log(Level.WARNING, "Decisione non accettata");
 				clearScreen();
 				System.err.println("Uno o più parametri inseriti non sono corretti\n" +
-						"I numeri devono essere compresi tra 1 e " +
-						currentParameters.getMaxCodValue() +
-						", prova di nuovo \n");
+									"I numeri devono essere compresi tra 1 e " +
+									currentParameters.getMaxCodValue() +
+									", prova di nuovo \n");
 			}
 			catch (IOException e)
 			{
+				logger.log(Level.WARNING, "Decisione non accettata");
+				clearScreen();
 				System.err.println("Uno o più parametri inseriti non sono corretti\n" +
-						"I numeri devono essere compresi tra 1 e " +
-						currentParameters.getMaxCodValue() +
-						", prova di nuovo \n");
+									"I numeri devono essere compresi tra 1 e " +
+									currentParameters.getMaxCodValue() +
+									", prova di nuovo \n");
+
 			}
 		}
 		while (!validate);
+		clearScreen();
 		output.println("Sequenza di valori accettata");
+		logger.log(Level.INFO, "Decisione accettata");
 		return codice;
-	}
-
-	/**
-	 * Stampa l'ArrayList di suggerimento preso in input.
-	 * 
-	 * @param sugg ArrayList di pioli suggerimento.
-	 */
-
-	@Override
-	public void gameInit()
-	{
-
-
-		String regole = "Benvenuti in MasterMind di Moschini Daniele e Benedetti Michele \n" +
-						"In questa verione di MasterMind inserire come primo giocatore colui che crea il codice da DECODIFICARE, e come\n" +
-						"secondo giocatore colui che dovrà indovinare il CODICE.\n" +
-						"La lunghezza del codice è variabile tra 4, 6 e 8 numeri, e si può scegliere se avere duplicati o no nel codice.\n" +
-						"Il Suggerimento stampato va interpretato come segue: \n" +
-						"PC = Numero Corretto, nella Posizione Corretta \n" +
-						"PE = Numero Corretto, nella Posizione Errata \n";
-		System.out.println(logo);
-		System.out.println(regole);
-	}
-
-	@Override
-	public void attemptResault(ArrayList<Pioli> sugg)
-	{
-		output.println("Suggerimento: " + sugg);
 
 	}
 
-	@Override
-	public void update(	Observable o,
-						Object arg)
+	private ArrayList<Integer> botGetCombination()
 	{
-		// TODO Auto-generated method stub
-	}
-
-	@Override
-	public void getSuggerimento()
-	{
-		terreno.getLastSuggerimento();
-	}
-
-	@Override
-	public ArrayList<Integer> botGetCombination()
-	{
+		logger.log(Level.INFO, "Aspettando la decisione del Bot");
 		ArrayList<Integer> code = new ArrayList<Integer>();
 
 		while (!(code.size() == currentParameters.getCodeLenght()))
@@ -332,114 +426,7 @@ public class InputOutput implements MMView, Observer
 				}
 			code.add(k);
 		}
+		logger.log(Level.INFO, "Decisione accettata");
 		return code;
 	}
-
-	@Override
-	public void vediCodice(ArrayList<Integer> arrayFromCode)
-	{
-		output.println(arrayFromCode);
-	}
-
-	@Override
-	public void matchResault(Risultato esito)
-	{
-	System.out.println(esito);
-	}
-
-	@Override
-	public int sceltaMenu()
-	{
-		while(true)
-		{
-		output.println("1. Gioca\n2. Impostazioni\n3. Esci");
-		String str;
-		try
-		{
-			str = input.readLine();
-			if (str.equals("1") || str.equals("2") || str.equals("3"))
-			{
-				return Integer.parseInt(str);
-			}
-			else
-				throw new IllegalParameterException();
-		}
-		catch (IOException e)
-		{
-			output.println("Inserisci il numero della risposta !");
-		}
-		catch (IllegalParameterException e)
-		{
-			output.println("Inserisci il numero della risposta !");
-		}}
-	}
-
-	@Override
-	public int difficultConfiguration()
-	{
-		while(true)
-		{
-		output.println("Seleziona la difficoltà:\n1. Facile\n2. Media\n3. Difficile");
-		String str;
-		try
-		{
-			str = input.readLine();
-			if (str.equals("1"))
-			{
-				return 4;
-			}
-			else if (str.equals("2"))
-			{
-				return 6;
-			}
-			else if(str.equals("3"))
-			{
-				return 8;
-			}
-				throw new IllegalParameterException();
-		}
-		catch (IOException e)
-		{
-			output.println("Inserisci il numero della risposta !");
-		}
-		catch (IllegalParameterException e)
-		{
-			output.println("Inserisci il numero della risposta !");
-		}}
-	}
-
-	@Override
-	public boolean duplicateConfiguration()
-	{
-		while(true)
-		{
-		output.println("Seleziona:\n1.Duplicati presenti nel codice\n2. Duplicati non presenti nel codice");
-		String str;
-		try
-		{
-			str = input.readLine();
-			if (str.equals("1"))
-			{
-				return true;
-			}
-			else if (str.equals("2"))
-			{
-				return false;
-			}
-			else
-				throw new IllegalParameterException();
-		}
-		catch (IOException e)
-		{
-			output.println("Inserisci il numero della risposta !");
-		}
-		catch (IllegalParameterException e)
-		{
-			output.println("Inserisci il numero della risposta !");
-		}}
-	}
-	public void clearScreen() {  
-		for (int i = 0; i < 50; ++i) System.out.println();
-	    System.out.println(logo);
-	} 
 }

@@ -7,11 +7,16 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import it.unicam.cs.pa.mastermind2019.LogToFile;
 
 public class ImpostazioniFileConfig implements ImpostazioniView
 {
 
 	private Properties prop = new Properties();
+	private static final Logger logger = LogToFile.getLogger(ImpostazioniFileConfig.class);
 
 	public ImpostazioniFileConfig() throws FileNotFoundException, IOException
 	{
@@ -27,17 +32,21 @@ public class ImpostazioniFileConfig implements ImpostazioniView
 
 	private void createDefaultProperty()
 	{
+		logger.log(Level.INFO, "Creazione impostazioni di default");
 		try (OutputStream output = new FileOutputStream("src/main/resources/config.properties"))
 		{
+
 			prop.setProperty("duplicateAllow", "true");
 			prop.setProperty("codeLenght", "4");
 			prop.setProperty("attempts", "9");
 			prop.setProperty("minCodValue", "1");
 			prop.setProperty("maxCodValue", "6");
 			prop.store(output, null);
+			logger.log(Level.INFO, "Impostazioni di default create correttamente");
 		}
 		catch (IOException io)
 		{
+			logger.log(Level.WARNING, "Creazione impostazioni di default non riuscita");
 			io.printStackTrace();
 		}
 
@@ -46,32 +55,57 @@ public class ImpostazioniFileConfig implements ImpostazioniView
 	@Override
 	public boolean isValidNumber(int num)
 	{
-		return num >= Integer.parseInt(prop.getProperty("minCodValue")) && num <= Integer.parseInt(prop.getProperty("maxCodValue"));
+		boolean x = num >= Integer.parseInt(prop.getProperty("minCodValue")) && num <= Integer.parseInt(prop.getProperty("maxCodValue"));
+		logger.log(Level.INFO, "Effetuato controllo validità sul numero con risultato: " +
+								x);
+		return x;
 	}
 
 	@Override
 	public int getCodeLenght()
-	{ return Integer.parseInt(prop.getProperty("codeLenght")); }
+	{
+		logger.log(Level.INFO, "Restituita la lunghezza del codice: " +
+								Integer.parseInt(prop.getProperty("codeLenght")));
+		return Integer.parseInt(prop.getProperty("codeLenght"));
+	}
 
 	@Override
 	public int getAttempts()
-	{ return Integer.parseInt(prop.getProperty("attempts")); }
+	{
+		logger.log(Level.INFO, "Restituiti il numero dei tentativi: " +
+								Integer.parseInt(prop.getProperty("attempts")));
+		return Integer.parseInt(prop.getProperty("attempts"));
+	}
 
 	@Override
 	public int getMinCodValue()
-	{ return Integer.parseInt(prop.getProperty("minCodValue")); }
+	{
+		logger.log(Level.INFO, "Restituita la lunghezza minima del codice: " +
+								Integer.parseInt(prop.getProperty("minCodValue")));
+		return Integer.parseInt(prop.getProperty("minCodValue"));
+	}
 
 	@Override
 	public int getMaxCodValue()
-	{ return Integer.parseInt(prop.getProperty("maxCodValue")); }
+	{
+		logger.log(Level.INFO, "Restituita la lunghezza massima del codice: " +
+								Integer.parseInt(prop.getProperty("maxCodValue")));
+		return Integer.parseInt(prop.getProperty("maxCodValue"));
+	}
 
 	@Override
 	public boolean isDuplicateAllow()
-	{ return Boolean.valueOf(prop.getProperty("src/main/resources/duplicateAllow")); }
+	{
+		logger.log(Level.INFO, "Restituito il permesso di avere duplicati nel codice: " +
+								Boolean.valueOf(prop.getProperty("duplicateAllow")));
+		return Boolean.valueOf(prop.getProperty("duplicateAllow"));
+	}
 
 	@Override
 	public void setCodeLenght(int code)
 	{
+		logger.log(Level.CONFIG, "Modificando la lunghezza del codice a: " +
+									code);
 		try (OutputStream output = new FileOutputStream("src/main/resources/config.properties"))
 		{
 			if (code == 4)
@@ -93,9 +127,12 @@ public class ImpostazioniFileConfig implements ImpostazioniView
 				prop.setProperty("maxCodValue", "10");
 			}
 			prop.store(output, null);
+			logger.log(Level.CONFIG, "Lunghezza del codice modificata correttamente a: " +
+										code);
 		}
 		catch (IOException io)
 		{
+			logger.log(Level.WARNING, "Impossibile modificare la lunghezza del codice");
 			io.printStackTrace();
 		}
 	}
@@ -103,13 +140,17 @@ public class ImpostazioniFileConfig implements ImpostazioniView
 	@Override
 	public void setDuplicate(boolean duplicate)
 	{
+		logger.log(Level.CONFIG, "Modificando il permesso per i duplicati a: " +
+				duplicate);
 		try (OutputStream output = new FileOutputStream("src/main/resources/config.properties"))
 		{
 			prop.setProperty("duplicateAllow", Boolean.toString(duplicate));
 			prop.store(output, null);
+			logger.log(Level.CONFIG, "Permesso per i duplicati modificato correttamente");
 		}
 		catch (IOException io)
 		{
+			logger.log(Level.WARNING, "Impossibile modificare il permesso per i duplicati");
 			io.printStackTrace();
 		}
 

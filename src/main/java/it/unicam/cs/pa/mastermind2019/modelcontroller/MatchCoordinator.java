@@ -2,7 +2,11 @@ package it.unicam.cs.pa.mastermind2019.modelcontroller;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
+
+import it.unicam.cs.pa.mastermind2019.LogToFile;
 import it.unicam.cs.pa.mastermind2019.Perdente;
 import it.unicam.cs.pa.mastermind2019.Pioli;
 import it.unicam.cs.pa.mastermind2019.Player;
@@ -26,7 +30,7 @@ public class MatchCoordinator implements ArbitroView {
 	private int tentativi;
 	private CampoView campo;
 	private ArrayList<Pioli> suggerimento;
-
+	private static final Logger logger = LogToFile.getLogger(MatchCoordinator.class);
 	/**
 	 * Metodo Cotruttore del MatchCoordinator.
 	 * 
@@ -42,6 +46,7 @@ public class MatchCoordinator implements ArbitroView {
 		this.p2 = due;
 		this.tentativi = 0;
 		this.campo = campo;
+		logger.log(Level.INFO,"Arbitro creato correttamente");
 	}
 
 	/**
@@ -55,6 +60,7 @@ public class MatchCoordinator implements ArbitroView {
 	 */
 	@Override
 	public Risultato play() throws IllegalParameterException {
+		logger.log(Level.INFO,"Match start!");
 		campo.setDecodeArray(p1.generateCode());
 		this.tentativi = parameters.getAttempts();
 		Risultato esito;
@@ -69,8 +75,9 @@ public class MatchCoordinator implements ArbitroView {
 				return esito;
 			}
 			this.tentativi--;
-
+			logger.log(Level.INFO,tentativi + " turni alla fine");
 		} while (tentativi > 0);
+		logger.log(Level.INFO,"Match finish!");
 		return esito = new Perdente(this.p2.getID());
 	}
 
@@ -83,6 +90,7 @@ public class MatchCoordinator implements ArbitroView {
 	 */
 	@Override
 	public ArrayList<Pioli> check(ArrayList<Integer> tentativo) {
+		logger.log(Level.INFO,"Inizio controllo dei dati");
 		ArrayList<Integer> codice = campo.getArrayFromDeco();
 		ArrayList<Integer> tempNums = tentativo;
 		ArrayList<Integer> tempCode = new ArrayList<>();
@@ -123,6 +131,7 @@ public class MatchCoordinator implements ArbitroView {
 		for (int i = 0; i < rightNumWrongPlace; i++) {
 			checkResult.add(Pioli.PE);
 		}
+		logger.log(Level.INFO,"Controllo eseguito correttamente");
 		return checkResult;
 	}
 
@@ -143,9 +152,15 @@ public class MatchCoordinator implements ArbitroView {
 			}
 		}
 		if (count == campo2.getArrayFromDeco().size())
+		{
+			logger.log(Level.INFO,"Tentativo vincente");
 			return true;
+		}
 		else
+		{
+			logger.log(Level.INFO,"Tentativo non vincente");
 			return false;
+		}
 	}
 
 }

@@ -18,7 +18,10 @@ public class PlayerFactory implements PlayerFactoryView
 	/**
 	 * Costruttore vuoto.
 	 */
-	public PlayerFactory() {}
+	public PlayerFactory() 
+	{
+		logger.log(Level.INFO,"Factory creata con successo");
+	}
 
 	/**
 	 * Metodo che consente di creare un player data una stringa iniziale.
@@ -32,13 +35,13 @@ public class PlayerFactory implements PlayerFactoryView
 		
 		if (c.equalsIgnoreCase("bot"))
 		{
+			logger.log(Level.INFO, "Creazione di un bot in corso .. ");
 			p = new Bot(vista,c);
-			logger.log(Level.INFO, "Creato un bot con id: "+ c);
 		}
 		else
 		{
+			logger.log(Level.INFO, "Creazione di un Human in corso .. ");
 			p = new Human(vista,c);
-			logger.log(Level.INFO, "Creato un Human con id: "+ c);
 		}
 		
 		return p;

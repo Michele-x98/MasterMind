@@ -30,7 +30,7 @@ public class Human implements Player
 		this.ID = "Standard Player";
 		this.tentativi = new ArrayList<ArrayList<Integer>>();
 		this.currentView = view;
-		logger.log(Level.INFO,"Creato un player umano con id: Standard Player");
+		logger.log(Level.INFO,"Player umano di default creato correttamente con id: Standard Player");
 	}
 
 	/**
@@ -45,7 +45,7 @@ public class Human implements Player
 		this.ID = id;
 		this.tentativi = new ArrayList<ArrayList<Integer>>();
 		this.currentView = view;
-		logger.log(Level.INFO,"Creato un player umano con id: "+ id);
+		logger.log(Level.INFO,"Player umano creato correttamente con id: "+ id);
 	}
 
 	/**
@@ -67,7 +67,7 @@ public class Human implements Player
 	@Override
 	public ArrayList<Integer> generateCode() throws IllegalParameterException
 	{
-		ArrayList<Integer> code = currentView.getCombination();
+		ArrayList<Integer> code = currentView.getCombination(PlayerType.HUMAN);
 		logger.log(Level.INFO,"Il player umano ha generato il codice: "+code);
 		tentativi.add(code);
 		return code;
