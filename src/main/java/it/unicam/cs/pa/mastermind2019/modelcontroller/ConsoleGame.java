@@ -25,6 +25,7 @@ public class ConsoleGame {
 	private Player giocatore2;
 	private MMView vista;
 	private static final Logger logger = LogToFile.getLogger(ConsoleGame.class);
+	
 	/**
 	 * Costruttore di ConsoleGame.
 	 * 
@@ -41,10 +42,10 @@ public class ConsoleGame {
 	}
 
 	/**
-	 * 
+	 * Metodo che crea un arbitro per la partita e la fa iniziare.
 	 * 
 	 * @throws IllegalParameterException Eccezione che può essere lanciata dal
-	 *                                   metodo play().
+	 *                                   metodo generateCode.
 	 */
 	public void start(ImpostazioniView impostazioni, CampoView terrenogioco) throws IllegalParameterException 
 	{

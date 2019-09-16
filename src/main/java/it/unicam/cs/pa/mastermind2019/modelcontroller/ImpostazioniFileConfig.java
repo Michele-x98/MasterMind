@@ -30,6 +30,10 @@ public class ImpostazioniFileConfig implements ImpostazioniView
 		}
 	}
 
+	/**
+	 * Metodo che crea un file di impostazioni nel caso in cui non ce ne fosse uno
+	 * presente.
+	 */
 	private void createDefaultProperty()
 	{
 		logger.log(Level.INFO, "Creazione impostazioni di default");
@@ -141,7 +145,7 @@ public class ImpostazioniFileConfig implements ImpostazioniView
 	public void setDuplicate(boolean duplicate)
 	{
 		logger.log(Level.CONFIG, "Modificando il permesso per i duplicati a: " +
-				duplicate);
+									duplicate);
 		try (OutputStream output = new FileOutputStream("src/main/resources/config.properties"))
 		{
 			prop.setProperty("duplicateAllow", Boolean.toString(duplicate));

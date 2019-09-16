@@ -14,6 +14,12 @@ import it.unicam.cs.pa.mastermind2019.view.IllegalParameterException;
 import it.unicam.cs.pa.mastermind2019.view.InputOutput;
 import it.unicam.cs.pa.mastermind2019.view.MMView;
 
+/**
+ * <b>Responsabilità:</b>Iniziare il programma.
+ * Abbiamo creato una classe isolata per il main per risolvere conflitti legati ai Log del programma.
+ * @author Michele Benedetti
+ * @author Daniele Moschini
+ */
 public class Index
 {
 

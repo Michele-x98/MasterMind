@@ -1,0 +1,204 @@
+set 16, 2019 6:45:56 PM it.unicam.cs.pa.mastermind2019.Index main
+INFO: Creazioni delle impostazioni in corso
+set 16, 2019 6:45:56 PM it.unicam.cs.pa.mastermind2019.Index main
+INFO: Creazione del terreno di gioco in corso
+set 16, 2019 6:45:56 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 16, 2019 6:45:56 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo <init>
+INFO: Campo creato correttamente
+set 16, 2019 6:45:56 PM it.unicam.cs.pa.mastermind2019.Index main
+INFO: Creazione dell' INPUT e dell' OUTPUT con l'utente in corso
+set 16, 2019 6:45:56 PM it.unicam.cs.pa.mastermind2019.view.InputOutput <init>
+INFO: Creazione dell' INPUT e dell' OUTPUT con l'utente avvenuta con successo
+set 16, 2019 6:45:56 PM it.unicam.cs.pa.mastermind2019.view.InputOutput gameInit
+INFO: Stampa logo e regole in corso
+set 16, 2019 6:45:56 PM it.unicam.cs.pa.mastermind2019.view.InputOutput gameInit
+INFO: Logo e regole stampate correttamente
+set 16, 2019 6:45:56 PM it.unicam.cs.pa.mastermind2019.Index main
+INFO: Creazione delle factory per i giocatori in corso
+set 16, 2019 6:45:56 PM it.unicam.cs.pa.mastermind2019.PlayerFactory <init>
+INFO: Factory creata con successo
+set 16, 2019 6:45:56 PM it.unicam.cs.pa.mastermind2019.PlayerFactory <init>
+INFO: Factory creata con successo
+set 16, 2019 6:45:56 PM it.unicam.cs.pa.mastermind2019.Index main
+INFO: Aspettando ordini ..
+set 16, 2019 6:45:56 PM it.unicam.cs.pa.mastermind2019.view.InputOutput sceltaMenu
+INFO: Aspettando la Decisione del menù dell'utente
+set 16, 2019 6:46:01 PM it.unicam.cs.pa.mastermind2019.view.InputOutput sceltaMenu
+INFO: Decisione acquisita correttamente
+set 16, 2019 6:46:01 PM it.unicam.cs.pa.mastermind2019.Index main
+INFO: Creazione di una console di gioco in corso
+set 16, 2019 6:46:01 PM it.unicam.cs.pa.mastermind2019.view.InputOutput typePlayerSelection
+INFO: In attesa della decisione dell'utente ..
+set 16, 2019 6:46:03 PM it.unicam.cs.pa.mastermind2019.view.InputOutput typePlayerSelection
+INFO: Decisione accettata
+set 16, 2019 6:46:03 PM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creazione di un Human in corso .. 
+set 16, 2019 6:46:03 PM it.unicam.cs.pa.mastermind2019.Human <init>
+INFO: Player umano creato correttamente con id: io
+set 16, 2019 6:46:03 PM it.unicam.cs.pa.mastermind2019.view.InputOutput typePlayerSelection
+INFO: In attesa della decisione dell'utente ..
+set 16, 2019 6:46:05 PM it.unicam.cs.pa.mastermind2019.view.InputOutput typePlayerSelection
+INFO: Decisione accettata
+set 16, 2019 6:46:05 PM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creazione di un Human in corso .. 
+set 16, 2019 6:46:05 PM it.unicam.cs.pa.mastermind2019.Human <init>
+INFO: Player umano creato correttamente con id: franco
+set 16, 2019 6:46:05 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ConsoleGame <init>
+INFO: Console di gioco creata correttamente
+set 16, 2019 6:46:05 PM it.unicam.cs.pa.mastermind2019.Index main
+INFO: Inizializzazione della partita
+set 16, 2019 6:46:05 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ConsoleGame start
+INFO: Creazione arbitro in corso
+set 16, 2019 6:46:05 PM it.unicam.cs.pa.mastermind2019.modelcontroller.MatchCoordinator <init>
+INFO: Arbitro creato correttamente
+set 16, 2019 6:46:05 PM it.unicam.cs.pa.mastermind2019.modelcontroller.MatchCoordinator play
+INFO: Match start!
+set 16, 2019 6:46:05 PM it.unicam.cs.pa.mastermind2019.view.InputOutput humanGetCombination
+INFO: Aspettando la decisione dell'utente
+set 16, 2019 6:46:05 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 16, 2019 6:46:05 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 6
+set 16, 2019 6:46:08 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 16, 2019 6:46:08 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 6
+set 16, 2019 6:46:08 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 16, 2019 6:46:08 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 6
+set 16, 2019 6:46:08 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 16, 2019 6:46:08 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 6
+set 16, 2019 6:46:08 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 16, 2019 6:46:08 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 6
+set 16, 2019 6:46:08 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 16, 2019 6:46:08 PM it.unicam.cs.pa.mastermind2019.view.InputOutput humanGetCombination
+INFO: Decisione accettata
+set 16, 2019 6:46:08 PM it.unicam.cs.pa.mastermind2019.Human generateCode
+INFO: Il player umano ha generato il codice: [1, 2, 5, 4]
+set 16, 2019 6:46:08 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo setDecodeArray
+INFO: Impostando [1, 2, 5, 4] come tentativo
+set 16, 2019 6:46:08 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getAttempts
+INFO: Restituiti il numero dei tentativi: 9
+set 16, 2019 6:46:08 PM it.unicam.cs.pa.mastermind2019.view.InputOutput humanGetCombination
+INFO: Aspettando la decisione dell'utente
+set 16, 2019 6:46:08 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 16, 2019 6:46:08 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 6
+set 16, 2019 6:46:12 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 16, 2019 6:46:12 PM it.unicam.cs.pa.mastermind2019.view.InputOutput humanGetCombination
+WARNING: Decisione non accettata
+set 16, 2019 6:46:12 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 6
+set 16, 2019 6:46:12 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 16, 2019 6:46:12 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 6
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 6
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 6
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 6
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 6
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.view.InputOutput humanGetCombination
+INFO: Decisione accettata
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.Human generateCode
+INFO: Il player umano ha generato il codice: [1, 2, 5, 4]
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo setCodeArray
+INFO: Impostando [1, 2, 5, 4] come array da codificare
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromCode
+INFO: Restituito l'array [1, 2, 5, 4] da codificare
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.view.InputOutput vediCodice
+INFO: Stampato Array
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromCode
+INFO: Restituito l'array [1, 2, 5, 4] da codificare
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.MatchCoordinator check
+INFO: Inizio controllo dei dati
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[1, 2, 5, 4] da decodificare
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniFileConfig getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.MatchCoordinator check
+INFO: Controllo eseguito correttamente
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.view.InputOutput attemptResault
+INFO: Restituzione del suggerimento: [PC, PC, PC, PC]
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo addSuggerimento
+INFO: Aggiunto il suggerimento [PC, PC, PC, PC] ai suggerimenti
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[1, 2, 5, 4] da decodificare
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.modelcontroller.MatchCoordinator isWinner
+INFO: Tentativo vincente
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.Vincitore <init>
+INFO: Creata un istanza di Vincitore per il giocatore: franco
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.view.InputOutput matchResault
+INFO: Stampato l'esito della partita
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.Vincitore toString
+INFO: Restituito Risultato della partita: Il giocatore franco ha vinto!
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.Index main
+INFO: Partita terminata
+set 16, 2019 6:46:17 PM it.unicam.cs.pa.mastermind2019.view.InputOutput matchAgain
+INFO: In attesa della decisione dell'utente ..
+set 16, 2019 6:46:25 PM it.unicam.cs.pa.mastermind2019.view.InputOutput matchAgain
+INFO: Decisione accettata: REGAME
+set 16, 2019 6:46:25 PM it.unicam.cs.pa.mastermind2019.Index main
+INFO: Aspettando ordini ..
+set 16, 2019 6:46:25 PM it.unicam.cs.pa.mastermind2019.view.InputOutput sceltaMenu
+INFO: Aspettando la Decisione del menù dell'utente
+set 16, 2019 6:46:26 PM it.unicam.cs.pa.mastermind2019.view.InputOutput sceltaMenu
+INFO: Decisione acquisita correttamente
+set 16, 2019 6:46:26 PM it.unicam.cs.pa.mastermind2019.Index main
+INFO: Partita terminata
+set 16, 2019 6:46:26 PM it.unicam.cs.pa.mastermind2019.view.InputOutput matchAgain
+INFO: In attesa della decisione dell'utente ..
+set 16, 2019 6:46:29 PM it.unicam.cs.pa.mastermind2019.view.InputOutput matchAgain
+INFO: Decisione accettata: FINE
+set 16, 2019 6:46:29 PM it.unicam.cs.pa.mastermind2019.Index main
+INFO: Programma terminato

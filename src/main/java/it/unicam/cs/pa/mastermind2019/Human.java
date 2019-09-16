@@ -23,9 +23,9 @@ public class Human implements Player
 
 	/**
 	 * Metodo costruttore della classe Human di Default con in ingresso un'istanza
-	 * di una classe che implementa MMView
+	 * di una classe che implementa MMView.
 	 * 
-	 * @param view Classe che implementa l'interfaccia per la View del programma
+	 * @param view Classe che implementa l'interfaccia per la View del programma.
 	 */
 	public Human(MMView view )
 	{

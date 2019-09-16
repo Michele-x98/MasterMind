@@ -21,6 +21,10 @@ public class Perdente implements Risultato
 		this.loserId = ID;
 	}
 
+	/**
+	 * Override del toString.
+	 * @return Stringa che identifica l'oggetto.
+	 */
 	@Override
 	public String toString()
 	{
@@ -29,7 +33,9 @@ public class Perdente implements Risultato
 				loserId +
 				" ha perso!";
 	}
-
+	/**Override del metodo getID dell'interfaccia Risultato.
+	 * @return L'ID del giocatore perdente
+	 */
 	@Override
 	public String getID()
 	{ return loserId; }

@@ -17,10 +17,9 @@ import it.unicam.cs.pa.mastermind2019.PlayerType;
 import it.unicam.cs.pa.mastermind2019.Risultato;
 import it.unicam.cs.pa.mastermind2019.modelcontroller.CampoView;
 import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniView;
-//import it.unicam.cs.pa.mastermind2019.modelcontroller.MatchCoordinator;
 
 /**
- * <b>Responsabilità:</b> Interfacciarsi con l'utente. <b>Fonte:</b>
+ * <b>Responsabilità:</b> Interfacciarsi con l'utente.
  * 
  * @author Michele Benedetti
  * @author Daniele Moschini
@@ -194,11 +193,12 @@ public class InputOutput implements MMView// , Observer
 //		 TODO Auto-generated method stub
 //	}
 
+	
 	@Override
 	public void getSuggerimento()
 	{
 		logger.log(Level.INFO, "Restituito il suggerimento");
-		terreno.getLastSuggerimento();
+		System.out.println(terreno.getLastSuggerimento());
 	}
 
 	@Override

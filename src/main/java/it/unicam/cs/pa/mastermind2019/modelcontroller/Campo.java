@@ -31,7 +31,9 @@ public class Campo implements CampoView
 		this.suggerimenti = new Stack<ArrayList<Pioli>>();
 		logger.log(Level.INFO, "Campo creato correttamente");
 	}
-
+/**
+ * Aggiunge l'ultimo suggetimento alla lista di seggerimenti
+ */
 	@Override
 	public void addSuggerimento(ArrayList<Pioli> sugg)
 	{
@@ -42,7 +44,11 @@ public class Campo implements CampoView
 	}
 
 //	 ****************** GETTERS ******************
-
+/**
+ * Metodo che restituiusce l'ultimo ArrayList di pioli contenente i suggerimenti
+ * @return ArrayList di Pioli contenente l'ultimo suggerimento
+ * 
+ */
 	@Override
 	public ArrayList<Pioli> getLastSuggerimento()
 	{

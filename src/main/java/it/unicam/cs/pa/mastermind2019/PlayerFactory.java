@@ -21,7 +21,11 @@ public class PlayerFactory implements PlayerFactoryView
 		logger.log(Level.INFO,"Factory creata con successo");
 	}
 
-
+/**
+ * Metodo che restituisce un player da una stringa e una MMView in ingresso.
+ * 
+ * @return Un nuovo player.
+ */
 	public Player getPlayer(String c, MMView vista)
 	{
 		Player p;
