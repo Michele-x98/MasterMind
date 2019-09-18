@@ -140,7 +140,7 @@ public class MatchCoordinator implements ArbitroView
 	 * @param campo2	Campo di gioco attuale.
 	 * @return true se il tentativo è vincente, false altrimenti.
 	 */
-	private static boolean isWinner(ArrayList<Pioli> tentativo,
+	public boolean isWinner(ArrayList<Pioli> tentativo,
 									CampoView campo2)
 	{
 		int count = 0;

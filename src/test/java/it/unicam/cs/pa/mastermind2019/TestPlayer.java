@@ -7,20 +7,25 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-//import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse;
-//import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniView;
+import it.unicam.cs.pa.mastermind2019.modelcontroller.Campo;
+import it.unicam.cs.pa.mastermind2019.modelcontroller.CampoView;
+import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse;
+import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniView;
 import it.unicam.cs.pa.mastermind2019.view.IllegalParameterException;
-//import it.unicam.cs.pa.mastermind2019.view.MMView;
+import it.unicam.cs.pa.mastermind2019.view.InputOutput;
 
 public class TestPlayer
 {
 
-//	@Test
+	@Test
 	public void testHumanGenerateCode() throws IOException, IllegalParameterException
 	{
-//		GameParameters settings = new GameParameters(6, false);
-//		PlayerFactory p = new PlayerFactory();
-//		Player chicco = p.getPlayer("Prova");
+		LogToFile.init();
+		ImpostazioniView settings = new ImpostazioniClasse(6, false);
+		CampoView cam = new Campo(settings);
+		InputOutput ciao = new InputOutput(settings, cam);
+		PlayerFactoryView p = new PlayerFactory();
+		Player chicco = p.getPlayer("Carlo", ciao);
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
 		app.add(2);
@@ -28,16 +33,20 @@ public class TestPlayer
 		app.add(4);
 		app.add(3);
 		app.add(7);
-//		System.out.println("Codice da inserire: 125437");
-//		assertEquals(app, chicco.generateCode(settings));
-		
+		System.out.println("Codice da inserire: 125437");
+		assertEquals(app, chicco.generateCode());
+
 	}
+
 	@Test
 	public void testBotGenerateCode() throws IOException, IllegalParameterException
 	{
-//		ImpostazioniView settings = new ImpostazioniClasse(6, false);
+		LogToFile.init();
+		ImpostazioniView settings = new ImpostazioniClasse(6, false);
+		CampoView cam = new Campo(settings);
+		InputOutput ciao = new InputOutput(settings, cam);
 		PlayerFactoryView p = new PlayerFactory();
-		Player chicco = p.getPlayer("BOT", null);
+		Player chicco = p.getPlayer("Bot", ciao);
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
 		app.add(2);
@@ -47,23 +56,29 @@ public class TestPlayer
 		app.add(7);
 		assertTrue(app.size() == chicco.generateCode().size());
 	}
-	
+
 	@Test
 	public void testBotGenerateCodeNotNull() throws IOException, IllegalParameterException
 	{
-//		ImpostazioniView settings = new ImpostazioniClasse(6, false);
+		LogToFile.init();
+		ImpostazioniView settings = new ImpostazioniClasse(4, false);
+		CampoView cam = new Campo(settings);
+		InputOutput ciao = new InputOutput(settings, cam);
 		PlayerFactoryView p = new PlayerFactory();
-		Player chicco = p.getPlayer("Bot", null);
+		Player chicco = p.getPlayer("Bot", ciao);
 		assertNotNull(chicco.generateCode());
 	}
-	
-//	@Test
+
+	@Test
 	public void testHumanGenerateCodeNotNull() throws IOException, IllegalParameterException
 	{
-//		ImpostazioniView settings = new ImpostazioniClasse(6, false);
+		LogToFile.init();
+		ImpostazioniView settings = new ImpostazioniClasse(4, false);
+		CampoView cam = new Campo(settings);
+		InputOutput ciao = new InputOutput(settings, cam);
 		PlayerFactoryView p = new PlayerFactory();
-		Player chicco = p.getPlayer("Prova", null);
+		Player chicco = p.getPlayer("Bot", ciao);
 		assertNotNull(chicco.generateCode());
-		
+
 	}
 }
