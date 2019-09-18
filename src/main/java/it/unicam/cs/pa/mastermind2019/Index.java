@@ -24,7 +24,7 @@ public class Index
 {
 
 	public static void main(String argv[]) throws IOException, IllegalParameterException {
-		LogToFile.init();
+		LogToFile.init("main");
 		Logger logger = LogToFile.getLogger(Index.class);
 		logger.log(Level.INFO,"Creazioni delle impostazioni in corso");
 		ImpostazioniView settings = new ImpostazioniFileConfig();

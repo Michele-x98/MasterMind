@@ -19,13 +19,13 @@ public class TestMatchCoordinator {
 
 	@Test
 	public void testCheckPC() throws IOException {
-		LogToFile.init();
+		LogToFile.init("test");
 		ImpostazioniView settings = new ImpostazioniClasse(6, false);
 		CampoView cam = new Campo(settings);
 		InputOutput ciao = new InputOutput(settings, cam);
 		PlayerFactoryView p = new PlayerFactory();
 		Player bot = p.getPlayer("bot", ciao);
-		Player chicco = p.getPlayer("Bot", ciao);
+		Player chicco = p.getPlayer("Carlo", ciao);
 		ArbitroView arbitro = new MatchCoordinator(settings, cam, ciao, bot, chicco);
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
@@ -51,13 +51,13 @@ public class TestMatchCoordinator {
 	@Test
 	public void testCheckPE() throws IOException
 	{
-		LogToFile.init();
+		LogToFile.init("test");
 		ImpostazioniView settings = new ImpostazioniClasse(4, false);
 		CampoView cam = new Campo(settings);
 		InputOutput ciao = new InputOutput(settings, cam);
 		PlayerFactoryView p = new PlayerFactory();
 		Player bot = p.getPlayer("bot", ciao);
-		Player chicco = p.getPlayer("Bot", ciao);
+		Player chicco = p.getPlayer("Carlo", ciao);
 		ArbitroView arbitro = new MatchCoordinator(settings, cam, ciao, bot, chicco);
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
@@ -85,13 +85,13 @@ public class TestMatchCoordinator {
 	@Test
 	public void testCheckBoth() throws IOException
 	{
-		LogToFile.init();
+		LogToFile.init("test");
 		ImpostazioniView settings = new ImpostazioniClasse(4, false);
 		CampoView cam = new Campo(settings);
 		InputOutput ciao = new InputOutput(settings, cam);
 		PlayerFactoryView p = new PlayerFactory();
 		Player bot = p.getPlayer("bot", ciao);
-		Player chicco = p.getPlayer("Bot", ciao);
+		Player chicco = p.getPlayer("Carlo", ciao);
 		ArbitroView arbitro = new MatchCoordinator(settings, cam, ciao, bot, chicco);
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
@@ -119,13 +119,13 @@ public class TestMatchCoordinator {
 	}@Test
 	public void testCheckNull() throws IOException
 	{
-		LogToFile.init();
+		LogToFile.init("test");
 		ImpostazioniView settings = new ImpostazioniClasse(4, false);
 		CampoView cam = new Campo(settings);
 		InputOutput ciao = new InputOutput(settings, cam);
 		PlayerFactoryView p = new PlayerFactory();
 		Player bot = p.getPlayer("bot", ciao);
-		Player chicco = p.getPlayer("Bot", ciao);
+		Player chicco = p.getPlayer("Carlo", ciao);
 		ArbitroView arbitro = new MatchCoordinator(settings, cam, ciao, bot, chicco);
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
@@ -151,14 +151,14 @@ public class TestMatchCoordinator {
 	@Test
 	public void testIsWinnerTrue() throws IOException
 	{
-		LogToFile.init();
+		LogToFile.init("test");
 		ImpostazioniView settings = new ImpostazioniClasse(4, false);
 		CampoView cam = new Campo(settings);
 
 		InputOutput ciao = new InputOutput(settings, cam);
 		PlayerFactoryView p = new PlayerFactory();
 		Player bot = p.getPlayer("bot", ciao);
-		Player chicco = p.getPlayer("carlo", ciao);
+		Player chicco = p.getPlayer("Carlo", ciao);
 		MatchCoordinator arbitro = new MatchCoordinator(settings, cam, ciao, bot, chicco);
 		ArrayList<Pioli> risultato = new ArrayList<Pioli>();
 		risultato.add(Pioli.PC);
@@ -177,13 +177,13 @@ public class TestMatchCoordinator {
 	@Test
 	public void testIsWinnerFalse() throws IOException
 	{
-		LogToFile.init();
+		LogToFile.init("test");
 		ImpostazioniView settings = new ImpostazioniClasse(4, false);
 		CampoView cam = new Campo(settings);
 		InputOutput ciao = new InputOutput(settings, cam);
 		PlayerFactoryView p = new PlayerFactory();
 		Player bot = p.getPlayer("bot", null);
-		Player chicco = p.getPlayer("Bot", null);
+		Player chicco = p.getPlayer("Carlo", null);
 		MatchCoordinator arbitro = new MatchCoordinator(settings, cam, ciao, bot, chicco);
 		ArrayList<Pioli> risultato = new ArrayList<Pioli>();
 		risultato.add(Pioli.PC);

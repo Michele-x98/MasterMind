@@ -20,7 +20,7 @@ public class TestPlayer
 	@Test
 	public void testHumanGenerateCode() throws IOException, IllegalParameterException
 	{
-		LogToFile.init();
+		LogToFile.init("test");
 		ImpostazioniView settings = new ImpostazioniClasse(6, false);
 		CampoView cam = new Campo(settings);
 		InputOutput ciao = new InputOutput(settings, cam);
@@ -41,7 +41,7 @@ public class TestPlayer
 	@Test
 	public void testBotGenerateCode() throws IOException, IllegalParameterException
 	{
-		LogToFile.init();
+		LogToFile.init("test");
 		ImpostazioniView settings = new ImpostazioniClasse(6, false);
 		CampoView cam = new Campo(settings);
 		InputOutput ciao = new InputOutput(settings, cam);
@@ -60,7 +60,7 @@ public class TestPlayer
 	@Test
 	public void testBotGenerateCodeNotNull() throws IOException, IllegalParameterException
 	{
-		LogToFile.init();
+		LogToFile.init("test");
 		ImpostazioniView settings = new ImpostazioniClasse(4, false);
 		CampoView cam = new Campo(settings);
 		InputOutput ciao = new InputOutput(settings, cam);
@@ -72,7 +72,7 @@ public class TestPlayer
 	@Test
 	public void testHumanGenerateCodeNotNull() throws IOException, IllegalParameterException
 	{
-		LogToFile.init();
+		LogToFile.init("test");
 		ImpostazioniView settings = new ImpostazioniClasse(4, false);
 		CampoView cam = new Campo(settings);
 		InputOutput ciao = new InputOutput(settings, cam);

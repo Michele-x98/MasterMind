@@ -39,14 +39,14 @@ public class LogToFile
 	/**
 	 * Metodo statico per l'inizializzazione della gestione dei Log
 	 */
-	public static void init()
+	public static void init(String s)
 	{
 
 		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy--HH-mm-ss");
 
 		try
 		{
-			fh = new FileHandler("src/main/resources/Log-" +
+			fh = new FileHandler("src/"+s+"/resources/Log-" +
 									format.format(Calendar.getInstance().getTime()) +
 									".log");
 		}
