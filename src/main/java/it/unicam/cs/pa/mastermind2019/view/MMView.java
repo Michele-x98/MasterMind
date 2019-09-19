@@ -27,7 +27,7 @@ public interface MMView
 	 *          CodeBreaker.
 	 * @return Stringa che identifica il tipo di player scelto.
 	 */
-	String typePlayerSelection(boolean i);
+	PlayerType typePlayerSelection(boolean i);
 
 	/**
 	 * Metodo che restuisce un ArrayList di Integer ovvero la combinazione di valori

@@ -5,8 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.util.ArrayList;
-//import java.util.Observable;
-//import java.util.Observer;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -107,7 +105,7 @@ public class InputOutput implements MMView// , Observer
 	}
 
 	@Override
-	public String typePlayerSelection(boolean i)
+	public PlayerType typePlayerSelection(boolean i)
 	{
 		String code = null;
 		if (i)
@@ -126,7 +124,7 @@ public class InputOutput implements MMView// , Observer
 				if (c == null)
 					throw new IllegalParameterException();
 				logger.log(Level.INFO, "Decisione accettata");
-				return c;
+				return PlayerType.getPlayerType(c);
 			}
 			catch (IOException e)
 			{

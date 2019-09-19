@@ -50,7 +50,7 @@ public class ConsoleGame {
 	public void start(ImpostazioniView impostazioni, CampoView terrenogioco) throws IllegalParameterException 
 	{
 		logger.log(Level.INFO,"Creazione arbitro in corso");
-		ArbitroView arbitro = new MatchCoordinator(impostazioni, terrenogioco, vista, this.giocatore1, this.giocatore2);
+		ArbitroView arbitro = new Arbitro(impostazioni, terrenogioco, vista, this.giocatore1, this.giocatore2);
 		vista.matchResault(arbitro.play());
 	}
 }

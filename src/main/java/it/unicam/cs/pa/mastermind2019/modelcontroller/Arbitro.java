@@ -20,7 +20,7 @@ import it.unicam.cs.pa.mastermind2019.view.MMView;
  * @author Daniele Moschini
  */
 
-public class MatchCoordinator implements ArbitroView
+public class Arbitro implements ArbitroView
 {
 	private Player p1;
 	private Player p2;
@@ -29,9 +29,9 @@ public class MatchCoordinator implements ArbitroView
 	private int tentativi;
 	private CampoView campo;
 	private ArrayList<Pioli> suggerimento;
-	private static final Logger logger = LogToFile.getLogger(MatchCoordinator.class);
+	private static final Logger logger = LogToFile.getLogger(Arbitro.class);
 
-	public MatchCoordinator(ImpostazioniView parametri,
+	public Arbitro(ImpostazioniView parametri,
 							CampoView campo,
 							MMView vista,
 							Player uno,

@@ -12,7 +12,7 @@ import it.unicam.cs.pa.mastermind2019.view.MMView;
  * @author Daniele Moschini
  *
  */
-public class PlayerFactory implements PlayerFactoryView
+public class PlayerFactory implements PlayerFactoryView, PlayerFactoryView
 {
 	private static final Logger logger = LogToFile.getLogger(PlayerFactory.class);
 
@@ -26,19 +26,20 @@ public class PlayerFactory implements PlayerFactoryView
  * 
  * @return Un nuovo player.
  */
-	public Player getPlayer(String c, MMView vista)
+	@Override
+	public Player getPlayer(PlayerType player, MMView vista)
 	{
 		Player p;
 		
-		if (c.equalsIgnoreCase("bot"))
+		if (player == PlayerType.BOT)
 		{
 			logger.log(Level.INFO, "Creazione di un bot in corso .. ");
-			p = new Bot(vista,c);
+			p = new Bot(vista,"Bot");
 		}
 		else
 		{
 			logger.log(Level.INFO, "Creazione di un Human in corso .. ");
-			p = new Human(vista,c);
+			p = new Human(vista,"Interactive Player");
 		}
 		
 		return p;

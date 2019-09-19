@@ -1,4 +1,5 @@
 package it.unicam.cs.pa.mastermind2019;
+
 /**
  * Enum con i possibili valori dell'ArrayList dei suggerimenti
  * 
@@ -13,4 +14,5 @@ public enum Pioli
 	//PC Elemento che indica che un numero è corretto e si trova nella posizione corretta.
 	//PE Elemento che indica che un numero è corretto, ma non nella posizione esatta.
 	PC, PE,
+	
 }

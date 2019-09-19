@@ -61,4 +61,9 @@ public class Bot implements Player
 	public String getID()
 	{ return ID; }
 
+	@Override
+	public ArrayList<Pioli> getSuggerimento() {
+		return null;
+	}
+
 }

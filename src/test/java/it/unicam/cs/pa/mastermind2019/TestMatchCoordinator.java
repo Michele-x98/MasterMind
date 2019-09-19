@@ -11,7 +11,7 @@ import it.unicam.cs.pa.mastermind2019.modelcontroller.ArbitroView;
 import it.unicam.cs.pa.mastermind2019.modelcontroller.Campo;
 import it.unicam.cs.pa.mastermind2019.modelcontroller.CampoView;
 import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse;
-import it.unicam.cs.pa.mastermind2019.modelcontroller.MatchCoordinator;
+import it.unicam.cs.pa.mastermind2019.modelcontroller.Arbitro;
 import it.unicam.cs.pa.mastermind2019.view.InputOutput;
 import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniView;
 
@@ -26,7 +26,7 @@ public class TestMatchCoordinator {
 		PlayerFactoryView p = new PlayerFactory();
 		Player bot = p.getPlayer("bot", ciao);
 		Player chicco = p.getPlayer("Carlo", ciao);
-		ArbitroView arbitro = new MatchCoordinator(settings, cam, ciao, bot, chicco);
+		ArbitroView arbitro = new Arbitro(settings, cam, ciao, bot, chicco);
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
 		app.add(2);
@@ -58,7 +58,7 @@ public class TestMatchCoordinator {
 		PlayerFactoryView p = new PlayerFactory();
 		Player bot = p.getPlayer("bot", ciao);
 		Player chicco = p.getPlayer("Carlo", ciao);
-		ArbitroView arbitro = new MatchCoordinator(settings, cam, ciao, bot, chicco);
+		ArbitroView arbitro = new Arbitro(settings, cam, ciao, bot, chicco);
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
 		app.add(2);
@@ -92,7 +92,7 @@ public class TestMatchCoordinator {
 		PlayerFactoryView p = new PlayerFactory();
 		Player bot = p.getPlayer("bot", ciao);
 		Player chicco = p.getPlayer("Carlo", ciao);
-		ArbitroView arbitro = new MatchCoordinator(settings, cam, ciao, bot, chicco);
+		ArbitroView arbitro = new Arbitro(settings, cam, ciao, bot, chicco);
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
 		app.add(2);
@@ -126,7 +126,7 @@ public class TestMatchCoordinator {
 		PlayerFactoryView p = new PlayerFactory();
 		Player bot = p.getPlayer("bot", ciao);
 		Player chicco = p.getPlayer("Carlo", ciao);
-		ArbitroView arbitro = new MatchCoordinator(settings, cam, ciao, bot, chicco);
+		ArbitroView arbitro = new Arbitro(settings, cam, ciao, bot, chicco);
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
 		app.add(2);
@@ -159,7 +159,7 @@ public class TestMatchCoordinator {
 		PlayerFactoryView p = new PlayerFactory();
 		Player bot = p.getPlayer("bot", ciao);
 		Player chicco = p.getPlayer("Carlo", ciao);
-		MatchCoordinator arbitro = new MatchCoordinator(settings, cam, ciao, bot, chicco);
+		Arbitro arbitro = new Arbitro(settings, cam, ciao, bot, chicco);
 		ArrayList<Pioli> risultato = new ArrayList<Pioli>();
 		risultato.add(Pioli.PC);
 		risultato.add(Pioli.PC);
@@ -184,7 +184,7 @@ public class TestMatchCoordinator {
 		PlayerFactoryView p = new PlayerFactory();
 		Player bot = p.getPlayer("bot", null);
 		Player chicco = p.getPlayer("Carlo", null);
-		MatchCoordinator arbitro = new MatchCoordinator(settings, cam, ciao, bot, chicco);
+		Arbitro arbitro = new Arbitro(settings, cam, ciao, bot, chicco);
 		ArrayList<Pioli> risultato = new ArrayList<Pioli>();
 		risultato.add(Pioli.PC);
 		risultato.add(Pioli.PC);

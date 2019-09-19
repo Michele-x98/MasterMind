@@ -79,4 +79,9 @@ public class Human implements Player
 		return code;
 	}
 
+	@Override
+	public ArrayList<Pioli> getSuggerimento() {
+		return null;
+	}
+
 }

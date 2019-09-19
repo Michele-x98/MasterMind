@@ -27,5 +27,13 @@ public interface Player
 	 *                                   in ingresso non valido.
 	 */
 	public ArrayList<Integer> generateCode() throws IllegalParameterException;
+	
+	/**
+	 * Metodo che verrà utilizzato dal Player con una strategia, per elaborare
+	 * al meglio un codice, attraverso il suggerimento datogli.
+	 * @return {@link ArrayList<Pioli>} ultimo suggerimento ottenuto.
+	 * 
+	 */
+	public ArrayList<Pioli> getSuggerimento();
 
 }
