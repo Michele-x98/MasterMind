@@ -43,7 +43,7 @@ public class Bot implements Player
 	 * @return Array generato dal metodo.
 	 */
 	@Override
-	public ArrayList<Integer> generateCode() throws IllegalParameterException
+	public ArrayList<Integer> generateCode()
 	{
 		ArrayList<Integer> codice = currentView.getCombination(PlayerType.BOT);
 		logger.log(Level.INFO, "Il Bot ha generato il codice: " +

@@ -10,7 +10,6 @@ import it.unicam.cs.pa.mastermind2019.Pioli;
 import it.unicam.cs.pa.mastermind2019.Player;
 import it.unicam.cs.pa.mastermind2019.Risultato;
 import it.unicam.cs.pa.mastermind2019.Vincitore;
-import it.unicam.cs.pa.mastermind2019.view.IllegalParameterException;
 import it.unicam.cs.pa.mastermind2019.view.MMView;
 
 /**
@@ -47,9 +46,9 @@ public class Arbitro implements ArbitroView
 	}
 
 	@Override
-	public Risultato play() throws IllegalParameterException
+	public Risultato play()
 	{
-		logger.log(Level.INFO, "Match start!");
+		logger.log(Level.INFO, "Match started!");
 		campo.setDecodeArray(p1.generateCode());
 		this.tentativi = parameters.getAttempts();
 		Risultato esito;
@@ -70,7 +69,7 @@ public class Arbitro implements ArbitroView
 									" turni alla fine");
 		}
 		while (tentativi > 0);
-		logger.log(Level.INFO, "Match finish!");
+		logger.log(Level.INFO, "Match finished!");
 		return esito = new Perdente(this.p2.getID());
 	}
 

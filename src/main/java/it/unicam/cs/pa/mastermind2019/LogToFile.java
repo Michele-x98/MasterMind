@@ -31,22 +31,22 @@ public class LogToFile
 	 */
 	public static Logger getLogger(Class<?> classeLog)
 	{
-		Logger x = Logger.getLogger(classeLog.getName());
-		x.addHandler(fh);
-		x.setUseParentHandlers(false);
-		return x;
+		Logger defaultLogger = Logger.getLogger(classeLog.getName());
+		defaultLogger.addHandler(fh);
+		defaultLogger.setUseParentHandlers(false);
+		return defaultLogger;
 	}
 	/**
 	 * Metodo statico per l'inizializzazione della gestione dei Log
 	 */
-	public static void init(String s)
+	public static void init(String type)
 	{
 
 		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy--HH-mm-ss");
 
 		try
 		{
-			fh = new FileHandler("src/"+s+"/resources/Log-" +
+			fh = new FileHandler("src/"+type+"/resources/Log-" +
 									format.format(Calendar.getInstance().getTime()) +
 									".log");
 		}

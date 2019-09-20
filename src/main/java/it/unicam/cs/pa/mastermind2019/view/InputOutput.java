@@ -65,18 +65,18 @@ public class InputOutput implements MMView// , Observer
 		while (true)
 		{
 			output.println("Vuoi uscire? (S/N)");
-			String str;
+			String decisione;
 			try
 			{
-				str = input.readLine();
-				if (str.equalsIgnoreCase("S"))
+				decisione = input.readLine();
+				if (decisione.equalsIgnoreCase("S"))
 				{
 					logger.log(Level.INFO, "Decisione accettata: FINE");
 					clearScreen();
 					output.println("Arrivederci");
 					return false;
 				}
-				else if (str.equalsIgnoreCase("N"))
+				else if (decisione.equalsIgnoreCase("N"))
 				{
 					logger.log(Level.INFO, "Decisione accettata: REGAME");
 					clearScreen();
@@ -105,18 +105,13 @@ public class InputOutput implements MMView// , Observer
 	}
 
 	@Override
-	public PlayerType typePlayerSelection(boolean i)
+	public PlayerType typePlayerSelection(String typePlayer)
 	{
-		String code = null;
-		if (i)
-			code = "CodeMaker";
-		else
-			code = "CodeBreaker";
 		logger.log(Level.INFO, "In attesa della decisione dell'utente ..");
 		while (true)
 		{
 			output.println("Inserisci chi vuoi che sia il " +
-							code);
+							typePlayer);
 			String c;
 			try
 			{
@@ -131,7 +126,7 @@ public class InputOutput implements MMView// , Observer
 				logger.log(Level.WARNING, "Decisione non valida");
 				clearScreen();
 				output.println("Tipo di " +
-								code +
+								typePlayer +
 								" non valido.");
 			}
 			catch (IllegalParameterException e)
@@ -139,7 +134,7 @@ public class InputOutput implements MMView// , Observer
 				logger.log(Level.WARNING, "Decisione non valida");
 				clearScreen();
 				output.println("Tipo di " +
-								code +
+								typePlayer +
 								" non valido.");
 			}
 

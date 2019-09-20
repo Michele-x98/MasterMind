@@ -26,7 +26,7 @@ public interface Player
 	 * @throws IllegalParameterException Eccezione lanciata in caso di un parametro
 	 *                                   in ingresso non valido.
 	 */
-	public ArrayList<Integer> generateCode() throws IllegalParameterException;
+	public ArrayList<Integer> generateCode();
 	
 	/**
 	 * Metodo che verrà utilizzato dal Player con una strategia, per elaborare

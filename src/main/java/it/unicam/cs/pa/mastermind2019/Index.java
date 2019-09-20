@@ -43,8 +43,8 @@ public class Index
 				switch (view.sceltaMenu()) {
 				case 1: {
 					logger.log(Level.INFO,"Creazione di una console di gioco in corso");
-					ConsoleGame direttore = new ConsoleGame(player1.getPlayer(view.typePlayerSelection(true), view),
-							player2.getPlayer(view.typePlayerSelection(false), view), view, terreno);
+					ConsoleGame direttore = new ConsoleGame(player1.getPlayer(view.typePlayerSelection("CodeMaker"), view),
+							player2.getPlayer(view.typePlayerSelection("CodeBreaker"), view), view, terreno);
 					logger.log(Level.INFO,"Inizializzazione della partita");
 					direttore.start(settings, terreno);
 					logger.log(Level.INFO,"Partita terminata");

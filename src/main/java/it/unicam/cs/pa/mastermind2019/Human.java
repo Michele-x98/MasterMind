@@ -70,7 +70,7 @@ public class Human implements Player
 	 * @return codice Codice generato dal giocatore interattivo.
 	 */
 	@Override
-	public ArrayList<Integer> generateCode() throws IllegalParameterException
+	public ArrayList<Integer> generateCode()
 	{
 		ArrayList<Integer> code = currentView.getCombination(PlayerType.HUMAN);
 		logger.log(Level.INFO, "Il player umano ha generato il codice: " +

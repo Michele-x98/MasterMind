@@ -15,7 +15,7 @@ public interface ArbitroView {
 	 * @throws IllegalParameterException Eccezione che può essere lanciata da
 	 *                                   generateCode.
 	 */
-	Risultato play() throws IllegalParameterException;
+	Risultato play();
 
 	/**
 	 * Metodo che si occupa del confronto tra un tentativo e il codice da decriptare.

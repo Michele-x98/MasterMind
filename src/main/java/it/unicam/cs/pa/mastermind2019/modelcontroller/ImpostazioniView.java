@@ -49,9 +49,9 @@ public interface ImpostazioniView
 	/**
 	 * Setter della lunghezza del codice.
 	 * 
-	 * @param code La nuova lunghezza del codice.
+	 * @param newCode La nuova lunghezza del codice.
 	 */
-	void setCodeLenght(int code);
+	void setCodeLenght(int newCode);
 	/**
 	 * Setter della presenza dei duplicati nel codice.
 	 * @param duplicate True per avere duplicati presenti nel codice, false altrimenti.

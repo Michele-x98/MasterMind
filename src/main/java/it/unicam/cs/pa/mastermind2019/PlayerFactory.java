@@ -29,19 +29,19 @@ public class PlayerFactory implements PlayerFactoryView
 	@Override
 	public Player getPlayer(PlayerType player, MMView vista)
 	{
-		Player p;
+		Player newPlayer;
 		
 		if (player == PlayerType.BOT)
 		{
 			logger.log(Level.INFO, "Creazione di un bot in corso .. ");
-			p = new Bot(vista,"Bot");
+			newPlayer = new Bot(vista,"Bot");
 		}
 		else
 		{
 			logger.log(Level.INFO, "Creazione di un Human in corso .. ");
-			p = new Human(vista,"Interactive Player");
+			newPlayer = new Human(vista,"Interactive Player");
 		}
 		
-		return p;
+		return newPlayer;
 	}
 }
