@@ -12,7 +12,7 @@ import it.unicam.cs.pa.mastermind2019.view.MMView;
  * @author Daniele Moschini
  *
  */
-public class PlayerFactory implements PlayerFactoryView, PlayerFactoryView
+public class PlayerFactory implements PlayerFactoryView
 {
 	private static final Logger logger = LogToFile.getLogger(PlayerFactory.class);
 

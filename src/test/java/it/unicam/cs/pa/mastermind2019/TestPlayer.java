@@ -25,7 +25,7 @@ public class TestPlayer
 		CampoView cam = new Campo(settings);
 		InputOutput ciao = new InputOutput(settings, cam);
 		PlayerFactoryView p = new PlayerFactory();
-		Player chicco = p.getPlayer("Carlo", ciao);
+		Player chicco = p.getPlayer(PlayerType.getPlayerType("Carlo"), ciao);
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
 		app.add(2);
@@ -46,7 +46,7 @@ public class TestPlayer
 		CampoView cam = new Campo(settings);
 		InputOutput ciao = new InputOutput(settings, cam);
 		PlayerFactoryView p = new PlayerFactory();
-		Player chicco = p.getPlayer("Bot", ciao);
+		Player chicco = p.getPlayer(PlayerType.getPlayerType("bot"), ciao);
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
 		app.add(2);
@@ -65,7 +65,7 @@ public class TestPlayer
 		CampoView cam = new Campo(settings);
 		InputOutput ciao = new InputOutput(settings, cam);
 		PlayerFactoryView p = new PlayerFactory();
-		Player chicco = p.getPlayer("Bot", ciao);
+		Player chicco = p.getPlayer(PlayerType.getPlayerType("bot"), ciao);
 		assertNotNull(chicco.generateCode());
 	}
 
@@ -77,7 +77,7 @@ public class TestPlayer
 		CampoView cam = new Campo(settings);
 		InputOutput ciao = new InputOutput(settings, cam);
 		PlayerFactoryView p = new PlayerFactory();
-		Player chicco = p.getPlayer("Bot", ciao);
+		Player chicco = p.getPlayer(PlayerType.getPlayerType("bot"), ciao);
 		assertNotNull(chicco.generateCode());
 
 	}
