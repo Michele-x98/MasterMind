@@ -48,6 +48,8 @@ public class TestMatchCoordinator
 	@Test
 	public void testCheckPE() 
 	{
+		LogToFile.init("test");
+
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
 		app.add(2);
@@ -79,7 +81,8 @@ public class TestMatchCoordinator
 	@Test
 	public void testCheckBoth() 
 	{
-		
+		LogToFile.init("test");
+	
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
 		app.add(2);
@@ -112,7 +115,8 @@ public class TestMatchCoordinator
 	@Test
 	public void testCheckNull()
 	{
-		
+		LogToFile.init("test");
+
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
 		app.add(2);
@@ -144,7 +148,8 @@ public class TestMatchCoordinator
 	@Test
 	public void testIsWinnerTrue() 
 	{
-		
+		LogToFile.init("test");
+
 		ArrayList<Pioli> risultato = new ArrayList<Pioli>();
 		risultato.add(Pioli.PC);
 		risultato.add(Pioli.PC);
@@ -166,7 +171,8 @@ public class TestMatchCoordinator
 	@Test
 	public void testIsWinnerFalse() 
 	{
-		
+		LogToFile.init("test");
+
 		ArrayList<Pioli> risultato = new ArrayList<Pioli>();
 		risultato.add(Pioli.PC);
 		risultato.add(Pioli.PC);

@@ -23,15 +23,14 @@ public interface Player
 	 * Metodo che genera un codice da criptare/decriptare.
 	 * 
 	 * @return Un arrayList di interi, ovvero il codice generato.
-	 * @throws IllegalParameterException Eccezione lanciata in caso di un parametro
-	 *                                   in ingresso non valido.
+	 * 
 	 */
 	public ArrayList<Integer> generateCode();
 	
 	/**
 	 * Metodo che verrà utilizzato dal Player con una strategia, per elaborare
 	 * al meglio un codice, attraverso il suggerimento datogli.
-	 * @return {@link ArrayList<Pioli>} ultimo suggerimento ottenuto.
+	 * @return ultimo suggerimento ottenuto.
 	 * 
 	 */
 	public ArrayList<Pioli> getSuggerimento();

@@ -78,7 +78,7 @@ public class Human implements Player
 		tentativi.add(code);
 		return code;
 	}
-
+	
 	@Override
 	public ArrayList<Pioli> getSuggerimento() {
 		return null;

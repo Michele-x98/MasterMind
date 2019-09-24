@@ -36,8 +36,10 @@ public class LogToFile
 		defaultLogger.setUseParentHandlers(false);
 		return defaultLogger;
 	}
-	/**
-	 * Metodo statico per l'inizializzazione della gestione dei Log
+	
+	/** Metodo statico per l'inizializzazione della gestione dei Log
+	 * 
+	 * @param type Nome identificativo della classe che utilizza il Log
 	 */
 	public static void init(String type)
 	{

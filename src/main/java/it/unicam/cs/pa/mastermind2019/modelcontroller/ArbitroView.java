@@ -12,8 +12,7 @@ public interface ArbitroView {
 	 * Con metodo play() le varie fasi della partita vengono svolte.
 	 * 
 	 * @return Il vincitore o il perdente della partita.
-	 * @throws IllegalParameterException Eccezione che può essere lanciata da
-	 *                                   generateCode.
+	 * 
 	 */
 	Risultato play();
 

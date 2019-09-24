@@ -27,12 +27,12 @@ public class ConsoleGame {
 	private MMView vista;
 	private static final Logger logger = LogToFile.getLogger(ConsoleGame.class);
 	
-	/**
-	 * Costruttore di ConsoleGame.
+	/** Costruttore di ConsoloGame
 	 * 
-	 * @param p1      Primo giocatore della partita.
-	 * @param p2      Secondo giocatore della partita.
-	 * @param terreno
+	 * @param p1 Primo giocatore della partita.
+	 * @param p2 Secodno giocatore della partita.
+	 * @param vista La vista della View
+	 * @param terreno Il terreno di gioco
 	 */
 	public ConsoleGame(Player p1, Player p2, MMView vista, CampoView terreno)
 	{
@@ -41,10 +41,11 @@ public class ConsoleGame {
 		this.vista = vista;
 		logger.log(Level.INFO,"Console di gioco creata correttamente");
 	}
-
-	/**
-	 * Metodo che crea un arbitro per la partita e la fa iniziare.
+	
+	/**Metodo che crea un arbitro per la partita e la fa iniziare.
 	 * 
+	 * @param impostazioni Le impostazioni della Partita
+	 * @param terrenogioco Il terreno di gioco
 	 * @throws IllegalParameterException Eccezione che può essere lanciata dal
 	 *                                   metodo generateCode.
 	 */

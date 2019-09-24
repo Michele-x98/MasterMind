@@ -45,11 +45,10 @@ public interface MMView
 	/**
 	 * Metodo che restituirà in Output il suggerimento ricavato.
 	 * 
-	 * @param sugg
+	 * @param sugg L'arraylist di Pioli di suggerimento
 	 */
 	void attemptResault(ArrayList<Pioli> sugg);
 
-//	void update(Observable o, Object arg);
 	/**
 	 * metodo che restituisce in output l'ultimo suggerimento. Da utilizzare in una
 	 * potenziale AI.
@@ -66,7 +65,7 @@ public interface MMView
 	/**
 	 * Metodo che stampa in output l'estito della partita.
 	 * 
-	 * @param esito
+	 * @param esito L'esito della partita
 	 */
 	void matchResault(Risultato esito);
 

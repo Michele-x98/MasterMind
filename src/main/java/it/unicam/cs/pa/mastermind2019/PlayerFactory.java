@@ -22,7 +22,7 @@ public class PlayerFactory implements PlayerFactoryView
 	}
 
 /**
- * Metodo che restituisce un player da una stringa e una MMView in ingresso.
+ * Metodo che restituisce un player da ub Enum e una MMView in ingresso.
  * 
  * @return Un nuovo player.
  */
