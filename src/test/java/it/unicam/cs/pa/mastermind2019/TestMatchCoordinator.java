@@ -4,28 +4,43 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import it.unicam.cs.pa.mastermind2019.modelcontroller.Campo;
+import it.unicam.cs.pa.mastermind2019.modelcontroller.CampoView;
 import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse;
 import it.unicam.cs.pa.mastermind2019.modelcontroller.Arbitro;
+import it.unicam.cs.pa.mastermind2019.modelcontroller.ArbitroView;
 import it.unicam.cs.pa.mastermind2019.view.InputOutput;
+import it.unicam.cs.pa.mastermind2019.view.MMView;
 import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniView;
 
 public class TestMatchCoordinator
 {
 
-	ImpostazioniView settingsTest = new ImpostazioniClasse(6, false);
-	Campo terrenoTest = new Campo(settingsTest);
-	InputOutput viewInstanceTest = new InputOutput(settingsTest, terrenoTest);
-	PlayerFactory playerGenerator = new PlayerFactory();
-	Player botTest = playerGenerator.getPlayer(PlayerType.getPlayerType("bot"), viewInstanceTest);
-	Player interactiveTest = playerGenerator.getPlayer(PlayerType.getPlayerType("Carlo"), viewInstanceTest);
-	Arbitro arbitro = new Arbitro(settingsTest, terrenoTest, viewInstanceTest, botTest, interactiveTest);
-	@Test
-	public void testCheckPC() 
+	static ImpostazioniView impostazioni;
+	static CampoView terrenoTest;
+	static MMView vista;
+	static Player p1;
+	static Player p2;
+	static ArbitroView arbitro;
+
+	@BeforeClass
+	public static void newMatch()
 	{
 		LogToFile.init("test");
+		impostazioni = new ImpostazioniClasse(6, false);
+		terrenoTest = new Campo(impostazioni);
+		vista = new InputOutput(impostazioni, terrenoTest);
+		p1 = new Bot(vista, "Bot");
+		p2 = new Bot(vista, "Human");
+		arbitro = new Arbitro(impostazioni, terrenoTest, vista, p1, p2);
+	}
+
+	@Test
+	public void testCheckPC()
+	{
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
 		app.add(2);
@@ -46,9 +61,8 @@ public class TestMatchCoordinator
 	}
 
 	@Test
-	public void testCheckPE() 
+	public void testCheckPE()
 	{
-		LogToFile.init("test");
 
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
@@ -74,15 +88,13 @@ public class TestMatchCoordinator
 		risultato.add(Pioli.PE);
 		risultato.add(Pioli.PE);
 		risultato.add(Pioli.PE);
-		
+
 		assertEquals(risultato, arbitro.check(app2));
 	}
 
 	@Test
-	public void testCheckBoth() 
+	public void testCheckBoth()
 	{
-		LogToFile.init("test");
-	
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
 		app.add(2);
@@ -115,7 +127,6 @@ public class TestMatchCoordinator
 	@Test
 	public void testCheckNull()
 	{
-		LogToFile.init("test");
 
 		ArrayList<Integer> app = new ArrayList<Integer>();
 		app.add(1);
@@ -124,7 +135,7 @@ public class TestMatchCoordinator
 		app.add(4);
 		app.add(5);
 		app.add(6);
-		
+
 		ArrayList<Integer> app2 = new ArrayList<Integer>();
 		app2.add(1);
 		app2.add(3);
@@ -146,9 +157,8 @@ public class TestMatchCoordinator
 	}
 
 	@Test
-	public void testIsWinnerTrue() 
+	public void testIsWinnerTrue()
 	{
-		LogToFile.init("test");
 
 		ArrayList<Pioli> risultato = new ArrayList<Pioli>();
 		risultato.add(Pioli.PC);
@@ -169,9 +179,8 @@ public class TestMatchCoordinator
 	}
 
 	@Test
-	public void testIsWinnerFalse() 
+	public void testIsWinnerFalse()
 	{
-		LogToFile.init("test");
 
 		ArrayList<Pioli> risultato = new ArrayList<Pioli>();
 		risultato.add(Pioli.PC);

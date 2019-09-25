@@ -162,14 +162,7 @@ public class Arbitro implements ArbitroView
 		return checkResult;
 	}
 
-	/**
-	 * Metodo interno che attravero un tentativo e un campo in input esegue un
-	 * controllo e restituisce se il tentativo è vincente.
-	 * 
-	 * @param tentativo ArrayList di Pioli restituito dal check.
-	 * @param campo2	Campo di gioco attuale.
-	 * @return true se il tentativo è vincente, false altrimenti.
-	 */
+	@Override
 	public boolean isWinner(ArrayList<Pioli> tentativo,
 									CampoView campo2)
 	{

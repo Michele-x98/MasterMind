@@ -30,5 +30,15 @@ public interface ArbitroView
 	 * @return Un ArrayList di Pioli contenente un suggerimento per l'utente.
 	 */
 	ArrayList<Pioli> check(ArrayList<Integer> tentativo);
+	/**
+	 * Metodo interno che attravero un tentativo e un campo in input esegue un
+	 * controllo e restituisce se il tentativo è vincente.
+	 * 
+	 * @param tentativo ArrayList di Pioli restituito dal check.
+	 * @param campo2	Campo di gioco attuale.
+	 * @return true se il tentativo è vincente, false altrimenti.
+	 */
+	public boolean isWinner(ArrayList<Pioli> tentativo,
+							CampoView campo2);
 
 }
