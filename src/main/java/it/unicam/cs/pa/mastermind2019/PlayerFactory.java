@@ -15,7 +15,9 @@ import it.unicam.cs.pa.mastermind2019.view.MMView;
 public class PlayerFactory implements PlayerFactoryView
 {
 	private static final Logger logger = LogToFile.getLogger(PlayerFactory.class);
-
+/**
+ * Costruttore della factory.
+ */
 	public PlayerFactory() 
 	{
 		logger.log(Level.INFO,"Factory creata con successo");

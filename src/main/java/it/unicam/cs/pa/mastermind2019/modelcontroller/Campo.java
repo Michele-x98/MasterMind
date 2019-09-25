@@ -17,12 +17,32 @@ import it.unicam.cs.pa.mastermind2019.Pioli;
 
 public class Campo implements CampoView
 {
+	/**
+	 * Logger della classe Campo.
+	 */
 	private static final Logger logger = LogToFile.getLogger(Campo.class);
+	/**
+	 * Array da decodificare.
+	 */
 	private ArrayList<Integer> decodeArray;
+	/**
+	 * Array tentativo.
+	 */
 	private ArrayList<Integer> codeArray;
+	/**
+	 * Pila (LIFO) contenente i suggerimenti già utilizzati.
+	 */
 	private Stack<ArrayList<Pioli>> suggerimenti;
+	/**
+	 * Lunghezza del codice.
+	 */
 	public int lunghezza;
 
+	/**
+	 * Costruttore del Campo
+	 * 
+	 * @param settings Impostazioni della partita corrente.
+	 */
 	public Campo(ImpostazioniView settings )
 	{
 		this.lunghezza = settings.getCodeLenght();
@@ -31,9 +51,7 @@ public class Campo implements CampoView
 		this.suggerimenti = new Stack<ArrayList<Pioli>>();
 		logger.log(Level.INFO, "Campo creato correttamente");
 	}
-/**
- * Aggiunge l'ultimo suggetimento alla lista di seggerimenti
- */
+
 	@Override
 	public void addSuggerimento(ArrayList<Pioli> sugg)
 	{
@@ -44,11 +62,7 @@ public class Campo implements CampoView
 	}
 
 //	 ****************** GETTERS ******************
-/**
- * Metodo che restituiusce l'ultimo ArrayList di pioli contenente i suggerimenti
- * @return ArrayList di Pioli contenente l'ultimo suggerimento
- * 
- */
+
 	@Override
 	public ArrayList<Pioli> getLastSuggerimento()
 	{
@@ -57,12 +71,6 @@ public class Campo implements CampoView
 								lastSugg.toString());
 		return lastSugg;
 	}
-
-	/**
-	 * Getter della variabile <code>decodeArray</code>.
-	 * 
-	 * @return Array da decodificare.
-	 */
 
 	@Override
 	public ArrayList<Integer> getArrayFromDeco()
@@ -73,11 +81,6 @@ public class Campo implements CampoView
 		return this.decodeArray;
 	}
 
-	/**
-	 * Getter della variabile <code>codeArray</code>.
-	 * 
-	 * @return Array tentativo.
-	 */
 	@Override
 	public ArrayList<Integer> getArrayFromCode()
 	{
@@ -89,11 +92,6 @@ public class Campo implements CampoView
 
 //	 ****************** SETTERS ******************
 
-	/**
-	 * Setter per la variabile <code>decodeArray</code>.
-	 * 
-	 * @param arrayList Nuovo <code>decodeArray</code>.
-	 */
 	@Override
 	public void setDecodeArray(ArrayList<Integer> arrayList)
 	{
@@ -103,11 +101,6 @@ public class Campo implements CampoView
 		this.decodeArray = arrayList;
 	}
 
-	/**
-	 * Setter per la variabile <code>codeArray</code>.
-	 * 
-	 * @param codeArray Nuovo <code>codeArray</code>.
-	 */
 	@Override
 	public void setCodeArray(ArrayList<Integer> codeArray)
 	{

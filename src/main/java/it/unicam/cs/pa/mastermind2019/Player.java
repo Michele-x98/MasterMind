@@ -2,7 +2,6 @@ package it.unicam.cs.pa.mastermind2019;
 
 import java.util.ArrayList;
 
-import it.unicam.cs.pa.mastermind2019.view.IllegalParameterException;
 
 /**
  * <b>Responsabilità:</b> Impostare le basi per la strategia di un giocatore.

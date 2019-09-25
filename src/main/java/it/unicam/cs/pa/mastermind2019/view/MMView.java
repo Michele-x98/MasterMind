@@ -7,7 +7,12 @@ import java.util.ArrayList;
 import it.unicam.cs.pa.mastermind2019.Pioli;
 import it.unicam.cs.pa.mastermind2019.PlayerType;
 import it.unicam.cs.pa.mastermind2019.Risultato;
-
+/**
+ * <b>Responsabilità:</b> Impostare una base per l'Input/Output.
+ * 
+ * @author Michele Benedetti
+ * @author Daniele Moschini
+ */
 public interface MMView
 {
 
@@ -38,14 +43,14 @@ public interface MMView
 	ArrayList<Integer> getCombination(PlayerType giocatore);
 
 	/**
-	 * Metodo che inizializza l'Input e l'Output
+	 * Metodo che inizializza l'Input e l'Output.
 	 */
 	void gameInit();
 
 	/**
 	 * Metodo che restituirà in Output il suggerimento ricavato.
 	 * 
-	 * @param sugg L'arraylist di Pioli di suggerimento
+	 * @param sugg L'arraylist di Pioli di suggerimento.
 	 */
 	void attemptResault(ArrayList<Pioli> sugg);
 
@@ -65,7 +70,7 @@ public interface MMView
 	/**
 	 * Metodo che stampa in output l'estito della partita.
 	 * 
-	 * @param esito L'esito della partita
+	 * @param esito L'esito della partita.
 	 */
 	void matchResault(Risultato esito);
 
@@ -79,7 +84,7 @@ public interface MMView
 
 	/**
 	 * Metodo che prende in Input la scelta dell'utente riguardo la configurazione
-	 * della difficoltà
+	 * della difficoltà.
 	 * 
 	 * @return l'intero che corrisponde alla scelta dell'utente.
 	 */
@@ -87,7 +92,7 @@ public interface MMView
 
 	/**
 	 * Metodo che prende in Input la scelta dell'utente riguardo la configurazione
-	 * dei duplicati
+	 * dei duplicati.
 	 * 
 	 * @return l'intero che corrisponde alla scelta dell'utente.
 	 */

@@ -4,11 +4,26 @@ import java.util.ArrayList;
 
 import it.unicam.cs.pa.mastermind2019.Pioli;
 
+/**
+ * <b>Responsabilità:</b> Impostare una base con cui gestire il campo da gioco.
+ * 
+ * @author Michele Benedetti
+ * @author Daniele Moschini
+ */
 public interface CampoView
 {
-
+	/**
+	 * Metodo che restituisce l'ultimo suggerimento creato.
+	 * 
+	 * @return {@link ArrayList} di Pioli contenente il suggerimento.
+	 */
 	ArrayList<Pioli> getLastSuggerimento();
 
+	/**
+	 * Aggiunge l'ultimo suggetimento alla lista di seggerimenti.
+	 *
+	 * @param sugg Ultimo suggerimento creato.
+	 */
 	void addSuggerimento(ArrayList<Pioli> sugg);
 
 	/**
@@ -20,6 +35,7 @@ public interface CampoView
 
 	/**
 	 * Getter della variabile <code>codeArray</code>.
+	 * 
 	 * @return Array tentativo.
 	 */
 	ArrayList<Integer> getArrayFromCode();

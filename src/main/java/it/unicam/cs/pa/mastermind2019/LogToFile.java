@@ -15,10 +15,19 @@ import java.util.logging.SimpleFormatter;
  */
 public class LogToFile
 {
+	/**
+	 * Formattazione che avrà il nome del file
+	 */
 	static SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy--HH-mm-ss");
+	/**
+	 * FileHandler che gestisce la scrittura su file esterno.
+	 */
 	private static FileHandler fh = null;
 
-	public LogToFile()
+	/**
+	 * Costruttore inutilizzato.
+	 */
+	private LogToFile()
 	{
 	}
 
@@ -27,7 +36,7 @@ public class LogToFile
 	 * al metodo con un Handler specifico e con parametri preimpostati.
 	 * 
 	 * @param classeLog Classe che riceverà il Logger.
-	 * @return	Un Logger per la classe.
+	 * @return Un Logger per la classe.
 	 */
 	public static Logger getLogger(Class<?> classeLog)
 	{
@@ -36,8 +45,9 @@ public class LogToFile
 		defaultLogger.setUseParentHandlers(false);
 		return defaultLogger;
 	}
-	
-	/** Metodo statico per l'inizializzazione della gestione dei Log
+
+	/**
+	 * Metodo statico per l'inizializzazione della gestione dei Log
 	 * 
 	 * @param type Nome identificativo della classe che utilizza il Log
 	 */
@@ -48,7 +58,9 @@ public class LogToFile
 
 		try
 		{
-			fh = new FileHandler("src/"+type+"/resources/Log-" +
+			fh = new FileHandler("src/" +
+									type +
+									"/resources/Log-" +
 									format.format(Calendar.getInstance().getTime()) +
 									".log");
 		}

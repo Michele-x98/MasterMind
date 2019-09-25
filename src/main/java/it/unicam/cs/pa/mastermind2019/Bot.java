@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import it.unicam.cs.pa.mastermind2019.view.IllegalParameterException;
 import it.unicam.cs.pa.mastermind2019.view.MMView;
 
 /**
@@ -16,14 +15,23 @@ import it.unicam.cs.pa.mastermind2019.view.MMView;
 
 public class Bot implements Player
 {
+	/**
+	 * Logger della classe Bot.
+	 */
 	private static final Logger logger = LogToFile.getLogger(Bot.class);
-	public String ID;
-	MMView currentView;
+	/**
+	 * Identificatore del Bot.
+	 */
+	private String ID;
+	/**
+	 * Implementazione dell'interfaccia MMView per interfacciarsi con l'utente.
+	 */
+	private MMView currentView;
 
 	/**
 	 * Metodo costruttore della classe Bot.
 	 * 
-	 * @param view Classe che implementa l'interfaccia MMView per interfacciarsi con
+	 * @param view Implementazione dell'interfaccia MMView per interfacciarsi con
 	 *             l'utente.
 	 * @param id   Identificatore del Bot.
 	 */
@@ -62,8 +70,7 @@ public class Bot implements Player
 	{ return ID; }
 
 	@Override
-	public ArrayList<Pioli> getSuggerimento() {
-		return null;
-	}
+	public ArrayList<Pioli> getSuggerimento()
+	{ return null; }
 
 }

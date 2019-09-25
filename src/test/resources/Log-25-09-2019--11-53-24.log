@@ -1,0 +1,734 @@
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo <init>
+INFO: Campo creato correttamente
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.view.InputOutput <init>
+INFO: Creazione dell' INPUT e dell' OUTPUT con l'utente avvenuta con successo
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.PlayerFactory <init>
+INFO: Factory creata con successo
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creazione di un bot in corso .. 
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.Bot <init>
+INFO: Bot Creato correttamente con id: Bot
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.view.InputOutput botGetCombination
+INFO: Aspettando la decisione del Bot
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 6
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 6
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 6
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 6
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.view.InputOutput botGetCombination
+INFO: Decisione accettata
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.Bot generateCode
+INFO: Il Bot ha generato il codice: [3, 2, 5, 4]
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo <init>
+INFO: Campo creato correttamente
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.view.InputOutput <init>
+INFO: Creazione dell' INPUT e dell' OUTPUT con l'utente avvenuta con successo
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.PlayerFactory <init>
+INFO: Factory creata con successo
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creazione di un bot in corso .. 
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.Bot <init>
+INFO: Bot Creato correttamente con id: Bot
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.view.InputOutput botGetCombination
+INFO: Aspettando la decisione del Bot
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 8
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 8
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 8
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 8
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 8
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 8
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.view.InputOutput botGetCombination
+INFO: Decisione accettata
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.Bot generateCode
+INFO: Il Bot ha generato il codice: [5, 6, 3, 2, 7, 4]
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo <init>
+INFO: Campo creato correttamente
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.view.InputOutput <init>
+INFO: Creazione dell' INPUT e dell' OUTPUT con l'utente avvenuta con successo
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.PlayerFactory <init>
+INFO: Factory creata con successo
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creazione di un Human in corso .. 
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.view.InputOutput humanGetCombination
+INFO: Aspettando la decisione dell'utente
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:24 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 8
+set 25, 2019 11:53:33 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:33 AM it.unicam.cs.pa.mastermind2019.view.InputOutput humanGetCombination
+WARNING: Decisione non accettata
+set 25, 2019 11:53:33 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 8
+set 25, 2019 11:53:33 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:33 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 8
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 8
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 8
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 8
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 8
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 8
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 8
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.view.InputOutput humanGetCombination
+INFO: Decisione accettata
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo <init>
+INFO: Campo creato correttamente
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.view.InputOutput <init>
+INFO: Creazione dell' INPUT e dell' OUTPUT con l'utente avvenuta con successo
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.PlayerFactory <init>
+INFO: Factory creata con successo
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creazione di un bot in corso .. 
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.Bot <init>
+INFO: Bot Creato correttamente con id: Bot
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.view.InputOutput botGetCombination
+INFO: Aspettando la decisione del Bot
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMaxCodValue
+INFO: Restituita la lunghezza massima del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse isDuplicateAllow
+INFO: Restituito il permesso di avere duplicati nel codice: false
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getMinCodValue
+INFO: Restituita la lunghezza minima del codice: 1
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 4
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.view.InputOutput botGetCombination
+INFO: Decisione accettata
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.Bot generateCode
+INFO: Il Bot ha generato il codice: [5, 4, 1, 3]
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo <init>
+INFO: Campo creato correttamente
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.view.InputOutput <init>
+INFO: Creazione dell' INPUT e dell' OUTPUT con l'utente avvenuta con successo
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.PlayerFactory <init>
+INFO: Factory creata con successo
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creazione di un bot in corso .. 
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.Bot <init>
+INFO: Bot Creato correttamente con id: Bot
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creazione di un Human in corso .. 
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo setDecodeArray
+INFO: Impostando [1, 2, 3, 4, 5, 6] come tentativo
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[1, 2, 3, 4, 5, 6] da decodificare
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo <init>
+INFO: Campo creato correttamente
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.view.InputOutput <init>
+INFO: Creazione dell' INPUT e dell' OUTPUT con l'utente avvenuta con successo
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.PlayerFactory <init>
+INFO: Factory creata con successo
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creazione di un bot in corso .. 
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.Bot <init>
+INFO: Bot Creato correttamente con id: Bot
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creazione di un Human in corso .. 
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo setDecodeArray
+INFO: Impostando [1, 2, 5, 4, 3, 7] come tentativo
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[1, 2, 5, 4, 3, 7] da decodificare
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo <init>
+INFO: Campo creato correttamente
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.view.InputOutput <init>
+INFO: Creazione dell' INPUT e dell' OUTPUT con l'utente avvenuta con successo
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.PlayerFactory <init>
+INFO: Factory creata con successo
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creazione di un bot in corso .. 
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.Bot <init>
+INFO: Bot Creato correttamente con id: Bot
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creazione di un Human in corso .. 
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo setDecodeArray
+INFO: Impostando [1, 2, 3, 4, 5, 6] come tentativo
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[1, 2, 3, 4, 5, 6] da decodificare
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo <init>
+INFO: Campo creato correttamente
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.view.InputOutput <init>
+INFO: Creazione dell' INPUT e dell' OUTPUT con l'utente avvenuta con successo
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.PlayerFactory <init>
+INFO: Factory creata con successo
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creazione di un bot in corso .. 
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.Bot <init>
+INFO: Bot Creato correttamente con id: Bot
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creazione di un Human in corso .. 
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo setDecodeArray
+INFO: Impostando [1, 2, 3, 4, 5, 6] come tentativo
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[1, 2, 3, 4, 5, 6] da decodificare
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo <init>
+INFO: Campo creato correttamente
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.view.InputOutput <init>
+INFO: Creazione dell' INPUT e dell' OUTPUT con l'utente avvenuta con successo
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.PlayerFactory <init>
+INFO: Factory creata con successo
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creazione di un bot in corso .. 
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.Bot <init>
+INFO: Bot Creato correttamente con id: Bot
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creazione di un Human in corso .. 
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo setDecodeArray
+INFO: Impostando [1, 2, 3, 4, 5, 6] come tentativo
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[1, 2, 3, 4, 5, 6] da decodificare
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo <init>
+INFO: Campo creato correttamente
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.view.InputOutput <init>
+INFO: Creazione dell' INPUT e dell' OUTPUT con l'utente avvenuta con successo
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.PlayerFactory <init>
+INFO: Factory creata con successo
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creazione di un bot in corso .. 
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.Bot <init>
+INFO: Bot Creato correttamente con id: Bot
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.PlayerFactory getPlayer
+INFO: Creazione di un Human in corso .. 
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo setDecodeArray
+INFO: Impostando [1, 2, 3, 4, 5, 6] come tentativo
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.Campo getArrayFromDeco
+INFO: Restituito array[1, 2, 3, 4, 5, 6] da decodificare
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6
+set 25, 2019 11:53:45 AM it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniClasse getCodeLenght
+INFO: Restituita la lunghezza del codice: 6

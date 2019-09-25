@@ -13,7 +13,7 @@ import it.unicam.cs.pa.mastermind2019.Vincitore;
 import it.unicam.cs.pa.mastermind2019.view.MMView;
 
 /**
- * <b>Responsabilità:</b> Gestire la partita (Arbitro).
+ * <b>Responsabilità:</b> Gestire la partita.
  * 
  * @author Michele Benedetti
  * @author Daniele Moschini
@@ -21,25 +21,56 @@ import it.unicam.cs.pa.mastermind2019.view.MMView;
 
 public class Arbitro implements ArbitroView
 {
+	/**
+	 * Primo giocatore della partita.
+	 */
 	private Player p1;
+	/**
+	 * Secondo giocatore della partita.
+	 */
 	private Player p2;
+	/**
+	 * Modalità di Input/Output utilizzata nella partita corrente.
+	 */
 	private MMView vista;
+	/**
+	 * Modalità di impostazioni utilizzate nella partita corrente.
+	 */
 	private ImpostazioniView parameters;
+	/**
+	 * Numero di tentativi
+	 */
 	private int tentativi;
+	/**
+	 * Modalità di campo utilizzato nella partita corrente.
+	 */
 	private CampoView campo;
+	/**
+	 * Array contenente il suggerimento per il giocatore.
+	 */
 	private ArrayList<Pioli> suggerimento;
+	/**
+	 * Logger della classe Arbitro.
+	 */
 	private static final Logger logger = LogToFile.getLogger(Arbitro.class);
-
+/**
+ * Costruttore dell'arbitro
+ * @param parametri Impostazioni della partita.
+ * @param campo Campo della partita.
+ * @param vista Input/Output della partita.
+ * @param firstPlayer Primo player della partita
+ * @param secondPlayer Secondo player della partita.
+ */
 	public Arbitro(ImpostazioniView parametri,
 							CampoView campo,
 							MMView vista,
-							Player uno,
-							Player due )
+							Player firstPlayer,
+							Player secondPlayer )
 	{
 		this.parameters = parametri;
 		this.vista = vista;
-		this.p1 = uno;
-		this.p2 = due;
+		this.p1 = firstPlayer;
+		this.p2 = secondPlayer;
 		this.tentativi = 0;
 		this.campo = campo;
 		logger.log(Level.INFO, "Arbitro creato correttamente");

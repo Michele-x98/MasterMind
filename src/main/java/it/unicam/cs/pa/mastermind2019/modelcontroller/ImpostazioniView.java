@@ -1,5 +1,10 @@
 package it.unicam.cs.pa.mastermind2019.modelcontroller;
-
+/**
+ * <b>Responsabilità:</b> Impostare una base con cui gestire le Impostazioni del gioco.
+ * 
+ * @author Michele Benedetti
+ * @author Daniele Moschini
+ */
 public interface ImpostazioniView
 {
 
@@ -40,7 +45,7 @@ public interface ImpostazioniView
 	public int getMaxCodValue();
 
 	/**
-	 * Metodo che comunica se i duplicati sono consentiti nel codice
+	 * Metodo che comunica se i duplicati sono consentiti nel codice.
 	 * 
 	 * @return true se i duplicati sono consentiti, false altrimenti.
 	 */

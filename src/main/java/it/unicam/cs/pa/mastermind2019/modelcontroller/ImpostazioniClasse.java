@@ -6,7 +6,7 @@ import java.util.logging.Level;
 import it.unicam.cs.pa.mastermind2019.LogToFile;
 
 /**
- * <b>Responsabilità:</b> Gestire i parametri di gioco.
+ * <b>Responsabilità:</b> Gestire i parametri di gioco attraverso la classe stessa.
  * 
  * @author Michele Benedetti
  * @author Daniele Moschini
@@ -14,14 +14,36 @@ import it.unicam.cs.pa.mastermind2019.LogToFile;
 
 public class ImpostazioniClasse implements ImpostazioniView
 {
+	/**
+	 * Boolean che indica se i duplicati sono permessi o no.
+	 */
 	private boolean duplicateAllow;
+	/**
+	 * Lunghezza del codice con cui si gioca.
+	 */
 	private int codeLenght;
+	/**
+	 * Numero di tentativi possibili.
+	 */
 	private int attempts;
+	/**
+	 * Numero minimo di valori possibili nel codice.
+	 */
 	private final int minCodValue = 1;
+	/**
+	 * Numero massimo di valori possibili nel codice.
+	 */
 	private int maxCodValue;
+	/**
+	 * Logger della classe ImpostazioniClasse.
+	 */
 	private static final Logger logger = LogToFile.getLogger(ImpostazioniClasse.class);
 
-
+/**
+ * Costruttore delle Impostazioni.
+ * @param lunghezza Lunghezza del codice.
+ * @param duplicate Presenza dei duplicati.
+ */
 	public ImpostazioniClasse(	int lunghezza,
 								boolean duplicate )
 	{
@@ -42,7 +64,9 @@ public class ImpostazioniClasse implements ImpostazioniView
 			this.maxCodValue = 10;
 		}
 	}
-
+/**
+ * Costruttore di default con lunghezza 4 e duplicati non ammessi.
+ */
 	public ImpostazioniClasse()
 	{
 		logger.log(Level.INFO, "Create impostazioni di default");

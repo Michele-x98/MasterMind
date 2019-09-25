@@ -13,6 +13,7 @@ import it.unicam.cs.pa.mastermind2019.LogToFile;
 import it.unicam.cs.pa.mastermind2019.Pioli;
 import it.unicam.cs.pa.mastermind2019.PlayerType;
 import it.unicam.cs.pa.mastermind2019.Risultato;
+import it.unicam.cs.pa.mastermind2019.modelcontroller.Campo;
 import it.unicam.cs.pa.mastermind2019.modelcontroller.CampoView;
 import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniView;
 
@@ -24,14 +25,31 @@ import it.unicam.cs.pa.mastermind2019.modelcontroller.ImpostazioniView;
  * 
  */
 
-//@SuppressWarnings("deprecation")
-public class InputOutput implements MMView// , Observer
+public class InputOutput implements MMView
 {
+	/**
+	 * Stream in Output.
+	 */
 	private PrintStream output;
+	/**
+	 * Stream in Input.
+	 */
 	private BufferedReader input;
+	/**
+	 * Impostazioni della partita corrente.
+	 */
 	ImpostazioniView currentParameters;
+	/**
+	 * Campo della partita corrente.
+	 */
 	CampoView terreno;
+	/**
+	 * Logger della classe {@link InputOutput}.
+	 */
 	private static final Logger logger = LogToFile.getLogger(InputOutput.class);
+	/**
+	 * Logo del gioco MasterMind.
+	 */
 	String logo = "  __  __           _                      _           _  \n" +
 					" |  \\/  |         | |                    (_)         | | \n" +
 					" | \\  / | __ _ ___| |_ ___ _ __ _ __ ___  _ _ __   __| | \n" +
@@ -40,6 +58,9 @@ public class InputOutput implements MMView// , Observer
 					" |_|  |_|\\__,_|___/\\__\\___|_|  |_| |_| |_|_|_| |_|\\__,_| \n" +
 					"                                                         \n" +
 					"                                                         ";
+	/**
+	 * Regole del gioco MasterMind.
+	 */
 	String regole = "Benvenuti in MasterMind di Moschini Daniele e Benedetti Michele \n" +
 					"In questa verione di MasterMind inserire come primo giocatore colui che crea il codice da DECODIFICARE, e come\n" +
 					"secondo giocatore colui che dovrà indovinare il CODICE.\n" +
@@ -48,6 +69,12 @@ public class InputOutput implements MMView// , Observer
 					"PC = Numero Corretto, nella Posizione Corretta \n" +
 					"PE = Numero Corretto, nella Posizione Errata \n";
 
+	/**
+	 * Costruttore per la classe {@link InputOutput}.
+	 * 
+	 * @param parametri {@link ImpostazioniView} della partita corrente.
+	 * @param terreno   {@link Campo} della partita corrente.
+	 */
 	public InputOutput(	ImpostazioniView parametri,
 						CampoView terreno )
 	{
@@ -179,14 +206,6 @@ public class InputOutput implements MMView// , Observer
 						sugg);
 	}
 
-//	@Override
-//	public void update(	Observable o,
-//						Object arg)
-//	{
-//		 TODO Auto-generated method stub
-//	}
-
-	
 	@Override
 	public void getSuggerimento()
 	{
@@ -334,6 +353,9 @@ public class InputOutput implements MMView// , Observer
 		}
 	}
 
+	/**
+	 * Metodo che pulisce lo schermo e ristampa la schermata di default.
+	 */
 	public void clearScreen()
 	{
 		for (int i = 0; i < 50; ++i) System.out.println();
@@ -341,6 +363,11 @@ public class InputOutput implements MMView// , Observer
 		System.out.println(regole);
 	}
 
+	/**
+	 * Metodo che prende dal player una combinazione da tastiera.
+	 * 
+	 * @return {@link ArrayList} di Integer combinazione.
+	 */
 	private ArrayList<Integer> humanGetCombination()
 	{
 		logger.log(Level.INFO, "Aspettando la decisione dell'utente");
@@ -402,6 +429,11 @@ public class InputOutput implements MMView// , Observer
 
 	}
 
+	/**
+	 * Metodo che restituisce una serie random di numeri per combinazione.
+	 * 
+	 * @return {@link ArrayList} di Integer combinazione randomica.
+	 */
 	private ArrayList<Integer> botGetCombination()
 	{
 		logger.log(Level.INFO, "Aspettando la decisione del Bot");

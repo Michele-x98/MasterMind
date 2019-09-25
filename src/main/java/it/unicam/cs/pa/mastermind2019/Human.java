@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import it.unicam.cs.pa.mastermind2019.view.IllegalParameterException;
 import it.unicam.cs.pa.mastermind2019.view.MMView;
 
 /**
@@ -16,10 +15,22 @@ import it.unicam.cs.pa.mastermind2019.view.MMView;
 
 public class Human implements Player
 {
+	/**
+	 * Logger della classe Human
+	 */
 	private static final Logger logger = LogToFile.getLogger(Human.class);
-	public String ID;
-	ArrayList<ArrayList<Integer>> tentativi;
-	MMView currentView = null;
+	/**
+	 * Identificatore dell'Human
+	 */
+	private String ID;
+	/**
+	 * ArrayList contenente tutti i tentativi già utilizzati.
+	 */
+	private ArrayList<ArrayList<Integer>> tentativi;
+	/**
+	 * Implementazione dell'interfaccia MMView per interfacciarsi con l'utente.
+	 */
+	private MMView currentView = null;
 
 	/**
 	 * Metodo costruttore della classe Human di Default con in ingresso un'istanza
@@ -27,7 +38,7 @@ public class Human implements Player
 	 * 
 	 * @param view Classe che implementa l'interfaccia per la View del programma.
 	 */
-	public Human(MMView view )
+	public Human(MMView view)
 	{
 		this.ID = "Standard Player";
 		this.tentativi = new ArrayList<ArrayList<Integer>>();
@@ -78,10 +89,9 @@ public class Human implements Player
 		tentativi.add(code);
 		return code;
 	}
-	
+
 	@Override
-	public ArrayList<Pioli> getSuggerimento() {
-		return null;
-	}
+	public ArrayList<Pioli> getSuggerimento()
+	{ return null; }
 
 }

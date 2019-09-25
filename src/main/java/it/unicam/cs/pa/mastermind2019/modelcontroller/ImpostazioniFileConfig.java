@@ -12,12 +12,30 @@ import java.util.logging.Logger;
 
 import it.unicam.cs.pa.mastermind2019.LogToFile;
 
+/**
+ * <b>Responsabilità:</b> Gestire i parametri di gioco attraverso un file
+ * properties.
+ * 
+ * @author Michele Benedetti
+ * @author Daniele Moschini
+ */
 public class ImpostazioniFileConfig implements ImpostazioniView
 {
-
+	/**
+	 * Oggetto properties che contiene le impostazioni del gioco.
+	 */
 	private Properties currentProperties = new Properties();
+	/**
+	 * Logger della classe ImpostazioniFileConfig
+	 */
 	private static final Logger logger = LogToFile.getLogger(ImpostazioniFileConfig.class);
 
+	/**
+	 * Costruttore di {@link ImpostazioniFileConfig}
+	 * 
+	 * @throws FileNotFoundException File non presente nella directory.
+	 * @throws IOException           Il file caricato non rispetta i parametri.
+	 */
 	public ImpostazioniFileConfig() throws FileNotFoundException, IOException
 	{
 		try (InputStream input = new FileInputStream("src/main/resources/config.properties"))

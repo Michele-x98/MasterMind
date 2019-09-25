@@ -11,9 +11,19 @@ import java.util.logging.Logger;
  */
 public class Vincitore implements Risultato
 {
+	/**
+	 * Logger della classe Vincitore.
+	 */
 	private static final Logger logger = LogToFile.getLogger(Vincitore.class);
+	/**
+	 * Identificatore del vincitore.
+	 */
 	private final String vincitoreID;
 
+	/**
+	 * Cotruttore del Vincitore.
+	 * @param vincitore Stringa che identifica il vincitore.
+	 */
 	public Vincitore(String vincitore )
 	{
 		this.vincitoreID = vincitore;
